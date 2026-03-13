@@ -56,6 +56,7 @@ text = "Hello World"
 result = text.swapcase()
 print("Swapped case:", result)
 
+
 # • 11. Check whether a string starts with a specific substring.
 # • 12. Check whether a string ends with a specific substring.
 # • 13. Count the number of occurrences of a character in a string.
