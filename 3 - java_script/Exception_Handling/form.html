@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <form name="loginform" onsubmit="return validateForm()">
+            <p>LOGIN FORM<p>
+            <input type="text" name="fname" placeholder="First Name">
+            <!-- <input type="text" name="lname" placeholder="Last Name">
+            <br>
+            <br>
+            <input type="email" name="mail" placeholder="Email">
+            <input type="email" name="mail" placeholder="Renter Email"> -->
+            <br>
+            <input type="submit" name="submit">
+            
+        </form>
+
+        <p id="msg" style="color: red;"></p>
+
+        <script>
+
+            function validateForm() {
+                let fname = document.forms["loginform"]["fname"].value;
+                // let lname = document.forms["loginform"]["lname"].value;
+                // let email = document.forms["loginform"]["email"].value;
+                // let remail = document.forms["loginform"]["remail"].value;
+            
+            if (fname == ""){
+                document.getElementById("msg").innerText = "Name Must Be Filled Out";
+                return false;
+            }
+                document.getElementById("msg").innerText = "Form submited Successfully";
+                
+                return true;
+            
+            }
+
+        </script>
+</body>
+</html>

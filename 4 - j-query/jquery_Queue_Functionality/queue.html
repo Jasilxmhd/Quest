@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery queue functionality </title>
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #d1{
+            height: 80px;
+            width: 80px;
+            background: rgb(62, 12, 199);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>Animation</button>
+    <div id="d1"></div>
+
+    <script>
+       $("button").click(function(){
+            var div = $("#d1");
+            div.animate({height:'300px',opacity:'0.4'},"slow");
+            div.animate({width:'300px',opacity:'0.8'},"slow");
+            div.animate({height:'100px',opacity:'0.4'},"slow");
+            div.animate({width:'100px',opacity:'0.8'},"slow");
+       });
+    
+    </script>
+</body>
+</html>

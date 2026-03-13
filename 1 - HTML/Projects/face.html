@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #e9ebee;
+        margin: 0;
+        padding: 0;
+        }
+
+      h2 {
+        margin-left: 145px;
+         }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #3b5998;
+        padding: 10px 40px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; 
+        } 
+
+      .login-box {
+        margin-right: 204px;
+        }
+
+      label.space {
+        margin-right: 105px; 
+        font-size: x-small;
+        }
+
+      label a {
+        margin-left: 70px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size:x-small;
+        }
+
+      label {
+        font-size: x-small;
+        }
+
+      input[type="button"] {
+        background-color: #4d72c1;
+        color: #ffffff;
+        }
+
+      .sign-up {
+        margin-left: 850px;
+        margin-top: -10px; 
+        }
+        
+      .inp {
+         margin-top: 10px;
+         border-radius: 4px;
+         width: 347px;
+         height: 23px;
+         border: none;
+         border: 1px solid rgb(204, 204, 204);  
+        }
+
+      h1 {
+        margin-left: 850px;
+        margin-top: -70px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+      h5 {
+        margin-left: 850px;
+        gap: 5px;
+        font-weight: normal;
+        margin-top: 5px;
+        }
+
+      .SignUp-btn {
+        width: 160px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;  
+        }
+
+      p {
+        font-size:11px;
+        }
+
+      .terms {
+        color: #4d72c1; 
+        }
+
+      .policy {
+        color: #4d72c1; 
+        }
+
+      .cookie {
+        color: #4d72c1;
+        }
+
+      .line {
+        height: 1px;
+        background-color: #a8a8a8;
+        width: 347px;             
+        margin-right: 105px; 
+        }
+
+      .create {
+        color: #4d72c1;
+        }
+
+      .pic {
+        color: #072567;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 180px;
+        margin-top: 30px;
+        }
+
+      .logo{
+        width:1px;
+        height: 1px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>facebook</h2></div>
+                <div class="login-box">
+
+        <label class="space">Email or Phone</label>
+        <label class="space">Password</label><br>
+        <input type="text" >
+        <input type="password">
+        <input type="button" value="Log in "><br>
+        <label><input type="checkbox">Keep me logged in <a href="">Forget your password ?</a></label>
+              </div>  
+        </div><br><br>
+    
+    <div class="pic">
+      Facebook helps you connect and share with <br> the people in your life. <br></div><br><br>
+
+        <div class="logo">
+            <img src="./facebook.png" style="width: 500px; height: 200px; margin-left: 140px;">
+        </div>
+
+        <div class="right-panel">
+          <h1>Sign Up</h1>
+            <h5>it's free and always will be.</h5>
+
+              <div class="sign-up">
+                <input type="text" placeholder="First Name" style="margin-right:10px; border-radius: 4px; height: 23px; border: none;  border: 1px solid rgb(204, 204, 204);" >
+                <input type="text" placeholder="Last Name" style="border-radius: 4px; height: 23px; border: none;  border: 1px solid rgb(204, 204, 204);"><br>
+                            
+                <input type="email"  class="inp" placeholder="Your Email"><br>
+                <input type="email"   class="inp" placeholder="Re-Enter Email"><br>
+                <input type="password"   class="inp" placeholder="New Password"><br><br>
+                <label>Birthday :</label><br><br>
+                <input type="date"><label style="color: #4d72c1;">      Why do i need to provide my birthday ?</label><br><br>
+
+                <label><input type="radio" name="gender" value="female" class="gender" /> Female</label>
+                <label><input type="radio" name="gender" value="male" class="gender" /> Male</label> 
+                <p> By Clicking Sign up, you agree to our  <span class="terms">Terms</span> and that you have <br>
+                 read our <span class="policy">Data Use Policy</span> including our <span class="cookie">Cookie Use</span>.</p>
+
+                <input type="button" value="Sign-Up " style="background-color: rgba(65, 155, 65, 0.881);" class="SignUp-btn"><br><br><br>
+
+                <div class="line"></div><br>
+                <p><span class="create">Create a Page</span> for a celibrity , band or business.</p>
+                </div>
+              </div>
+        </div>
+    </div>   
+</body>
+</html>

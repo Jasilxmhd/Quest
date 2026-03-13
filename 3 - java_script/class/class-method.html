@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class employee{
+            constructor(name,idnum,company){
+                this.name = name
+                this.idnum = idnum
+                this.company = company
+            }
+            display(){
+                document.write("Name : "+ this.name)
+            }
+
+            id(){
+                 document.write("id : "+ this.idnum)
+
+            }
+            work(){
+                document.write("Company Name : "+ this.company)
+            }
+        }
+        const emp = new employee("Jasil",1102,"Ey")
+
+        emp.display();
+        document.write("<br>")
+        emp.id();
+        document.write("<br>")
+        emp.work();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <p>hover or click me</p>
+    <p>hover or click meeee !</p>
+
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter:function(){
+                    $(this).css("background-color","green");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","lightblue");
+                },
+                click:function(){
+                    $(this).css("background-color","yellow");
+
+                }
+            });
+
+        });
+        
+    </script>
+</body>
+</html>

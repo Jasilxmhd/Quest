@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: lightblue;
+            position: relative;
+            animation-name: sample;
+            animation-duration: 10s;
+            border-radius: 50px;
+            animation-iteration-count: infinite;
+        }
+        @keyframes sample{
+            0%{background-color:lightblue ;left: 0px; top: 100px; transform: rotate(360deg); border-radius: 55px;}
+            20%{background-color:rgb(23, 27, 29) ;left: 400px; top: 100px; border-radius: 30px; transform: rotateY(150deg);}
+            50%{background-color: rgb(20, 211, 97); left: 550px; top: 200px;}
+            100%{background-color: blue;left: 0px; top:100px ;}
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    
+</body>
+</html>

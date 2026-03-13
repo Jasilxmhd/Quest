@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In</title>
+    <script src="jquery.min.js"></script>
+
+
+    <style>
+        #d1{
+            width: 50px;
+            height: 50px;
+            display: none;
+            background-color: green;
+        }
+        #d2{
+            width: 50px;
+            height: 50px;
+            display: none;
+            background-color: rgb(11, 42, 133);
+        }
+        #d3{
+            width: 50px;
+            height: 50px;
+            display: none;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button> click to fade</button>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#d1").fadeIn()
+            $("#d2").fadeIn("slow")
+            $("#d3").fadeIn(3000) //3 seconds
+        })
+    })
+</script>
+</html>

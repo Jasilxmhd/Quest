@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Out</title>
+    <script src="jquery.min.js"></script>
+
+
+    <style>
+        #d1{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(192, 12, 33);
+        }
+
+    </style>
+</head>
+<body>
+    <button> click to fade</button>
+    <div id="d1"></div>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#d1").fadeOut(3000)
+            // $("#d1").fadeOut("slow")
+
+        });
+    });
+</script>
+</html>

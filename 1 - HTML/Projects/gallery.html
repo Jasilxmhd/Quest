@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; background: #fdfdfd; color: #333; }
+
+    header {
+      padding: 12px 30px;
+      background: #aba7a7;
+      border-bottom: 1px solid #918e8e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: #0077cc; }
+
+    main {
+      padding: 100px 30px 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery-item {
+      max-width: 220px;
+      width: 100%;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 6 / 4;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .description {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="gallery-item"><img src="a8-tfsi_e.jpg" alt="Image 1"><p class="description">A8 TFSI e</p></div>
+    <div class="gallery-item"><img src="a6-sedan.jpg" alt="Image 2"><p class="description">A6 Sedan</p></div>
+    <div class="gallery-item"><img src="./a5.jpg" alt="Image 3"><p class="description">A5 Sedan e-hybrid quattro</p></div>
+    <div class="gallery-item"><img src="./a3.jpg" alt="Image 4"><p class="description">A3 Sportback</p></div>
+    <div class="gallery-item"><img src="./xm.jpg" alt="Image 5"><p class="description">XM</p></div>
+    <div class="gallery-item"><img src="./i7.webp" alt="Image 6"><p class="description">i7</p></div>
+    <div class="gallery-item"><img src="./m4.webp" alt="Image 7"><p class="description">M4</p></div>
+    <div class="gallery-item"><img src="./zz4.avif" alt="Image 8"><p class="description">Z4</p></div>
+    <div class="gallery-item"><img src="./lx.jpg" alt="Image 8"><p class="description">LX 500d Urban</p></div>
+    <div class="gallery-item"><img src="./VELAR.png" alt="Image 10"><p class="description">VELAR</p></div>
+    <div class="gallery-item"><img src="./OCTA.png" alt="Image 11"><p class="description">OCTA</p></div>
+    <div class="gallery-item"><img src="./es.jpg" alt="Image 12"><p class="description">ES Sedan</p></div>
+  </main>
+
+</body>
+</html>

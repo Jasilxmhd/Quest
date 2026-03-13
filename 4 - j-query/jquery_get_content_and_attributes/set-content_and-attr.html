@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+
+    <p id="p1">Orginal text</p>
+    <p id="p2">Orginal <b> HTML </b></p>
+    
+    <input type="text" id="t1" value="Orginal value">
+
+    <button id="b1">Set Text</button>
+    <button id="b2">Set Html</button>
+    <button id="b3">Set Value</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#p1").text("Muhammed Jasil")
+            })
+            $("#b2").click(function(){
+                $("#p2").html("<b> Shinas <b>")
+            })
+            $("#b3").click(function(){
+                $("#t1").val("Aflah")
+            })
+        })
+    </script>
+    
+</body>
+</html>

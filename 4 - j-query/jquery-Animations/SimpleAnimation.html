@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #d1{
+            height: 80px;
+            width: 80px;
+            background: rgb(180, 6, 6);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button>Start Animation</button>
+    <div id="d1"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#d1").animate({left:'250px'},"slow");
+            });
+        });
+    </script>
+</body>
+</html>

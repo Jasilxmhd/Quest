@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #panel{
+            height: 150px;
+            width: 148px;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="flip">Startslide</button>
+    <button id="stop">stop slide</button>
+
+    <div id="panel"></div>
+
+    <script>
+        $("#flip").click(function(){
+            $("#panel").slideDown(5000);
+        });
+
+        $("#stop").click(function(){
+            $("#panel").stop();
+        });
+
+    </script>
+</body>
+</html>

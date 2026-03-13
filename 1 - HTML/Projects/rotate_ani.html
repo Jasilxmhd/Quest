@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .par{
+            display: flex;
+            perspective: 200px;
+        }
+        .d1{
+            width: 200px;
+            height: 200px;
+            background: rgb(17, 136, 136);
+            border-radius: 100px;          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-iteration-count: infinite;
+            animation-name: circle;
+            /* transform: rotate(45deg); */
+            animation-duration: 10s;
+            
+            
+        }
+        @keyframes circle{
+            /* 0%{transform: rotate3d(0,1,0,0deg);} */
+            20%{transform: rotate3d(0,0,5,10000deg);}
+            100%{transform: matrix3d(0,0,5,10000deg);}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="par">
+    <div class="d1">*******circle*******</div>
+    </div>
+    
+</body>
+</html>

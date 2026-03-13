@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person {
+            constructor(name){
+                this.name = name
+            }
+        greet(){
+            document.write("Hello, i am "+ this.name)
+        }
+        }
+        class student extends person{
+            constructor(name,RollNo){
+                super(name)
+                this.RollNo= RollNo;
+            }
+        study(){
+            document.write(this.name + " is styding")
+        }
+        }
+        let s = new student ("jasil",35)
+        s.greet();
+        document.write("<br>")
+        s.study();
+
+
+    </script>
+</body>
+</html>

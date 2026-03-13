@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide Toggle</title>
+
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #flip{
+            text-align: center;
+        }
+        #panel{
+            padding: 40px;
+            background-color: rgb(7, 74, 96);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click to Toggle slide</div>
+    <div id="panel">This will Toggle</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>

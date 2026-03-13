@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Properties Animation</title>
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #d1{
+            height: 80px;
+            width: 80px;
+            background: rgb(132, 6, 160);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>Start Animation</button>
+    <div id="d1"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                
+                $("#d1").animate({left:'250px',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px'
+            },2000);
+            });
+        });
+    </script>
+</body>
+</html>

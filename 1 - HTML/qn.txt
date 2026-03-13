@@ -1,0 +1,76 @@
+1.Hyper text markup language
+
+2. Tags :-              Attributes :-
+   * <p>                * <a href>
+   * <br>               * img
+   * heading tag        * id
+   * <center>           * class
+   *ul,li
+
+3. div :-
+  Block level element
+
+  span :-
+  inline level element
+
+4. it tell the browser that the document is written in a html5.
+
+6. block level:- block level elements start with a new line.
+   inline level:=- inline level elements stays with a some line.
+  
+7.self closing tags are a  dont require a separate closing tag.
+ eg:- <br>, <img> , <input>
+
+8. <head>
+   * its used for linking stylesheets.
+   * internal CSS styles inside the <head>.
+
+  <body>
+   * body tag is an a visible content.
+   * everything inside the body.
+
+9. <a href = "www.google.com">click</a>
+
+10. target="_blank"
+
+11. text , password, email ,number, file
+
+14. image
+	<img src="image.jpeg">
+
+    audio
+	<audio src="audio.mp3"></audio>
+
+    video
+	<video src="video.mp4"></video>
+
+15. insert another webpage into your current page.
+
+16. <label> year </label>
+    <select>
+    <option>2000</option>
+    <option>2001</option>
+    <option>2002</option>
+    </select>
+	
+18. id :- unique identifier
+    class :- class used to style many elements at once.
+
+20. local storage :- stored data in the browser
+    session storage:- data cleared automatically when tab closed.
+
+24. cascading style sheets
+
+25. inline , internal , external
+
+26. inline css applying in a same line
+    internal css inside the head 
+    external css written in a separate page using .css extension.
+
+27. id selector used to style one element
+    class selector used to style multiple elements at once.
+
+30. z index is an overlap an element.
+
+
+     

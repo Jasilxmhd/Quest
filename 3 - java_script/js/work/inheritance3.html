@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class vehicle{
+            constructor(race){
+                this.race = race
+
+            }
+            start(){
+                document.write("Get revved up and ready to hit the road! 🏍💨" + "<br>")
+            }
+        }
+        class bike extends vehicle{
+            constructor(race,speed){
+                super(race)
+                this.speed = speed
+            }
+            bhoom(){
+                document.write("Vroom, vroom!")
+
+            }
+        }
+        let go = new bike ()
+        go.start();
+        go.bhoom();
+        
+    </script>
+</body>
+</html>
