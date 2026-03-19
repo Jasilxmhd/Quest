@@ -91,3 +91,15 @@
 
 
 
+
+
+
+# name = ['jasil', 'adivaram', 'AAA', 'ZZZ', "XX"]
+
+# print(len(name))
+
+# print(min(name))
+
+# print(max(name))
+
+# print(sorted(name))
