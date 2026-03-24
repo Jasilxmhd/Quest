@@ -410,16 +410,18 @@
 
 
 
-large = 0
-s_large = 0
-nums = [1, 2, 3, 401, 10, 4008, 20]
+# large = 0
+# s_large = 0
+# nums = [1, 2, 3, 401, 10, 4008, 20]
 
-for i in range(len(nums)):
-    if nums[i] > large:
-        s_large = large
-        large = nums[i]
-    elif large > nums[i] > s_large:
-        s_large = nums[i]
+# for i in range(len(nums)):
+#     if nums[i] > large:
+#         s_large = large
+#         large = nums[i]
+#     elif large > nums[i] > s_large:
+#         s_large = nums[i]
 
-print("Largest =", large)
-print("Second Largest =", s_large)
+# print("Largest =", large)
+# print("Second Largest =", s_large)
+
+
