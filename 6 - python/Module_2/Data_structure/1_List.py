@@ -425,3 +425,16 @@
 # print("Second Largest =", s_large)
 
 
+
+
+
+
+
+
+'List Unpacking'
+
+# sample_list = ['apple','banana','mango','grapes']
+# x, y, *z = sample_list                                  # * ittaal athikam llath *z kk kayarumm
+# print(x)                      # apple
+# print(y)                      # banana
+# print(z)                      # ['mango', 'grapes']
