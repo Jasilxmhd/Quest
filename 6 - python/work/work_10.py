@@ -51,8 +51,34 @@
 # print(z)
 
 # 9. Demonstrate what happens if you try to unpack a tuple of 4 elements into 3 variables. 
+
+# name = ('jasil', 'yaseen', 'shakir','niyas')
+# x, *y, z = name
+# print(x)
+# print(y)
+# print(z)
+
+
+
+
+
+
+
 # 10. Use the 'extended iterable unpacking' (using *) to grab the first element and the rest into a 
 # list. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 #  --- PART 2: IMMUTABILITY LOGIC --- 
 # 11. Write code that attempts to change the first element of a tuple and handle the resulting 
 # TypeError gracefully. 
