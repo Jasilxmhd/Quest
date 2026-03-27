@@ -1,9 +1,9 @@
-# PYTHON FULL STACK TRAINING: TUPLE LOGIC & INTERVIEW 
-# PREP 
-# Topic: Tuples, Immutability, and Data Integrity 
+'PYTHON FULL STACK TRAINING: TUPLE LOGIC & INTERVIEW '
+'PREP '
+'Topic: Tuples, Immutability, and Data Integrity '
 
 
-#  --- PART 1: BASICS & INITIALIZATION --- 
+' --- PART 1: BASICS & INITIALIZATION --- '
 
 
 # 1. Create a tuple containing five different data types (int, float, string, list, boolean). 
@@ -79,12 +79,39 @@
 
 
 
-#  --- PART 2: IMMUTABILITY LOGIC --- 
+' --- PART 2: IMMUTABILITY LOGIC --- '
+
 # 11. Write code that attempts to change the first element of a tuple and handle the resulting 
 # TypeError gracefully. 
 # 12. Given a tuple: t = (1, 2, [3, 4]). Change the value 3 to 30. Explain why this works despite 
 # tuples being immutable. 
+
+# t = (1, 2, [3, 4])
+# update = list(t)
+
+# update[2][0]= 30
+# t = tuple(update) 
+# print(t)
+
+
 # 13. Create two tuples, concatenate them, and assign them to a new variable. 
+
+# 'concatenate'
+# t = (1, 2, [3, 4])
+# t1 = (10, 200, [3.5, 4])
+
+# concatenate = t + t1
+# print(concatenate)
+
+
+# 'assign'
+# t1 = ( 10, 20, 30 )
+# t1 += ( 2004, )
+# print(t1)
+
+
+
+
 # 14. Use the repetition operator (*) to create a tuple of ten zeros. 
 # 15. Swap two variables a and b using tuple unpacking logic in a single line. 
 # 16. Write a program to "add" an item to a tuple by converting it to a list first. 
@@ -119,3 +146,12 @@
 # them. 
 # 39. Write a program to find duplicate elements in a tuple. 
 # 40. Zip two tuples together to create a list of coordinate pairs.
+
+
+
+
+
+
+
+
+
