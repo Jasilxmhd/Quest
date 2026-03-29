@@ -113,9 +113,25 @@
 
 
 # 14. Use the repetition operator (*) to create a tuple of ten zeros. 
+
+t = (0,) * 10
+print(t)
+
+
 # 15. Swap two variables a and b using tuple unpacking logic in a single line. 
 # 16. Write a program to "add" an item to a tuple by converting it to a list first. 
+
+t = (1, 2, [3, 4])
+update = list(t)
+update.append(2004)
+
+t = tuple(update) 
+print(t)
+
 # 17. Write a program to "remove" an item from a tuple. 
+
+
+
 # 18. Delete an entire tuple variable from memory and verify its absence using a try-except 
 # block. 
 # 19. Sort a tuple of integers and return the result as a new tuple. 
@@ -133,8 +149,20 @@
 # numbers. 
 # 28. Convert a list of tuples into a single flat list. 
 # 29. Create a tuple from a user-input string where each character is an element. 
-# 30. Check if all elements in a tuple are truthy using the all() function. 
-#  --- PART 4: SLICING & LOOPING --- 
+# 30. Check if all elements in a tuple are truthy using the all() function.
+
+
+
+
+
+' --- PART 4: SLICING & LOOPING --- '
+
+
+
+
+
+
+
 # 31. Extract a sub-tuple containing the elements from index 2 to 5 (inclusive). 
 # 32. Use slicing to get every second element of a tuple. 
 # 33. Write a 'for' loop to print each element of a tuple with its corresponding index number. 
