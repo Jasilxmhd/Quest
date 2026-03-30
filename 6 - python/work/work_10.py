@@ -114,19 +114,20 @@
 
 # 14. Use the repetition operator (*) to create a tuple of ten zeros. 
 
-t = (0,) * 10
-print(t)
+# t = (0,) * 10
+# print(t)
 
 
 # 15. Swap two variables a and b using tuple unpacking logic in a single line. 
 # 16. Write a program to "add" an item to a tuple by converting it to a list first. 
 
-t = (1, 2, [3, 4])
-update = list(t)
-update.append(2004)
+# t = (1, 2, [3, 4])
+# update = list(t)
+# update.append(2004)
 
-t = tuple(update) 
-print(t)
+# t = tuple(update) 
+# print(t)
+
 
 # 17. Write a program to "remove" an item from a tuple. 
 
@@ -174,17 +175,6 @@ print(t)
 # them. 
 # 39. Write a program to find duplicate elements in a tuple. 
 # 40. Zip two tuples together to create a list of coordinate pairs.
-
-
-
-
-
-
-
-
-
-
-
 
 
 

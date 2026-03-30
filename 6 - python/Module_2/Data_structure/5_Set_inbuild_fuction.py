@@ -148,9 +148,9 @@
 
 'Clear'
 
-person = { 'yaseen', 'jasil', 'niyas', 'shakir'}
-person.clear( )
-print(person)
+# person = { 'yaseen', 'jasil', 'niyas', 'shakir'}
+# person.clear( )
+# print(person)
 
 
 
