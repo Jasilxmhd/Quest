@@ -96,6 +96,6 @@
 
 
 
-number = ['1','2','3','4','5','6']
-convert = [int (i) for i in number if i.isdigit() ]
-print(convert)
+# number = ['1','2','3','4','5','6']
+# convert = [int (i) for i in number if i.isdigit() ]
+# print(convert)

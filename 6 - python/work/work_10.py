@@ -135,17 +135,46 @@
 
 # 18. Delete an entire tuple variable from memory and verify its absence using a try-except 
 # block. 
+
+# person1 = ('jasil','yaseen','shakir','Niyas')
+# del person1
+# print(person1)
+
 # 19. Sort a tuple of integers and return the result as a new tuple. 
 # 20. Reverse a tuple using the slicing method [::-1]. 
-#  --- PART 3: METHODS & AGGREGATION --- 
+
+# person = ('jasil','yaseen','shakir','Niyas')
+# print(person[::-1])
+
+
+' --- PART 3: METHODS & AGGREGATION --- '
+
 # 21. Find the index of the first occurrence of the number 10 in a tuple. 
+
+# t = (5, 3, 10, 7, 10, 2)
+# print(t.index(10))
+
 # 22. Count how many times the string "Python" appears in a tuple of job roles. 
+
+# job = ( 'java' , 'DevOps' ,'python' , 'dart', 'python')
+# print(job.count('python'))
+
 # 23. Find the maximum and minimum values in a tuple of stock prices. 
 # 24. Calculate the sum of all numeric elements in a tuple. 
+
+# t = (1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+# print(sum(t))
+
 # 25. Given a tuple of tuples: ((1, 2), (3, 4), (5, 6)), calculate the sum of the second element of 
 # each internal tuple. 
+
+# t = ((1, 2), (3, 4), (5, 6))
+# result = (t[0][1] + t[1][1] + t[2][1])
+# print(result)
+
 # 26. Use the index() method to find the position of 'Apple' starting from index 3 in a large fruit 
 # tuple. 
+
 # 27. Write a function that takes a tuple and returns a new tuple containing only the even 
 # numbers. 
 # 28. Convert a list of tuples into a single flat list. 
@@ -169,9 +198,16 @@
 # 33. Write a 'for' loop to print each element of a tuple with its corresponding index number. 
 # 34. Use a 'while' loop to iterate through a tuple backwards. 
 # 35. Create a tuple of 10 numbers and slice it to get the last 3 elements. 
+
+# t = ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+# print(t[7::])
+
 # 36. Slice a tuple to remove the first and last elements. 
 # 37. Use a for loop to concatenate all strings in a tuple into a single sentence. 
 # 38. Compare two tuples (1, 2, 3) and (1, 2, 4). Explain the logic of how Python compares 
+
+
+
 # them. 
 # 39. Write a program to find duplicate elements in a tuple. 
 # 40. Zip two tuples together to create a list of coordinate pairs.
