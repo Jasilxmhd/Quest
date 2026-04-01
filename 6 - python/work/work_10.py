@@ -1,221 +1,213 @@
-'PYTHON FULL STACK TRAINING: TUPLE LOGIC & INTERVIEW '
-'PREP '
-'Topic: Tuples, Immutability, and Data Integrity '
+# Python Data Structures (Lists) – Lab Practical
+# Question Bank
+# Beginner → Advanced + Logical & Interview-Oriented Questions
+# Section 1: Beginner Level
 
+# 1 1. Create a list of five integers and print all elements using a for loop.
 
-' --- PART 1: BASICS & INITIALIZATION --- '
+# L1 = [ 10, 21, 203]
+# for i in L1:
+#     print(i)
 
+    
+# 2 2. Write a program to find the length of a list without using len().
+# L1 = [ 10, 21, 203]
+# count = 0 
+# for i in L1:
+#     count += 1
+# print(count)
 
-# 1. Create a tuple containing five different data types (int, float, string, list, boolean). 
-# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
-# print(t1)
+# 3 3. Create a list of numbers and print the maximum and minimum values.
 
+# L1 = [ 10, 21, 203, 2004]
+# print(max(L1))
+# print(min(L1))
 
-# 2. Write a script to check the type of a tuple with a single element. Show the difference 
-# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
-# print(type(t1[2]))
-# print(type(t1))
 
-# between (5) and (5,). 
-# t1 = (5, )
-# t2 = (6)
-# print(type(t1))
-# print(type(t2))
+# 4 4. Write a program to append a new element to a list entered by the user.
 
-# 3. Access the last element of a tuple without knowing its length. 
-# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
-# print(t1[-1])
+# L1 = [ 10, 21, 203, 2004]
+# print(L1)
+# update =input("Please Enter : ")
+# L1.append(update)
+# print(L1)
 
-# 4. Access the second to last element of a tuple using negative indexing. 
-# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
-# print(t1[-2])
+# 5 5. Insert an element at a specific position in a list.
 
-# 5. Given nested_tuple = ("Python", [10, 20, 30], (5, 15, 25)), print the number 20. 
-# nested_tuple = ("Python", [10, 20, 30], (5, 15, 25))
-# print(nested_tuple[1][1])
+# L1 = [ 10, 21, 203, 2004]
+# L1.insert(1,"Adivaram")
+# print(L1)
 
+# 6 6. Remove an element from a list using remove() and pop().
 
-# 6. Check if the element 'Sreeraj' exists in a tuple using a membership operator. 
-# t1 = (10, 7.2, "jasil",'Sreeraj', [10, 20, 30 ],True)
-# print('Sreeraj' in t1)
+# L1 = [ 10, 21, 203, 2004]
+# # pop
+# L1.pop(1)
+# print(L1)
 
+# Remove
+# L2 = [ 10, 21, 203, 2004]
+# L2.remove(2004)
+# print(L2)
 
+# 7 7. Write a program to check whether a given element exists in a list.
 
-# 7. Find the memory size of a list vs. a tuple with the same elements using the sys module. 
+# L1 = [ 10, 21, 203, 2004]
+# print( 2004 in L1)
 
-# 8. Unpack a tuple of 3 elements into three variables: x, y, and z. 
-# person = ('jasil', 'shakir', 'niyas','yaseen')
-# x, *y, z = person
-# print(x)
-# print(y)
-# print(z)
+# 8 8. Reverse a list without using reverse().
 
-# 9. Demonstrate what happens if you try to unpack a tuple of 4 elements into 3 variables. 
+# L1 = [ 10, 21, 203, 2004]
+# print(L1[::-1])
 
-# name = ('jasil', 'yaseen', 'shakir','niyas')
-# x, *y, z = name
-# print(x)
-# print(y)
-# print(z)
 
+# 9 9. Sort a list of numbers in ascending and descending order.
 
+# ascending
+# L1 = [ 100, 21, 5, 2004]
+# L1.sort()
+# print(L1)
 
+# # descending
+# L1.sort(reverse=True)
+# print(L1)
 
+# 10 10. Create a list of numbers and print only the even numbers.
 
+# num = [ 0, 2, 4, 5, 7]
+# new_list = [n for n in num if n %2==0]
+# print(new_list)
 
 
-# 10. Use the 'extended iterable unpacking' (using *) to grab the first element and the rest into a 
-# list. 
 
+# 11. Count how many times a specific element appears in a list.
 
+# num = [ 0, 2, 4, 5, 7,7]
+# print(num.count(7))
 
+# 12. Write a program to copy one list into another list.
 
+# num = [ 0, 2, 4, 5, 7,7]
+# copy_list = num.copy()
+# print(copy_list)
 
+# 13. Concatenate two lists using the + operator.
 
+# num = [ 0, 2, 4, 5, 7,7]
+# num1 = [ 1, 2, 3, 4, 5, 6]
 
+# new_list = num + num1
+# print(new_list)
 
 
+# 14. Repeat a list three times using the * operator.
+# num = [ 1, 2, 3, 4, 5, 6]
+# print(num * 3 )
 
 
+# 15. Demonstrate positive and negative indexing in a list.
+# num = [ 1, 2, 3, 4, 5, 6]
+# print(num[0])     # positive
+# print(num[-6])    # Negative
 
 
-' --- PART 2: IMMUTABILITY LOGIC --- '
+'Section 2: Intermediate Level'
 
-# 11. Write code that attempts to change the first element of a tuple and handle the resulting 
-# TypeError gracefully. 
-# 12. Given a tuple: t = (1, 2, [3, 4]). Change the value 3 to 30. Explain why this works despite 
-# tuples being immutable. 
+# 1 16. Write a program to remove duplicates from a list.
 
-# t = (1, 2, [3, 4])
-# update = list(t)
+# num = [ 1, 2, 3, 4, 5, 6, 6]
+# new_list = set(num)
 
-# update[2][0]= 30
-# t = tuple(update) 
-# print(t)
+# update = list(new_list)
+# print(update)
 
 
-# 13. Create two tuples, concatenate them, and assign them to a new variable. 
 
-# 'concatenate'
-# t = (1, 2, [3, 4])
-# t1 = (10, 200, [3.5, 4])
+# 2 17. Find the second largest element in a list.
 
-# concatenate = t + t1
-# print(concatenate)
+# num = [ 1, 2, 3, 4, 5, 6, 6] 
 
 
-# 'assign'
-# t1 = ( 10, 20, 30 )
-# t1 += ( 2004, )
-# print(t1)
+# 3 18. Write a program to rotate a list to the left by one position.
+# 4 19. Write a program to rotate a list to the right by one position.
+# 5 20. Move a specific element (e.g., 50) to the first position of a list.
+# 6 21. Create a list of squares of numbers from 1–10 using list comprehension.
+# 7 22. Create a list containing only odd numbers from 1–50 using list comprehension.
+# 8 23. Write a program to merge two lists and remove duplicates.
+# 9 24. Find the sum of all elements in a list without using sum().
+# 10 25. Write a program to find common elements between two lists.
+# 11 26. Write a program to split a list into two halves.
+# 12 27. Find the index of a given element without using index().
+# 13 28. Write a program to flatten a nested list.
+# 14 29. Create a program to find the frequency of each element in a list.
+# 15 30. Reverse each element of a list of strings.
 
+'Section 3: Advanced Level'
 
+# 1 31. Implement a matrix using nested lists and print it in matrix format.
+# 2 32. Write a program to add two matrices using nested lists.
+# 3 33. Write a program to transpose a matrix.
+# 4 34. Flatten a 2D list into a single list using list comprehension.
+# 5 35. Find the largest sublist length in a nested list.
+# 6 36. Write a program to find the intersection of multiple lists.
+# 7 37. Write a program to group list elements by their length (strings).
+# 8 38. Implement a simple stack using a Python list.
+# 9 39. Implement a queue using a Python list.
+# 10 40. Write a program to shuffle elements in a list.
+# 11 41. Write a program to find the kth largest element in a list.
+# 12 42. Write a program to check whether a list is a palindrome.
+# 13 43. Write a program to generate all possible pairs from a list.
+# 14 44. Create a list of prime numbers within a given range using list comprehension.
+# 15 45. Write a program to remove all negative numbers from a list.
 
+'Section 4: Logical / Problem Solving'
 
-# 14. Use the repetition operator (*) to create a tuple of ten zeros. 
+# 1 46. Given a list of numbers, move all zeros to the end while maintaining order.
+# 2 47. Find the first non-repeating element in a list.
+# 3 48. Find the highest frequency element in a list.
+# 4 49. Find all pairs whose sum equals a given target value.
+# 5 50. Write a program to detect duplicates in a list.
+# 6 51. Given two lists, determine whether they contain the same elements regardless of order.
+# 7 52. Write a program to partition a list into even and odd numbers.
+# 8 53. Implement bubble sort using lists.
+# 9 54. Implement selection sort using lists.
+# 10 55. Write a program to remove consecutive duplicate elements.
 
-# t = (0,) * 10
-# print(t)
+'Section 5: Interview-Oriented Questions'
 
+# 1 56. Explain the difference between list.copy() and copy.deepcopy(). Demonstrate with code.
+# 2 57. What is list comprehension? Write examples and compare it with loops.
 
-# 15. Swap two variables a and b using tuple unpacking logic in a single line. 
-# 16. Write a program to "add" an item to a tuple by converting it to a list first. 
+# number = [i for i in range(1,11)]  
+# print(number) 
 
-# t = (1, 2, [3, 4])
-# update = list(t)
-# update.append(2004)
 
-# t = tuple(update) 
-# print(t)
+# 3 58. What happens when you modify a list during iteration? Demonstrate with an example.
+# 4 59. Explain the difference between append(), extend(), and insert().
 
 
-# 17. Write a program to "remove" an item from a tuple. 
+# append()
+# sample = [1,2,3,4,5,6,7,8,9,100]
+# sample.append("Jasil")
+# print(sample)
 
 
 
-# 18. Delete an entire tuple variable from memory and verify its absence using a try-except 
-# block. 
+# insert()
+# num = [1,2,3,4,5,6,7,8,9]
+# num.insert(1,'jasil')
+# print(num)
 
-# person1 = ('jasil','yaseen','shakir','Niyas')
-# del person1
-# print(person1)
+# extend()
+# num = [1,2,3]
+# num.extend([4, 5])
+# print(num)
 
-# 19. Sort a tuple of integers and return the result as a new tuple. 
-# 20. Reverse a tuple using the slicing method [::-1]. 
 
-# person = ('jasil','yaseen','shakir','Niyas')
-# print(person[::-1])
 
-
-' --- PART 3: METHODS & AGGREGATION --- '
-
-# 21. Find the index of the first occurrence of the number 10 in a tuple. 
-
-# t = (5, 3, 10, 7, 10, 2)
-# print(t.index(10))
-
-# 22. Count how many times the string "Python" appears in a tuple of job roles. 
-
-# job = ( 'java' , 'DevOps' ,'python' , 'dart', 'python')
-# print(job.count('python'))
-
-# 23. Find the maximum and minimum values in a tuple of stock prices. 
-# 24. Calculate the sum of all numeric elements in a tuple. 
-
-# t = (1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
-# print(sum(t))
-
-# 25. Given a tuple of tuples: ((1, 2), (3, 4), (5, 6)), calculate the sum of the second element of 
-# each internal tuple. 
-
-# t = ((1, 2), (3, 4), (5, 6))
-# result = (t[0][1] + t[1][1] + t[2][1])
-# print(result)
-
-# 26. Use the index() method to find the position of 'Apple' starting from index 3 in a large fruit 
-# tuple. 
-
-# 27. Write a function that takes a tuple and returns a new tuple containing only the even 
-# numbers. 
-# 28. Convert a list of tuples into a single flat list. 
-# 29. Create a tuple from a user-input string where each character is an element. 
-# 30. Check if all elements in a tuple are truthy using the all() function.
-
-
-
-
-
-' --- PART 4: SLICING & LOOPING --- '
-
-
-
-
-
-
-
-# 31. Extract a sub-tuple containing the elements from index 2 to 5 (inclusive). 
-# 32. Use slicing to get every second element of a tuple. 
-# 33. Write a 'for' loop to print each element of a tuple with its corresponding index number. 
-# 34. Use a 'while' loop to iterate through a tuple backwards. 
-# 35. Create a tuple of 10 numbers and slice it to get the last 3 elements. 
-
-# t = ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
-# print(t[7::])
-
-# 36. Slice a tuple to remove the first and last elements. 
-# 37. Use a for loop to concatenate all strings in a tuple into a single sentence. 
-# 38. Compare two tuples (1, 2, 3) and (1, 2, 4). Explain the logic of how Python compares 
-
-
-
-# them. 
-# 39. Write a program to find duplicate elements in a tuple. 
-# 40. Zip two tuples together to create a list of coordinate pairs.
-
-
-
-
-
-
-
-
+# 5 60. Demonstrate shallow copy behavior using lists.
+# 6 61. Explain time complexity of list operations (append, insert, pop).
+# 7 62. Write a program to implement a stack using a list and explain push/pop.
+# 8 63. Write a program to remove duplicates while preserving order.
+# 9 64. Explain the difference between mutable and immutable data structures in Python.
+# 10 65. Write a Python program to simulate a simple task queue using lists.

@@ -52,9 +52,9 @@
 
 # • 10. Swap the case of each character in a string.
 
-text = "Hello World"
-result = text.swapcase()
-print("Swapped case:", result)
+# text = "Hello World"
+# result = text.swapcase()
+# print("Swapped case:", result)
 
 
 # • 11. Check whether a string starts with a specific substring.

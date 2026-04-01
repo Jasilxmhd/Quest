@@ -1,144 +1,221 @@
-'Python Lab Practical Questions '
-
-'Topic: Sets in Python (Beginner → Advanced) '
-
-'Section 1 – Basic Set Programs '
-
-# 1. Create a set containing 5 numbers and print the set.
-
-# new = { 1, 2, 3 ,4, 5} 
-# print(new)
-
-# 2. Create a set with mixed data types and print each element. 
-
-# sample_set = { 'jasil' , 2004 , 10.55 , True, None}
-# print(sample_set)
-
-# 3. Write a program to create a set from a list. 
-
-# my_list = [1, 2, 2, 3, 5, 6]
-
-# # convert to set 
-# my_set = set(my_list)
-# print(my_set)
+'PYTHON FULL STACK TRAINING: TUPLE LOGIC & INTERVIEW '
+'PREP '
+'Topic: Tuples, Immutability, and Data Integrity '
 
 
-# 4. Write a program to remove duplicate elements from a list using a set. 
+' --- PART 1: BASICS & INITIALIZATION --- '
 
 
-# 5. Create an empty set and add three elements to it.
-
-# sample_Set = set()
-
-# sample_Set.update(['jasil',2004,'Adivaram'])
-# print(sample_Set) 
-
-# 6. Write a program to check if an element exists in a set. 
-# 7. Create a set and print all elements using a for loop. 
-
-# sample_Set = ('jasil',2004,'Adivaram')
-# for i in sample_Set:
-#     print(i)
+# 1. Create a tuple containing five different data types (int, float, string, list, boolean). 
+# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
+# print(t1)
 
 
-# 8. Write a program to find the length of a set without using len(). 
+# 2. Write a script to check the type of a tuple with a single element. Show the difference 
+# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
+# print(type(t1[2]))
+# print(type(t1))
 
-# s = ( 1 ,2 ,2 ,3 , 4 ,5 )
-# count = 0 
-# for i in s :
-#     count += 1
-# print(count)
+# between (5) and (5,). 
+# t1 = (5, )
+# t2 = (6)
+# print(type(t1))
+# print(type(t2))
 
-# 9. Write a program to convert a tuple into a set. 
+# 3. Access the last element of a tuple without knowing its length. 
+# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
+# print(t1[-1])
 
-# t = { 1, 2, 3, 5, "jasil"}
-# update = set(t)
-# print(update)
+# 4. Access the second to last element of a tuple using negative indexing. 
+# t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
+# print(t1[-2])
 
-# 10. Write a program to convert a set into a list. 
+# 5. Given nested_tuple = ("Python", [10, 20, 30], (5, 15, 25)), print the number 20. 
+# nested_tuple = ("Python", [10, 20, 30], (5, 15, 25))
+# print(nested_tuple[1][1])
 
-# new_set = {1, 2, 3, 5, 'jasil'}
-# convert = list(new_set)
-# print(convert)
 
-# 'Section 2  Adding and Removing Elements'
+# 6. Check if the element 'Sreeraj' exists in a tuple using a membership operator. 
+# t1 = (10, 7.2, "jasil",'Sreeraj', [10, 20, 30 ],True)
+# print('Sreeraj' in t1)
 
-# 11. Create a set and add a new element using add(). 
 
-# new_set = {1, 2, 3, 5, 'jasil'}
-# new_set.add('python')
-# print(new_set)
 
-# 12. Write a program to add multiple elements to a set using update(). 
+# 7. Find the memory size of a list vs. a tuple with the same elements using the sys module. 
 
-# new_set = {1, 2, 3, 5, 'jasil'}
-# new_set.update(["pyhton",2004])
-# print(new_set)
+# 8. Unpack a tuple of 3 elements into three variables: x, y, and z. 
+# person = ('jasil', 'shakir', 'niyas','yaseen')
+# x, *y, z = person
+# print(x)
+# print(y)
+# print(z)
 
-# 13. Write a program to remove an element using remove(). 
-new_set = {1, 2, 3, 5, 'jasil'}
-new_set.remove("jasil")
-print(new_set)
+# 9. Demonstrate what happens if you try to unpack a tuple of 4 elements into 3 variables. 
 
-# 14. Write a program to remove an element using discard(). 
-# 15. Write a program to remove a random element using pop(). 
-# 16. Write a program to clear all elements from a set. 
-# 17. Write a program to copy a set into another set. 
-# 18. Write a program to add elements from a list into a set. 
-# 19. Write a program to add elements from a tuple into a set. 
-# 20. Write a program to update a set with another set. 
- 
-'Section 3 – Set Operations '
+# name = ('jasil', 'yaseen', 'shakir','niyas')
+# x, *y, z = name
+# print(x)
+# print(y)
+# print(z)
 
-# 21. Write a program to find the union of two sets. 
-# 22. Write a program to find the intersection of two sets. 
-# 23. Write a program to find the difference between two sets. 
-# 24. Write a program to find the symmetric difference between two sets. 
-# 25. Write a program to update a set using intersection_update(). 
-# 26. Write a program to update a set using difference_update(). 
-# 27. Write a program to update a set using symmetric_difference_update(). 
-# 28. Write a program to check if one set is a subset of another set. 
-# 29. Write a program to check if one set is a superset of another set. 
-# 30. Write a program to check if two sets are disjoint. 
- 
-'Section 4 – Logical Set Problems '
 
-# 31. Write a program to find common elements between two lists using sets. 
-# 32. Write a program to find unique elements from two lists. 
-# 33. Write a program to find elements present in the first list but not in the second list. 
-# 34. Write a program to remove duplicates from a sentence using sets. 
-# 35. Write a program to find unique characters in a string using sets. 
-# 36. Write a program to count unique words in a sentence. 
-# 37. Write a program to find the difference between two strings using sets. 
-# 38. Write a program to find vowels present in a string using sets. 
-# 39. Write a program to check whether two strings contain the same characters. 
-# 40. Write a program to find common characters between two strings. 
- 
-'Section 5 – Set Comprehension '
 
-# 41. Write a program to create a set of squares from numbers 1–10 using set 
-# comprehension. 
-# 42. Write a program to create a set of cubes using set comprehension. 
-# 43. Write a program to create a set of even numbers from 1–20 using set comprehension. 
-# 44. Write a program to create a set of odd numbers using set comprehension. 
-# 45. Write a program to create a set containing lengths of words in a sentence. 
- 
-'Section 6 – Industry Based Problems '
 
-# 46. Given two sets representing students enrolled in Python and Java, find students 
-# enrolled in both courses. 
-# 47. Given two sets representing users who logged in today and yesterday, find new users 
-# today. 
-# 48. Given two sets representing available skills and required job skills, find missing skills. 
-# 49. Create a set representing product categories in an e-commerce system and remove a 
-# category dynamically. 
-# 50. Given two datasets of email IDs, remove duplicates and print all unique email IDs. 
- 
-'Bonus Interview Questions '
 
-# 1. Why are sets unordered in Python? 
-# 2. What is the difference between remove() and discard()? 
-# 3. Why can't sets contain mutable elements like lists? 
-# 4. What is the difference between difference() and difference_update()? 
-# 5. When should sets be used instead of lists in real-world applications? 
- 
+
+
+# 10. Use the 'extended iterable unpacking' (using *) to grab the first element and the rest into a 
+# list. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+' --- PART 2: IMMUTABILITY LOGIC --- '
+
+# 11. Write code that attempts to change the first element of a tuple and handle the resulting 
+# TypeError gracefully. 
+# 12. Given a tuple: t = (1, 2, [3, 4]). Change the value 3 to 30. Explain why this works despite 
+# tuples being immutable. 
+
+# t = (1, 2, [3, 4])
+# update = list(t)
+
+# update[2][0]= 30
+# t = tuple(update) 
+# print(t)
+
+
+# 13. Create two tuples, concatenate them, and assign them to a new variable. 
+
+# 'concatenate'
+# t = (1, 2, [3, 4])
+# t1 = (10, 200, [3.5, 4])
+
+# concatenate = t + t1
+# print(concatenate)
+
+
+# 'assign'
+# t1 = ( 10, 20, 30 )
+# t1 += ( 2004, )
+# print(t1)
+
+
+
+
+# 14. Use the repetition operator (*) to create a tuple of ten zeros. 
+
+# t = (0,) * 10
+# print(t)
+
+
+# 15. Swap two variables a and b using tuple unpacking logic in a single line. 
+# 16. Write a program to "add" an item to a tuple by converting it to a list first. 
+
+# t = (1, 2, [3, 4])
+# update = list(t)
+# update.append(2004)
+
+# t = tuple(update) 
+# print(t)
+
+
+# 17. Write a program to "remove" an item from a tuple. 
+
+
+
+# 18. Delete an entire tuple variable from memory and verify its absence using a try-except 
+# block. 
+
+# person1 = ('jasil','yaseen','shakir','Niyas')
+# del person1
+# print(person1)
+
+# 19. Sort a tuple of integers and return the result as a new tuple. 
+# 20. Reverse a tuple using the slicing method [::-1]. 
+
+# person = ('jasil','yaseen','shakir','Niyas')
+# print(person[::-1])
+
+
+' --- PART 3: METHODS & AGGREGATION --- '
+
+# 21. Find the index of the first occurrence of the number 10 in a tuple. 
+
+# t = (5, 3, 10, 7, 10, 2)
+# print(t.index(10))
+
+# 22. Count how many times the string "Python" appears in a tuple of job roles. 
+
+# job = ( 'java' , 'DevOps' ,'python' , 'dart', 'python')
+# print(job.count('python'))
+
+# 23. Find the maximum and minimum values in a tuple of stock prices. 
+# 24. Calculate the sum of all numeric elements in a tuple. 
+
+# t = (1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+# print(sum(t))
+
+# 25. Given a tuple of tuples: ((1, 2), (3, 4), (5, 6)), calculate the sum of the second element of 
+# each internal tuple. 
+
+# t = ((1, 2), (3, 4), (5, 6))
+# result = (t[0][1] + t[1][1] + t[2][1])
+# print(result)
+
+# 26. Use the index() method to find the position of 'Apple' starting from index 3 in a large fruit 
+# tuple. 
+
+# 27. Write a function that takes a tuple and returns a new tuple containing only the even 
+# numbers. 
+# 28. Convert a list of tuples into a single flat list. 
+# 29. Create a tuple from a user-input string where each character is an element. 
+# 30. Check if all elements in a tuple are truthy using the all() function.
+
+
+
+
+
+' --- PART 4: SLICING & LOOPING --- '
+
+
+
+
+
+
+
+# 31. Extract a sub-tuple containing the elements from index 2 to 5 (inclusive). 
+# 32. Use slicing to get every second element of a tuple. 
+# 33. Write a 'for' loop to print each element of a tuple with its corresponding index number. 
+# 34. Use a 'while' loop to iterate through a tuple backwards. 
+# 35. Create a tuple of 10 numbers and slice it to get the last 3 elements. 
+
+# t = ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+# print(t[7::])
+
+# 36. Slice a tuple to remove the first and last elements. 
+# 37. Use a for loop to concatenate all strings in a tuple into a single sentence. 
+# 38. Compare two tuples (1, 2, 3) and (1, 2, 4). Explain the logic of how Python compares 
+
+
+
+# them. 
+# 39. Write a program to find duplicate elements in a tuple. 
+# 40. Zip two tuples together to create a list of coordinate pairs.
+
+
+
+
+
+
+
+
