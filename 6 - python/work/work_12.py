@@ -112,15 +112,79 @@
 'Section 3 – Set Operations '
 
 # 21. Write a program to find the union of two sets. 
+
+# s1 = { 1, 2, 3, 4, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# print(s1 | s2)
+
 # 22. Write a program to find the intersection of two sets. 
+
+# s1 = { 1, 2, 3, 7, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# print(s1 & s2)
+
 # 23. Write a program to find the difference between two sets. 
+
+# s1 = { 1, 2, 3, 7, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# print(s1 - s2)
+
 # 24. Write a program to find the symmetric difference between two sets. 
+
+# s1 = { 1, 2, 3, 7, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# print(s1 ^ s2)
+
 # 25. Write a program to update a set using intersection_update(). 
+
+# s1 = { 1, 2, 3, 7, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# s2&= s1
+# print(s2)
+
 # 26. Write a program to update a set using difference_update(). 
+
+# s1 = { 1, 2, 3, 7, 5}
+# s2 = { 1, 2, 6, 7, 8}
+
+# s1.difference_update(s2)
+# print(s1)
+
 # 27. Write a program to update a set using symmetric_difference_update(). 
+
+# set1 = { 1,2,3,4,5}
+# set2 = { 4,5,6,7,8}
+
+# set1 ^= set2
+# print(set1)
+
 # 28. Write a program to check if one set is a subset of another set. 
+
+# s1 = { 1,2,3,4,5}
+
+# s2 = {1}                           
+# print(s2.issubset(s1))
+
 # 29. Write a program to check if one set is a superset of another set. 
+
+# s1 = { 1,2,3,4,5}
+
+
+# s2 = {2,1,5}                       
+# print(s1.issuperset(s2))
+
 # 30. Write a program to check if two sets are disjoint. 
+
+set1 = { 1,2,3}
+set2 = { 4,5,6}
+              
+
+print(set1.isdisjoint(set2))
  
 'Section 4 – Logical Set Problems '
 
@@ -139,26 +203,62 @@
 
 # 41. Write a program to create a set of squares from numbers 1–10 using set 
 # comprehension. 
+
+
+
 # 42. Write a program to create a set of cubes using set comprehension. 
 # 43. Write a program to create a set of even numbers from 1–20 using set comprehension. 
+
+# even_set = {x for x in range(1, 21) if x % 2 == 0}
+# print(even_set)
+
 # 44. Write a program to create a set of odd numbers using set comprehension. 
-# 45. Write a program to create a set containing lengths of words in a sentence. 
+
+# numbers = {2, 1, 3, 5, 8, 7, 6}
+
+# odd_numbers = {i for i in numbers if i % 2 != 0}
+# print(odd_numbers)
+
+# 45. Write a program to create a set containing lengths of words in a sentence.  
  
 'Section 6 – Industry Based Problems '
 
 # 46. Given two sets representing students enrolled in Python and Java, find students 
 # enrolled in both courses. 
+
+# python = { 'jasil' , 'niyas' , 'yaseen' }
+# java =  { 'niyas' , 'shakir' , 'yaseen' }
+# print(python.intersection(java))
+
 # 47. Given two sets representing users who logged in today and yesterday, find new users 
 # today. 
-# 48. Given two sets representing available skills and required job skills, find missing skills. 
+
+# today = { 'user1' , 'user2' , 'user3' , 'user5'}
+# yesterday = { 'user1' , 'user4' , 'user2' , 'user6' }
+
+# new = today - yesterday
+# print(' New users : ', new)
+
+# 48. Given two sets representing available skills and required job skills, find missing skills.  
 # 49. Create a set representing product categories in an e-commerce system and remove a 
 # category dynamically. 
 # 50. Given two datasets of email IDs, remove duplicates and print all unique email IDs. 
  
-'Bonus Interview Questions '
+'Bonus Interview Questions'
 
 # 1. Why are sets unordered in Python? 
 # 2. What is the difference between remove() and discard()? 
+
+'remove'
+# person = { 'yaseen', 'jasil', 'niyas', 'shakir'}
+# person.remove("jasil")
+# print(person)
+
+'discard()'
+# person = { 'yaseen', 'jasil', 'niyas', 'shakir'}
+# person.discard("jasil")
+# print(person)
+
 # 3. Why can't sets contain mutable elements like lists? 
 # 4. What is the difference between difference() and difference_update()? 
 # 5. When should sets be used instead of lists in real-world applications? 

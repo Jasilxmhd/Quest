@@ -12,6 +12,7 @@
 
 
 # 2. Write a script to check the type of a tuple with a single element. Show the difference 
+
 # t1 = (10, 7.2, "jasil", [10, 20, 30 ],True)
 # print(type(t1[2]))
 # print(type(t1))
@@ -83,6 +84,7 @@
 
 # 11. Write code that attempts to change the first element of a tuple and handle the resulting 
 # TypeError gracefully. 
+
 # 12. Given a tuple: t = (1, 2, [3, 4]). Change the value 3 to 30. Explain why this works despite 
 # tuples being immutable. 
 
