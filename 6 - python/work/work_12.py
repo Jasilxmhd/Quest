@@ -180,11 +180,11 @@
 
 # 30. Write a program to check if two sets are disjoint. 
 
-set1 = { 1,2,3}
-set2 = { 4,5,6}
+# set1 = { 1,2,3}
+# set2 = { 4,5,6}
               
 
-print(set1.isdisjoint(set2))
+# print(set1.isdisjoint(set2))
  
 'Section 4 – Logical Set Problems '
 
@@ -240,6 +240,14 @@ print(set1.isdisjoint(set2))
 # print(' New users : ', new)
 
 # 48. Given two sets representing available skills and required job skills, find missing skills.  
+
+available_skills = {"Python", "HTML", "CSS"}
+required_skills = {"Python", "HTML", "CSS", "JavaScript", "SQL"}
+
+missing_skills = required_skills - available_skills
+
+print("Missing skills:", missing_skills)
+
 # 49. Create a set representing product categories in an e-commerce system and remove a 
 # category dynamically. 
 # 50. Given two datasets of email IDs, remove duplicates and print all unique email IDs. 
