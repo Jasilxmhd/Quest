@@ -251,6 +251,20 @@ print("Missing skills:", missing_skills)
 # 49. Create a set representing product categories in an e-commerce system and remove a 
 # category dynamically. 
 # 50. Given two datasets of email IDs, remove duplicates and print all unique email IDs. 
+
+# Dataset 1
+emails1 = {"a@gmail.com", "b@gmail.com", "c@gmail.com"}
+
+# Dataset 2
+emails2 = {"b@gmail.com", "d@gmail.com", "e@gmail.com"}
+
+# Combine and remove duplicates
+unique_emails = emails1 | emails2
+
+# Print result
+print("Unique Email IDs:")
+for email in unique_emails:
+    print(email)
  
 'Bonus Interview Questions'
 
@@ -268,6 +282,7 @@ print("Missing skills:", missing_skills)
 # print(person)
 
 # 3. Why can't sets contain mutable elements like lists? 
+
 # 4. What is the difference between difference() and difference_update()? 
 # 5. When should sets be used instead of lists in real-world applications? 
  
