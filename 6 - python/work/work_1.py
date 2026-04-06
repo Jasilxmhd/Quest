@@ -170,6 +170,7 @@ LOGIC BUILDING TASKS
 
 
 
+
 # 25. Write a program to input a number and calculate the sum of first and last digit.
 
 # digit = int(input("Enter a 3 digit number : "))
@@ -181,7 +182,9 @@ LOGIC BUILDING TASKS
 # print("Sum = ",addition)
 
 
-num = int(input("Enter table number : "))
-limit = int(input("Enter limit : "))
-for i in range(1,limit):
-    print(f"{limit} x {num} = {limit * num }")
+# num = int(input("Enter table number : "))
+# limit = int(input("Enter limit : "))
+# for i in range(1,limit):
+#     print(f"{limit} x {num} = {limit * num }")
+
+

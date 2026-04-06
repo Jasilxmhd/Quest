@@ -189,6 +189,21 @@
 'Section 4 – Logical Set Problems '
 
 # 31. Write a program to find common elements between two lists using sets. 
+
+# Define two lists
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+# Convert lists to sets
+set1 = set(list1)
+set2 = set(list2)
+
+# Find common elements using intersection
+common_elements = set1.intersection(set2)
+
+# Print result
+print("Common elements:", common_elements)
+
 # 32. Write a program to find unique elements from two lists. 
 # 33. Write a program to find elements present in the first list but not in the second list. 
 # 34. Write a program to remove duplicates from a sentence using sets. 
@@ -199,6 +214,20 @@
 # 39. Write a program to check whether two strings contain the same characters. 
 # 40. Write a program to find common characters between two strings. 
  
+ # Define two strings
+str1 = "hello"
+str2 = "world"
+
+# Convert strings to sets
+set1 = set(str1)
+set2 = set(str2)
+
+# Find common characters
+common_chars = set1.intersection(set2)
+
+# Print result
+print("Common characters:", common_chars)
+
 'Section 5 – Set Comprehension '
 
 # 41. Write a program to create a set of squares from numbers 1–10 using set 
@@ -252,19 +281,7 @@ print("Missing skills:", missing_skills)
 # category dynamically. 
 # 50. Given two datasets of email IDs, remove duplicates and print all unique email IDs. 
 
-# Dataset 1
-emails1 = {"a@gmail.com", "b@gmail.com", "c@gmail.com"}
 
-# Dataset 2
-emails2 = {"b@gmail.com", "d@gmail.com", "e@gmail.com"}
-
-# Combine and remove duplicates
-unique_emails = emails1 | emails2
-
-# Print result
-print("Unique Email IDs:")
-for email in unique_emails:
-    print(email)
  
 'Bonus Interview Questions'
 

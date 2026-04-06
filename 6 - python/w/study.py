@@ -103,3 +103,11 @@
 # print(max(name))
 
 # print(sorted(name))
+
+
+
+
+'List'
+
+l1 = [10, 20, 30, 40, 60]
+l2 = [10, 20, 50, 40]
