@@ -191,18 +191,18 @@
 # 31. Write a program to find common elements between two lists using sets. 
 
 # Define two lists
-list1 = [1, 2, 3, 4, 5]
-list2 = [4, 5, 6, 7, 8]
+# list1 = [1, 2, 3, 4, 5]
+# list2 = [4, 5, 6, 7, 8]
 
-# Convert lists to sets
-set1 = set(list1)
-set2 = set(list2)
+# # Convert lists to sets
+# set1 = set(list1)
+# set2 = set(list2)
 
-# Find common elements using intersection
-common_elements = set1.intersection(set2)
+# # Find common elements using intersection
+# common_elements = set1.intersection(set2)
 
-# Print result
-print("Common elements:", common_elements)
+# # Print result
+# print("Common elements:", common_elements)
 
 # 32. Write a program to find unique elements from two lists. 
 # 33. Write a program to find elements present in the first list but not in the second list. 
@@ -215,20 +215,21 @@ print("Common elements:", common_elements)
 # 40. Write a program to find common characters between two strings. 
  
  # Define two strings
-str1 = "hello"
-str2 = "world"
+# str1 = "hello"
+# str2 = "world"
 
 # Convert strings to sets
-set1 = set(str1)
-set2 = set(str2)
+# set1 = set(str1)
+# set2 = set(str2)
 
 # Find common characters
-common_chars = set1.intersection(set2)
+# common_chars = set1.intersection(set2)
 
 # Print result
-print("Common characters:", common_chars)
 
-'Section 5 – Set Comprehension '
+# print("Common characters:", common_chars)
+
+# 'Section 5 – Set Comprehension '
 
 # 41. Write a program to create a set of squares from numbers 1–10 using set 
 # comprehension. 
@@ -270,12 +271,12 @@ print("Common characters:", common_chars)
 
 # 48. Given two sets representing available skills and required job skills, find missing skills.  
 
-available_skills = {"Python", "HTML", "CSS"}
-required_skills = {"Python", "HTML", "CSS", "JavaScript", "SQL"}
+# available_skills = {"Python", "HTML", "CSS"}
+# required_skills = {"Python", "HTML", "CSS", "JavaScript", "SQL"}
 
-missing_skills = required_skills - available_skills
+# missing_skills = required_skills - available_skills
 
-print("Missing skills:", missing_skills)
+# print("Missing skills:", missing_skills)
 
 # 49. Create a set representing product categories in an e-commerce system and remove a 
 # category dynamically. 
