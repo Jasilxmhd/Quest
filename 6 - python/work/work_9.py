@@ -58,6 +58,7 @@
 
 
 # • 11. Check whether a string starts with a specific substring.
+
 # • 12. Check whether a string ends with a specific substring.
 # • 13. Count the number of occurrences of a character in a string.
 # • 14. Replace a word in a string with another word.
@@ -87,6 +88,13 @@
 # print("Words:", words)
 
 # • 5. Join a list of words into a single string.
+
+words = ["Python", "is", "easy", "to", "learn"]
+
+result = " ".join(words)
+
+print("Joined string:", result)
+
 # • 6. Find the first occurrence of a substring in a string.
 # • 7. Find the last occurrence of a substring in a string.
 # • 8. Remove a prefix from a string.
@@ -111,6 +119,12 @@
 # • 7. Find the longest word in a sentence.
 # • 8. Compress a string (example: aaabb → a3b2).
 # • 9. Remove all spaces from a string.
+
+
+text = input("Enter a string: ")
+result = text.replace(" ", "")
+print("String without spaces:", result)
+
 # • 10. Convert the first letter of every word to uppercase without using title().
 # • 11. Extract digits from a string and store them separately.
 # • 12. Count the number of words in a sentence.

@@ -79,11 +79,10 @@
 
 
 
-
 # Repatition
 
 # num = [1,2,3,4,5,6,7,8,9]
-# num *= 10
+# num *= 2
 # print(num)
 
 
@@ -173,8 +172,8 @@
 # matrix = [[0,1,2],[3,4,5],[6,7,8]]
 # for s in matrix:
 #     for m in s:     
-#         print(m)
-
+#         print(m,end=' ')
+#     print()
 
 
 """append()"""      # Last index il value add cheyyaan
@@ -288,8 +287,6 @@
 
 
 
-
-
 '''Copy()'''
 # num = [1,200,3,4,5,6,7,8,9,[100,200,7]]
 # copy_list = num.copy()
@@ -322,7 +319,7 @@
 # Sort in alphabetic order 
 # name = ['my', 'name', 'is', 'jasil', 'adivaram']
 # name.sort()
-# print(name)                                             # ['adivaram', 'is', 'jasil', 'my', 'name']
+# print(name)    
 
 
 
@@ -359,8 +356,8 @@
 
 '''index()'''                                # (value,start,stop)
 # list1 = [1, 200, 9, 7, 5, 0, 3]
-# print(list1.index(200))                      # 1
-# print(list1.index(9,0,3))                    # 2
+# print(list1.index(1))                      # 0
+# print(list1.index(9,0,3))                  # 2
 
 
 
