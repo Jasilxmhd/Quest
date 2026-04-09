@@ -101,6 +101,15 @@ print("Joined string:", result)
 # • 9. Remove a suffix from a string.
 # • 10. Center align a string within a given width.
 # • 11. Left justify and right justify a string
+
+text = "Hello"
+
+left = text.ljust(10)
+right = text.rjust(10)
+
+print("Left Justified :", left)
+print("Right Justified:", right)
+
 # • 12. Pad a number string with zeros using zfill(). 
 # • 13. Use format() method in string formatting.
 # • 14. Create a formatted string using f-strings.
