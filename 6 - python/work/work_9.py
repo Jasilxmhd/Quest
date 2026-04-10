@@ -89,11 +89,11 @@
 
 # • 5. Join a list of words into a single string.
 
-words = ["Python", "is", "easy", "to", "learn"]
+# words = ["Python", "is", "easy", "to", "learn"]
 
-result = " ".join(words)
+# result = " ".join(words)
 
-print("Joined string:", result)
+# print("Joined string:", result)
 
 # • 6. Find the first occurrence of a substring in a string.
 # • 7. Find the last occurrence of a substring in a string.
@@ -102,13 +102,13 @@ print("Joined string:", result)
 # • 10. Center align a string within a given width.
 # • 11. Left justify and right justify a string
 
-text = "Hello"
+# text = "Hello"
 
-left = text.ljust(10)
-right = text.rjust(10)
+# left = text.ljust(10)
+# right = text.rjust(10)
 
-print("Left Justified :", left)
-print("Right Justified:", right)
+# print("Left Justified :", left)
+# print("Right Justified:", right)
 
 # • 12. Pad a number string with zeros using zfill(). 
 # • 13. Use format() method in string formatting.
@@ -130,9 +130,9 @@ print("Right Justified:", right)
 # • 9. Remove all spaces from a string.
 
 
-text = input("Enter a string: ")
-result = text.replace(" ", "")
-print("String without spaces:", result)
+# text = input("Enter a string: ")
+# result = text.replace(" ", "")
+# print("String without spaces:", result)
 
 # • 10. Convert the first letter of every word to uppercase without using title().
 # • 11. Extract digits from a string and store them separately.

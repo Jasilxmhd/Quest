@@ -259,8 +259,12 @@
 
 
 
-student1 = { 'Name' : 'Jasil' , 'Age' : 22 , 'rollno' : 250}
+# student1 = { 'Name' : 'Jasil' , 'Age' : 22 , 'rollno' : 250}
 
 # print(student1.keys())                      # dict_keys(['Name', 'Age', 'rollno'])
 # print(student1.values())                    # dict_values(['Jasil', 22, 250])
 # print(student1.items())                     # dict_items([('Name', 'Jasil'), ('Age', 22), ('rollno', 250)])
+
+
+
+
