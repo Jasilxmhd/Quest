@@ -5,13 +5,42 @@
 
 
 # 1. Create a dictionary representing a 'Laptop' with keys: brand, model, and price. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop)
+
 # 2. Access the value of the 'model' key using square brackets. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop['model'])
+
 # 3. Access the value of a key that doesn't exist using .get() and explain why it's safer than []. 
 # 4. Create an empty dictionary using both {} and the dict() constructor. 
 # 5. Add a new key-value pair 'processor': 'i7' to an existing dictionary. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# Laptop['processor'] = ' i7 '
+# print(Laptop)
+
 # 6. Update the 'price' of the laptop to a new value. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# Laptop['price'] = '95,000'
+# print(Laptop)
+
+
 # 7. Use the len() function to find how many key-value pairs are in a dictionary. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(len(Laptop))
+
 # 8. Create a dictionary where the keys are numbers 1 to 5 and the values are their squares. 
+
+# sqaure = {}
+# for i in range(1,6):
+#     sqaure[i] = i*i
+# print(sqaure)
+
 # 9. Check if a specific key exists in a dictionary using the 'in' operator. 
 # 10. Delete a key-value pair using the 'del' keyword and handle the case if the key is missing. --- PART 2: METHODS & MANIPULATION --- 
 # 11. Use the pop() method to remove a key and store its value in a variable. 

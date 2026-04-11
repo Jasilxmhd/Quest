@@ -107,7 +107,34 @@
 
 
 
-'List'
+# 'List'
 
-l1 = [10, 20, 30, 40, 60]
-l2 = [10, 20, 50, 40]
+# l1 = [10, 20, 30, 40, 60]
+# l2 = [10, 20, 50, 40]
+
+
+
+
+
+# for loop
+
+# print 1 to 100 
+
+# for i in range(1,101):
+#     # print(i)
+#     print(i,end=" ")
+
+
+# square 
+
+# for jasil in range(1,11):
+#     print(jasil * jasil)
+
+
+
+# for jasil in range(1,11):
+#     print('Hey')
+
+
+for i in range(1,11,2):
+    print(i)
