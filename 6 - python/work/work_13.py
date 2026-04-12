@@ -42,20 +42,78 @@
 # print(sqaure)
 
 # 9. Check if a specific key exists in a dictionary using the 'in' operator. 
-# 10. Delete a key-value pair using the 'del' keyword and handle the case if the key is missing. --- PART 2: METHODS & MANIPULATION --- 
+# 10. Delete a key-value pair using the 'del' keyword and handle the case if the key is missing.
+
+
+' --- PART 2: METHODS & MANIPULATION --- '
+
 # 11. Use the pop() method to remove a key and store its value in a variable. 
-# 12. Use popitem() to remove the last inserted item and explain its behavior in Python 3.7+. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# Laptop.pop('brands')
+# print(Laptop)
+
+# 12. Use popitem() to remove the last inserted item and explain its behavior in Python 3.7+.
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# Laptop.popitem()
+# print(Laptop)
+
+
 # 13. Use the keys() method to print all the keys in a dictionary. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop.keys())
+
+
 # 14. Use the values() method to print all the values in a dictionary. 
-# 15. Use the items() method to iterate through a dictionary and print "Key: Value" for each 
-# pair. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop.values())
+
+
+
+# 15. Use the items() method to iterate through a dictionary and print "Key: Value" for each pair. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop.items())
+
+
+ 
 # 16. Merge two dictionaries: {'a': 1, 'b': 2} and {'c': 3, 'd': 4} using the update() method. 
+
+# a = {'a': 1, 'b': 2}
+# b = {'c': 3, 'd': 4}
+
+# c = a
+# c.update(b)
+# print(c)
+
 # 17. Clear all items from a dictionary using the clear() method. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+# print(Laptop.clear())
+
 # 18. Use the setdefault() method to add a key 'country' with value 'India' only if it doesn't exist. 
+
+# Laptop = {'brands' : 'mac' , 'model' : 'M4' , 'price' : '94,990'}
+
+# result = Laptop.setdefault('country', 'India')
+# print(Laptop)
+
+
+
 # 19. Create a shallow copy of a dictionary and show that modifying the copy doesn't change 
 # the original. 
 # 20. Create a dictionary from two lists: one for keys and one for values using the zip() 
 # function. 
+
+# a = { 1 , 2 , 3 }
+# b = { 10 , 20 , 30 }
+
+# c = dict(zip(a , b))
+# print(c)
+
 # --- PART 3: NESTED DICTIONARIES (API STYLE) --- 
 # 21. Create a nested dictionary called 'Employees' containing data for three different people. 
 # 22. Access a value inside a nested dictionary (e.g., Employees['emp1']['salary']). 
