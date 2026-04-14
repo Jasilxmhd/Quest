@@ -105,8 +105,7 @@
 
 # 19. Create a shallow copy of a dictionary and show that modifying the copy doesn't change 
 # the original. 
-# 20. Create a dictionary from two lists: one for keys and one for values using the zip() 
-# function. 
+# 20. Create a dictionary from two lists: one for keys and one for values using the zip() function. 
 
 # a = { 1 , 2 , 3 }
 # b = { 10 , 20 , 30 }
@@ -114,21 +113,162 @@
 # c = dict(zip(a , b))
 # print(c)
 
-# --- PART 3: NESTED DICTIONARIES (API STYLE) --- 
+'--- PART 3: NESTED DICTIONARIES (API STYLE) --- '
+
 # 21. Create a nested dictionary called 'Employees' containing data for three different people. 
+
+# Employees = {
+#     'emp1' : {
+#         'Name'        : 'Jasil',
+#         'Age'         : 21,
+#         'Department'  : 'IT'
+
+#     },
+#     'emp2' : {
+#         'Name'        : 'Niyas',
+#         'Age'         :  20,
+#         'Department'  :  'Designing'
+
+#     },
+#     'emp3'  : {
+#         'Name'        : 'Yaseen',
+#         'Age'         : 21,
+#         'Department'  : 'Finance'
+#     }
+# }
+
+# print(Employees)
+
+
 # 22. Access a value inside a nested dictionary (e.g., Employees['emp1']['salary']). 
+
+# Employees = {
+#     'emp1' : {
+#         'Name'        : 'Jasil',
+#         'Age'         : 21,
+#         'Salary'      : '3.5 LPA',
+#         'Department'  : 'IT'
+
+#     },
+#     'emp2' : {
+#         'Name'        : 'Niyas',
+#         'Age'         :  20,
+#         'Salary'      : '4 LPA',
+#         'Department'  : 'Designing'
+
+#     },
+#     'emp3'  : {
+#         'Name'        : 'Yaseen',
+#         'Age'         : 21,
+#         'Salary'      : '5 LPA',
+#         'Department'  : 'Finance'
+#     }
+# }
+
+# print(Employees['emp1']['Salary'])
+
+
+
+
 # 23. Update a value inside a nested dictionary. 
+
+# Employees = {
+#     'emp1' : {
+#         'Name'        : 'Jasil',
+#         'Age'         : 21,
+#         'Salary'      : '3.5 LPA',
+#         'Department'  : 'IT'
+
+#     },
+#     'emp2' : {
+#         'Name'        : 'Niyas',
+#         'Age'         :  20,
+#         'Salary'      : '4 LPA',
+#         'Department'  : 'Designing'
+
+#     },
+#     'emp3'  : {
+#         'Name'        : 'Yaseen',
+#         'Age'         : 21,
+#         'Salary'      : '5 LPA',
+#         'Department'  : 'Finance'
+#     }
+# }
+
+# Employees['emp2']['Name']='Shakir'
+# print(Employees['emp2'])
+
+
 # 24. Add a new nested dictionary (a new employee) to the existing 'Employees' structure. 
-# 25. Write a loop to print only the names of all employees from the nested 'Employees' 
-# dictionary. 
+
+# Employees = {
+#     'emp1' : {
+#         'Name'        : 'Jasil',
+#         'Age'         : 21,
+#         'Salary'      : '3.5 LPA',
+#         'Department'  : 'IT'
+
+#     }
+
+# }
+
+
+
+# Employees.update(
+#     {
+#         'emp2' : {
+#             'Name' : 'Aljith',
+#             'Age'  : 21,
+#         }
+#     }
+# )
+
+# print(Employees)
+
+
+# 25. Write a loop to print only the names of all employees from the nested 'Employees' dictionary. 
+
+
+# Employees = {
+#     'emp1' : {
+#         'Name'        : 'Jasil',
+#         'Age'         : 21,
+#         'Salary'      : '3.5 LPA',
+#         'Department'  : 'IT'
+
+#     },
+#     'emp2' : {
+#         'Name'        : 'Niyas',
+#         'Age'         :  20,
+#         'Salary'      : '4 LPA',
+#         'Department'  : 'Designing'
+
+#     },
+#     'emp3'  : {
+#         'Name'        : 'Yaseen',
+#         'Age'         : 21,
+#         'Salary'      : '5 LPA',
+#         'Department'  : 'Finance'
+#     }
+# }
+
+# for emp in Employees:
+#     print(Employees[emp]['Name'])
+
+
 # 26. Create a dictionary where a key points to a list of values (e.g., 'hobbies': ['coding', 
 # 'reading']). 
 # 27. Append a new hobby to the list inside that dictionary. 
 # 28. Given a dictionary of students and their marks (a list), calculate the average marks for one 
 # student. 
 # 29. Flatten a simple nested dictionary (convert {'a': {'b': 1}} to {('a', 'b'): 1}). 
-# 30. Represent a JSON response from a weather API as a nested dictionary and extract the 
-# 'temperature'. --- PART 4: COMPREHENSIONS & LOGIC --- 
+# 30. Represent a JSON response from a weather API as a nested dictionary and extract the temperature
+
+
+
+'--- PART 4: COMPREHENSIONS & LOGIC ---'
+
+
 # 31. [Comprehension] Create a dictionary of even numbers between 1-10 as keys and their 
 # cubes as values. 
 # 32. [Comprehension] Given a dictionary, create a new one with only items where the value is 

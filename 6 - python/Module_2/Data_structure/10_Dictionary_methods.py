@@ -67,7 +67,7 @@
 
 # c = dict(zip(a,b))
 # print(c)                          # {'name': 'jasil', 'age': 22, 'place': 'Adivaram'}
-
+    
 
 
 
