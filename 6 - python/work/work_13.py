@@ -258,6 +258,15 @@
 
 # 26. Create a dictionary where a key points to a list of values (e.g., 'hobbies': ['coding', 
 # 'reading']). 
+
+person = {
+    'name': 'Jasil',
+    'age': 21,
+    'hobbies': ['coding', 'reading', 'gaming']
+}
+
+print(person)
+
 # 27. Append a new hobby to the list inside that dictionary. 
 # 28. Given a dictionary of students and their marks (a list), calculate the average marks for one 
 # student. 
