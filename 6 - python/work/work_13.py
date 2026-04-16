@@ -268,6 +268,19 @@ person = {
 print(person)
 
 # 27. Append a new hobby to the list inside that dictionary. 
+
+# Dictionary with a list
+person = {
+    'name': 'Jasil',
+    'hobbies': ['coding', 'reading']
+}
+
+# Append a new hobby
+person['hobbies'].append('gaming')
+
+# Print result
+print(person)
+
 # 28. Given a dictionary of students and their marks (a list), calculate the average marks for one 
 # student. 
 # 29. Flatten a simple nested dictionary (convert {'a': {'b': 1}} to {('a', 'b'): 1}). 
