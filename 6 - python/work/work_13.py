@@ -291,8 +291,11 @@ print(person)
 '--- PART 4: COMPREHENSIONS & LOGIC ---'
 
 
-# 31. [Comprehension] Create a dictionary of even numbers between 1-10 as keys and their 
-# cubes as values. 
+# 31. [Comprehension] Create a dictionary of even numbers between 1-10 as keys and their cubes as values.
+
+even_cubes = {x: x**3 for x in range(1, 11) if x % 2 == 0}
+print(even_cubes) 
+
 # 32. [Comprehension] Given a dictionary, create a new one with only items where the value is 
 # > 100. 
 # 33. [Comprehension] Swap keys and values in a dictionary (Reverse Mapping). 
