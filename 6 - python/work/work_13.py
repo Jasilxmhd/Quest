@@ -300,6 +300,19 @@ print(even_cubes)
 # > 100. 
 # 33. [Comprehension] Swap keys and values in a dictionary (Reverse Mapping). 
 # 34. Sort a dictionary by its keys in alphabetical order. 
+
+
+data = {
+    'banana': 3,
+    'apple': 5,
+    'cherry': 2
+}
+
+
+sorted_dict = dict(sorted(data.items()))
+
+print(sorted_dict)
+
 # 35. Sort a dictionary by its values in ascending order. 
 # 36. Find the key with the maximum value in a dictionary of product prices. 
 # 37. Count the frequency of each character in a string "Python Trainer" using a dictionary. 
