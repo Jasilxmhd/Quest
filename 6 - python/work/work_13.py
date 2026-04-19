@@ -315,7 +315,9 @@ print(sorted_dict)
 
 # 35. Sort a dictionary by its values in ascending order. 
 # 36. Find the key with the maximum value in a dictionary of product prices. 
+
 # 37. Count the frequency of each character in a string "Python Trainer" using a dictionary. 
+
 # 38. Combine two dictionaries by adding values for common keys. 
 # 39. Convert a dictionary into a list of tuples. 
 # 40. Check if all values in a dictionary are the same. --- PART 5: INDUSTRIAL & INTERVIEW SCENARIOS --- 
