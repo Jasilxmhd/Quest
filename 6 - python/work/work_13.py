@@ -324,6 +324,8 @@ print(sorted_dict)
 # 41. [JSON] Use the 'json' module to convert a dictionary into a JSON string. 
 # 42. [Data Cleaning] Remove all keys from a dictionary that have None or empty string 
 # values. 
+
+
 # 43. [Security] Explain why a list cannot be used as a dictionary key, but a tuple can. 
 # 44. [Logic] Write a program to find the sum of all values in a numeric dictionary. 
 # 45. [Simulation] Use a dictionary to simulate a simple "Switch-Case" statement logic. 
