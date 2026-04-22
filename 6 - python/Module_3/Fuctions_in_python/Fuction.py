@@ -137,4 +137,4 @@ def details(name : str , age : int , phone : list) -> str :
     return name,age,phone
 
 result = details('Jasil',21,[9746827950])
-print(result)
+print(result)   

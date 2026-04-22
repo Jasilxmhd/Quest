@@ -136,5 +136,42 @@
 #     print('Hey')
 
 
-for i in range(1,11,2):
-    print(i)
+# for i in range(1,11,2):
+#     print(i)
+
+
+
+
+
+
+
+
+
+
+# function 
+
+# def jasil():
+#     print("Hey good morning..")
+
+# jasil()
+
+
+
+
+
+
+
+
+
+# voting
+
+def vote(age : int) -> int:
+
+    """This fuction Check to eligibile or Not for Voting"""
+    
+    if age > 18 :
+        print("You are eligible for voting")
+    else:
+        print("You are not eligibile for voting")
+
+Result = vote(19)

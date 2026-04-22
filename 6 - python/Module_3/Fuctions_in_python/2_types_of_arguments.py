@@ -45,7 +45,89 @@
 
 '3 Deafult Argument'
 
-def add(a , b , c = 2 ):
-    return a+b+c
+# def add(a , b , c = 2 ):
+#     return a+b+c
 
-print(add(5,5))
+# print(add(5,5))
+
+
+
+
+
+
+
+
+
+'4. Arbitary argument'
+ 
+# def add(*args):
+
+#     total = 0
+#     for i in args:
+#         total += i
+#     return total
+
+# print(add(10,30,50,))
+
+
+
+
+
+
+
+
+
+'4. Arbitary Keyword argument'
+
+# def details(**kwargs):
+#     print(kwargs)
+
+# details(name = 'jasil' , age = 21)
+# details(name = 'jasil' , age = 21 , place = "calicut")
+# details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'Access Arbitary Keyword argument'
+
+
+
+# def details(**kwargs):
+#     for k,v in kwargs.items():
+#         print(k,v)
+
+# details(name = 'jasil' , age = 21)
+# details(name = 'jasil' , age = 21 , place = "calicut")
+# details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
+
+
+
+
+
+
+
+
+
+
+
+
+def even(*args):
+    for i in args:
+        if i % 2==0:
+            print(i)
+
+even(1,2,3,4,5,6,7,8,9,10)
