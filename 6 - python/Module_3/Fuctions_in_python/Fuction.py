@@ -132,9 +132,13 @@
 
 
 
-def details(name : str , age : int , phone : list) -> str :
-    """Get details fro user """
-    return name,age,phone
+# def details(name : str , age : int , phone : list) -> str :
+#     """Get details fro user """
+#     return name,age,phone
 
-result = details('Jasil',21,[9746827950])
-print(result)   
+# result = details('Jasil',21,[9746827950])
+# print(result)   
+
+
+
+

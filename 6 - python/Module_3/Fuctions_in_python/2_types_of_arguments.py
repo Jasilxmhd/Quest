@@ -125,9 +125,62 @@
 
 
 
-def even(*args):
-    for i in args:
-        if i % 2==0:
-            print(i)
+# def even(*args):
+#     for i in args:
+#         if i % 2==0:
+#             print(i)
 
-even(1,2,3,4,5,6,7,8,9,10)
+# even(1,2,3,4,5,6,7,8,9,10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# x = 20
+# def modify():
+#     global x
+#     print(x)
+#     x = 250
+
+# modify()
+# print(x)
+
+
+
+
+
+
+
+
+
+# Recursion
+
+# def fact(n):
+#     if n ==0:
+#         return 1
+#     return n* fact(n - 1)
+
+# print(fact(5))
+
+
+
+
+
+
+
+'Stirng reverse'
+
+def reverse(s):
+    if len(s) == 0:
+        return s
+    return reverse(s[1 : ]) + s [0]
+
+print(reverse("Jasil Adivaram"))
