@@ -171,3 +171,11 @@ def number(num):
 # 5 Build a small text-based calculator app using reusable functions.
 # Tip for Students: Try solving each question first without looking at old code. Focus on function design, input
 # handling, return values, and clean logic.
+
+
+
+
+
+
+
+
