@@ -165,13 +165,13 @@
 
 # voting
 
-def vote(age : int) -> int:
+# def vote(age : int) -> int:
 
-    """This fuction Check to eligibile or Not for Voting"""
+#     """This fuction Check to eligibile or Not for Voting"""
     
-    if age > 18 :
-        print("You are eligible for voting")
-    else:
-        print("You are not eligibile for voting")
+#     if age > 18 :
+#         print("You are eligible for voting")
+#     else:
+#         print("You are not eligibile for voting")
 
-Result = vote(19)
+# Result = vote(19)

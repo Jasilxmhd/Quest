@@ -48,31 +48,82 @@
 
 # 7 Write a function check_positive(num) to check whether a number is positive, negative, or zero.
 
-def number(num):
-    if num > 0 :
-        print('number is positive')
-    elif num == 0:
-        print("number is Zero")
-    elif num < 0 :
-        print('number is neg')
+# def number(num):
+#     if num > 0 :
+#         print('number is positive')
+#     elif num == 0:
+#         print("number is Zero")
+#     else:
+#         print('number is negative')
+
+# num = int(input("enter a number : "))
+# number(num)
+
 # 8 Write a function multiply(a, b) and call it using user input.
+
+# def multi(a, b):
+#     return a * b
+
+# a = int(input("Enter a first number : "))
+# b = int(input("Enter a second number : "))
+# print(multi(a, b))
+
 # 9 Write a function full_name(first, last) that returns the full name.
+
+# def full_name(first,last):
+#     return first + last
+
+# first = str(input("Enter your first name : "))
+# last = str(input("Enter your last name : "))
+
+# print(full_name(first,last))
+
 # 10 Write a function calculate_area(length, width) to return the area of a rectangle.
+
+# def rectangle_area(length,width):
+#     return length * width
+
+# length = float(input("Enter a length : "))
+# width = float(input("Enter a width : "))
+
+# print(rectangle_area(length,width))
+
+
 
 'Section B – Functions with Return Values'
 
 # 1 Write a function to return the cube of a number.
+
+# def number(cube):
+#     return cube ** 3
+
+# cube = float(input("Enter a number : "))
+# print(number(cube))
+
 # 2 Write a function to return the reverse of a string.
+
+# def reverse(name):
+#     if len(name) == 0:
+#         return name
+#     return reverse(name[1 : ]) + name [0]
+
+# name = str(input("Enter a string : "))
+# print(reverse(name))
+
+
+
 # 3 Write a function to count the number of vowels in a given string.
 # 4 Write a function to return the factorial of a number.
+
 # 5 Write a function to return the sum of digits of a number.
+
 # 6 Write a function to return the smallest element in a list.
 # 7 Write a function to return the second largest number in a list.
 # 8 Write a function to return the number of words in a sentence.
 # 9 Write a function to return True if a number is a palindrome, otherwise False.
 # 10 Write a function to return the common elements from two lists.
 
-'# Section C – Arguments Practice'
+# ' Section C – Arguments Practice'
 
 # 1 Write a function student_info(name, age, course) and call it using positional arguments.
 # 2 Write the same function and call it using keyword arguments.
@@ -171,11 +222,3 @@ def number(num):
 # 5 Build a small text-based calculator app using reusable functions.
 # Tip for Students: Try solving each question first without looking at old code. Focus on function design, input
 # handling, return values, and clean logic.
-
-
-
-
-
-
-
-
