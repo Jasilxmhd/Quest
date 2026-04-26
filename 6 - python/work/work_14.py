@@ -118,7 +118,19 @@
 # 5 Write a function to return the sum of digits of a number.
 
 # 6 Write a function to return the smallest element in a list.
+
+# def small(element):
+#     return min(element)
+
+# print(small([10,20,3]))
+
 # 7 Write a function to return the second largest number in a list.
+
+# def large(element):
+#     return max(element)
+
+# print(large([10,20,3]))
+
 # 8 Write a function to return the number of words in a sentence.
 # 9 Write a function to return True if a number is a palindrome, otherwise False.
 # 10 Write a function to return the common elements from two lists.
@@ -126,10 +138,31 @@
 # ' Section C – Arguments Practice'
 
 # 1 Write a function student_info(name, age, course) and call it using positional arguments.
+
+# def details(name : str , age : int , course : str ) -> str :
+#     return name,age,course
+
+# result = details(name= " Jasil" , age= 21 , course= "Python Full Stack With Gen Ai")
+# print(result)
+
 # 2 Write the same function and call it using keyword arguments.
+
+# def details(name : str , age : int , course : str ) -> str :
+#     print(name)
+#     print(age)
+#     print(course)
+
+# result = details(name= "Jasil" , age= 21 , course= "Python Full Stack With Gen Ai")
+
 # 3 Write a function power(base, exp=2) that returns the power of a number using a default argument.
 # 4 Write a function discount(price, percent=10) to calculate discounted price.
 # 5 Write a function introduce(name, city='Kochi') and test it with and without the city argument.
+
+# def introduce(name):
+#     print(f"{name} City = kochi")
+
+# introduce("Jasil")
+
 # 6 Write a function that accepts any number of values using *args and returns their sum.
 # 7 Write a function that accepts any number of values using *args and returns the largest one.
 # 8 Write a function that accepts user details using **kwargs and prints each key-value pair.
