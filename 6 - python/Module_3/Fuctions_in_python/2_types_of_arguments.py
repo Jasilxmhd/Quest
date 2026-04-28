@@ -60,14 +60,14 @@
 
 '4. Arbitary argument'
  
-# def add(*args):
+def add(*args):
 
-#     total = 0
-#     for i in args:
-#         total += i
-#     return total
+    total = 0
+    for i in args:
+        total += i
+    return total
 
-# print(add(10,30,50,))
+print(add(10,30,50,))
 
 
 
@@ -79,12 +79,12 @@
 
 '4. Arbitary Keyword argument'
 
-# def details(**kwargs):
-#     print(kwargs)
+    # def details(**kwargs):
+    #     print(kwargs)
 
-# details(name = 'jasil' , age = 21)
-# details(name = 'jasil' , age = 21 , place = "calicut")
-# details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
+    # details(name = 'jasil' , age = 21)
+    # details(name = 'jasil' , age = 21 , place = "calicut")
+    # details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
 
 
 

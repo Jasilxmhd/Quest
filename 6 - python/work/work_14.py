@@ -164,9 +164,36 @@
 # introduce("Jasil")
 
 # 6 Write a function that accepts any number of values using *args and returns their sum.
+
+# def add(*args):
+#     total = 0
+#     for i in args:
+#         total += i
+#     return total
+
+# print(add(10,100,1))
+
+
 # 7 Write a function that accepts any number of values using *args and returns the largest one.
+
 # 8 Write a function that accepts user details using **kwargs and prints each key-value pair.
+
+# def details(**kwargs):
+#     print(kwargs)
+
+# details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
+
 # 9 Write a function bill(item, quantity, price) and calculate total bill.
+
+# def bill(item,quantity,price):
+#     total = quantity * price
+#     print('Item :' , item)
+#     print('Quantity :' , quantity)
+#     print('Price :' , price)
+#     print('Total Ammount : ', total)
+
+# bill('Pen',10,5)
+
 # 10 Write a function marks_total(*marks) that returns total and average marks.
 
 '# Section D – String-Based Function Problems'

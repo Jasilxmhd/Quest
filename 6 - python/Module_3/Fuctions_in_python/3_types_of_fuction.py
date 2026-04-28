@@ -315,9 +315,9 @@
 
 
 
-number = [3, 6, 5, 8, 9, 12, 13, 9, 15]
+# number = [3, 6, 5, 8, 9, 12, 13, 9, 15]
 
-result = list(map(lambda x: x ** 3, filter(lambda y: y % 3 == 0, number)))
-print(result)                                                                    # [27, 216, 729, 1728, 729, 3375]
+# result = list(map(lambda x: x ** 3, filter(lambda y: y % 3 == 0, number)))
+# print(result)                                                                    # [27, 216, 729, 1728, 729, 3375]
 
 
