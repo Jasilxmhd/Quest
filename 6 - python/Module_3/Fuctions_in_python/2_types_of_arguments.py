@@ -60,14 +60,14 @@
 
 '4. Arbitary argument'
  
-def add(*args):
+# def add(*args):
 
-    total = 0
-    for i in args:
-        total += i
-    return total
+#     total = 0
+#     for i in args:
+#         total += i
+#     return total
 
-print(add(10,30,50,))
+# print(add(10,30,50,))
 
 
 

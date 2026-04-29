@@ -158,7 +158,7 @@
 
 # ```
 # x = lambda a: a + 5
-# print(x(10))
+# print(x(10))         # 15
 # ```
 
 # 47. What is the output of the following?
@@ -166,7 +166,7 @@
 # ```
 # x = lambda a, b: a if a > b else b
 # print(x(7, 12))
-# ```
+# ``` 
 
 # 48. What is the output of the following?
 
