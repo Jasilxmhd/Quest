@@ -204,13 +204,38 @@
 #     - username should not be empty
 #     - password length should be at least 8
 
-def validate_login(username, password):
-    if username >
+# def validate_login(username,password):
+#     if not username:
+#         return "username should not be empty"
+#     if len(password) < 8 :
+#         return "password length should be at least 8"
+#     return "Login successful"
+
+# print(validate_login('jasil','12345678'))
 
 
 # 47. Write a function `is_eligible_for_vote(age)`.
 
+# def is_eligible_for_vote(age):
+#     if age >= 18 :
+#         return "You are eligibile for voting"
+#     else:
+#         return "You are not eligibile for voting"
+
+# print(is_eligible_for_vote(17))
+
+
 # 48. Write a function `is_eligible_for_job(age, degree_completed)`.
+
+# def is_eligible_for_job(age, degree_completed):
+#     if age >= 18 and degree_completed:
+#         return "Eligible for job"
+#     else:
+#         return "Not Eligible for job"
+
+# print(is_eligible_for_job(18,True))
+# print(is_eligible_for_job(18,False))
+
 
 # 49. Write a function `calculate_overtime(hours_worked)`.
 
@@ -218,6 +243,14 @@ def validate_login(username, password):
 
 # 51. Write a function `check_coupon_valid(amount)`:
 #     Apply coupon only if amount >= 1000.
+
+# def check_coupon_valid(amount):
+#     if amount >= 1000:
+#         return f'Your ammount is : {amount-1000}'
+#     else:
+#         return f'Your ammount is : {amount}'
+
+# print(check_coupon_valid(1100))
 
 # 52. Write a function `calculate_mobile_bill(call_minutes, sms_count, data_used)`.
 
@@ -235,6 +268,12 @@ def validate_login(username, password):
 # 56. Write a function `email_validator(email)` using simple conditions.
 
 # 57. Write a function `generate_username(first_name, last_name)`.
+
+# def generate_username(first_name, last_name):
+#     username = (first_name + last_name).lower()
+#     return username
+ 
+# print(generate_username("Jasil","Muh"))
 
 # 58. Write a function `otp_generator(length)` using digits only.
 
