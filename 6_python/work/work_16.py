@@ -505,6 +505,18 @@
 
 # 144. Use `filter()` to get emails containing "@gmail.com".
 
+# emails = [
+#     'jasilmuhammed25@gmail.com',
+#     'yaseen256@yaho.com',
+#     'shakir456@gmail.com',
+#     'niyas123@yahoo.com',
+#     'aflah@apple.com'
+#     ]
+
+# result = list(filter(lambda x: any(x.endswith(d) for d in ['gmail.com']),emails))
+
+# print(result)
+
 # 145. Use `filter()` to get strings that start with a vowel.
 
 # 146. Use `filter()` to get positive numbers only.
