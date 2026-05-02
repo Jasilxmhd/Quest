@@ -122,7 +122,11 @@ with open("student.txt",'r+')as f:
 
 
 # Create a file marks.txt, write marks, then read and calculate total.
+
 # Create a file and update its first line using r+.
 # Read a file and duplicate its content into another file.
 # Write a program to demonstrate all three modes (r, w, r+) in one program.
+
+
+
 
