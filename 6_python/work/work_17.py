@@ -7,18 +7,57 @@
 
 
 # Write a program to read the first 10 characters from a file.
+
+# Open the file in read mode
+# with open('sam.txt', "r") as f:
+#     data = f.read(10)
+#     print("First 10 characters:", data)
+
 # Write a program to print all lines using a loop.
+
+# with open('sam.txt','r') as f:
+#     for i in f:
+#         print(i)
+
 # Write a program to count total characters in a file.
+
+# with open('sam.txt',"r")as f:
+#     data = f.read()
+#     count = len(data)
+#     print(f"count = {count}")
+    
 # Write a program to count total lines in a file.
 # Write a program to display only the first line of a file.
+
+# with open('sam.txt',"r")as f:
+#     first = f.readline()
+#     print(f"First Line = {first}")
+
 # Write a program to display the last line of a file.
+
+# with open('sam.txt',"r")as f:
+#     first = f.readlines()
+#     # print(f"First Line = {first[-1]}")
+
+
 # Write a program to read a file and print it in uppercase.
+
+# with open('sam.txt','r')as f:
+#     data = f.read()
+#     upper = data.upper()
+#     print(upper)
+
 # Write a program to read a file and count number of words.
 # Write a program to check what happens if file does not exist in r mode.
 # Write a program to read a file using with statement.
 # Write a program to check if file is closed after reading.
 # Write a program to print alternate lines from a file.
 # Write a program to read file content and reverse it.
+
+# with open('sam.txt','r')as f:
+#     data = f.read()
+#     reverse_data = data[: : -1]
+#     print(reverse_data)
 
 '🔹 Section B: Writing Files (w mode)'
 
