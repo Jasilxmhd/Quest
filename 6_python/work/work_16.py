@@ -3,12 +3,16 @@
 # Level: Beginner to Intermediate
 # Topics Covered Based On Your Functions Module
 
-# ============================================================
-# SECTION A - BASIC FUNCTION BUILDING
-# ============================================================
+"""============================================================
+SECTION A - BASIC FUNCTION BUILDING
+============================================================"""
 
-# 1. Write a function `company_welcome()` that prints:
-#    "Welcome to Python Full Stack Lab"
+# 1. Write a function `company_welcome()` that prints: "Welcome to Python Full Stack Lab"
+
+# def company_welcome():
+#     return "Welcome to Python Full Stack Lab"
+
+# print(company_welcome())
 
 # 2. Write a function `display_course_name()` and call it 3 times.
 
@@ -19,29 +23,97 @@
 
 # 5. Write a function `add_two_numbers(a, b)` that returns the sum.
 
+# def add_two_numbers(a, b):
+#     return a+b
+
+# print(add_two_numbers(10,20))
+
 # 6. Write a function `multiply_three_numbers(a, b, c)` that returns the result.
+
+# def multiply_three_numbers(a, b, c):
+#     return a*b*c
+
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# c = int(input("Enter third number: "))
+
+# print("Result:", multiply_three_numbers(a, b, c))
+
 
 # 7. Write a function `is_even(num)` that returns True if the number is even, otherwise False.
 
 # 8. Write a function `find_square(n)` that returns the square of a number.
 
+# def find_square(n):
+#     return n**2
+
+# n = float(input("Enter a number : "))
+# print("Square : ",find_square(n))
+
+
 # 9. Write a function `find_cube(n)` that returns the cube of a number.
+
+# def find_cube(n):
+#     return n**3
+
+# n = float(input("Enter a number : "))
+# print("cube : ",find_cube(n))
+
 
 # 10. Write a function `full_name(first_name, last_name)` that returns the full name.
 
+# def full_name(first_name, last_name):
+#     return first_name + last_name
+
+# first_name = str(input("Enter a first Name : "))
+# last_name = str(input("Enter a last Name : "))
+
+# print(full_name(first_name, last_name))
+
+
 # 11. Write a function `calculate_discount(price, discount_percent)` that returns the final price.
+
+# def calculate_discount(price, discount_percent):
+#     discount = ( price * discount_percent) / 100 
+#     return price - discount
+
+# price = float(input("Enter a price : "))
+# discount_percent = float(input("Enter a percent : "))
+
+# print("Final Price : ",calculate_discount(price,discount_percent))
+
 
 # 12. Write a function `fahrenheit_to_celsius(temp)` that returns the Celsius value.
 
 # 13. Write a function `calculate_area_of_rectangle(length, width)`.
 
+# def calculate_area_of_rectangle(length, width):
+#     return length * width
+
+# length = float(input("Enter a length : "))
+# width = float(input("Enter a width : "))
+
+# print("Area of Rectangle : ",calculate_area_of_rectangle(length,width))
+
 # 14. Write a function `calculate_simple_interest(p, r, t)`.
 
 # 15. Write a function `generate_email(username, domain)` that returns a professional email ID.
 
-# ============================================================
-# SECTION B - FUNCTION CALLING + RETURN VS PRINT
-# ============================================================
+
+
+# def generate_email(username, domain):
+#     return f"{username}@{domain}"
+
+# username = str(input("Enter your username : "))
+# domain = str(input("Enter a domain (eg:- gmail.com) : "))
+# print("Enail :",generate_email(username,domain))
+
+
+
+"""============================================================
+SECTION B - FUNCTION CALLING + RETURN VS PRINT
+============================================================"""
+
 
 # 16. Write one function using `print()` and another using `return()` for adding two numbers.
 #     Compare the outputs.
@@ -63,9 +135,9 @@
 
 # 23. Rewrite the previous question using return so the output can be reused elsewhere.
 
-# ============================================================
-# SECTION C - FUNCTION ARGUMENTS
-# ============================================================
+"""============================================================
+SECTION C - FUNCTION ARGUMENTS
+============================================================"""
 
 # 24. Write a function `employee_details(name, age, department)` using positional arguments.
 
@@ -88,9 +160,9 @@
 
 # 33. Write a function `attendance_status(name, status="Present")`.
 
-# ============================================================
-# SECTION D - *args AND **kwargs
-# ============================================================
+"""============================================================
+SECTION D - *args AND **kwargs
+============================================================"""
 
 # 34. Write a function `sum_all(*numbers)` that returns the sum of all given numbers.
 
@@ -196,9 +268,9 @@
 # invoice('Ahammadhul Kabeer','Pen','Notebook','Bag',date = "29-04-26",payment = 'upi')
 
 
-# ============================================================
-# SECTION E - REAL-WORLD LOGIC BUILDING FUNCTIONS
-# ============================================================
+"""============================================================
+SECTION E - REAL-WORLD LOGIC BUILDING FUNCTIONS
+============================================================"""
 
 # 46. Write a function `validate_login(username, password)` that checks:
 #     - username should not be empty
@@ -282,9 +354,9 @@
 
 # 60. Write a function `masked_email(email)`.
 
-# ============================================================
-# SECTION F - TYPE HINTING PRACTICALS
-# ============================================================
+"""============================================================
+SECTION F - TYPE HINTING PRACTICALS
+============================================================"""
 
 # 61. Write a function with type hints:
 #     `def add(a: int, b: int) -> int`
@@ -307,9 +379,9 @@
 
 # 70. Write a function `calculate_total(prices: list[float]) -> float`
 
-# ============================================================
-# SECTION G - BUILT-IN VS USER-DEFINED FUNCTIONS
-# ============================================================
+"""============================================================
+SECTION G - BUILT-IN VS USER-DEFINED FUNCTIONS
+============================================================"""
 
 # 71. Write a program using built-in functions:
 #     len(), max(), min(), sum(), type()
@@ -324,9 +396,9 @@
 
 # 76. Write a custom function `my_abs(num)` without using `abs()`.
 
-# ============================================================
-# SECTION H - SCOPE (LOCAL / GLOBAL / LEGB)
-# ============================================================
+"""============================================================
+SECTION H - SCOPE (LOCAL / GLOBAL / LEGB)
+============================================================"""
 
 # 77. Create a global variable `company_name` and print it inside a function.
 
@@ -343,9 +415,9 @@
 
 # 83. Write a program to demonstrate LEGB rule clearly.
 
-# ============================================================
-# SECTION I - NESTED FUNCTIONS + CLOSURES
-# ============================================================
+"""============================================================
+SECTION I - NESTED FUNCTIONS + CLOSURES
+============================================================"""
 
 # 84. Write a nested function where inner function prints outer variable.
 
@@ -366,9 +438,9 @@
 #     square = power_of(2)
 #     cube = power_of(3)
 
-# ============================================================
-# SECTION J - MULTIPLE RETURN VALUES
-# ============================================================
+"""============================================================
+SECTION J - MULTIPLE RETURN VALUES
+============================================================"""
 
 # 91. Write a function that returns sum and product of two numbers.
 
@@ -382,9 +454,9 @@
 
 # 96. Write a function that returns monthly EMI and total payable amount.
 
-# ============================================================
-# SECTION K - PASS BY OBJECT REFERENCE / MUTABLE / IMMUTABLE
-# ============================================================
+"""============================================================
+SECTION K - PASS BY OBJECT REFERENCE / MUTABLE / IMMUTABLE
+============================================================"""
 
 # 97. Pass an integer to a function and try changing it inside.
 #     Check whether original changes.
@@ -404,9 +476,9 @@
 
 # 104. Write a function that accepts a dictionary of student marks and adds a new subject.
 
-# ============================================================
-# SECTION L - RECURSION
-# ============================================================
+"""============================================================
+SECTION L - RECURSION
+============================================================"""
 
 # 105. Write a recursive function to print numbers from 1 to n.
 
@@ -430,9 +502,9 @@
 
 # 115. Write a recursive function to search an element in a list.
 
-# ============================================================
-# SECTION M - LAMBDA FUNCTIONS
-# ============================================================
+"""============================================================
+SECTION M - LAMBDA FUNCTIONS
+============================================================"""
 
 # 116. Write a lambda function to square a number.
 
@@ -451,9 +523,9 @@
 
 # 123. Write a lambda function to convert Celsius to Fahrenheit.
 
-# ============================================================
-# SECTION N - HIGHER ORDER FUNCTIONS
-# ============================================================
+"""============================================================
+SECTION N - HIGHER ORDER FUNCTIONS
+============================================================"""
 
 # 124. Write a function `apply_operation(func, value)` and pass different functions to it.
 
@@ -465,9 +537,9 @@
 
 # 128. Write a function `process_data(func, data)`.
 
-# ============================================================
-# SECTION O - map() PRACTICALS
-# ============================================================
+"""============================================================
+SECTION O - map() PRACTICALS
+============================================================"""
 
 # 129. Use `map()` to convert a list of temperatures from Celsius to Fahrenheit.
 
@@ -487,9 +559,9 @@
 
 # 137. Use `map()` to convert a list of strings into integers.
 
-# ============================================================
-# SECTION P - filter() PRACTICALS
-# ============================================================
+"""============================================================
+SECTION P - filter() PRACTICALS
+============================================================"""
 
 # 138. Use `filter()` to get only even numbers from a list.
 
@@ -521,9 +593,9 @@
 
 # 146. Use `filter()` to get positive numbers only.
 
-# ============================================================
-# SECTION Q - reduce() PRACTICALS
-# ============================================================
+"""============================================================
+SECTION Q - reduce() PRACTICALS
+============================================================"""
 
 # 147. Use `reduce()` to find sum of a list.
 
@@ -539,9 +611,9 @@
 
 # 153. Use `reduce()` to merge a list of dictionaries.
 
-# ============================================================
-# SECTION R - DECORATORS
-# ============================================================
+"""============================================================
+SECTION R - DECORATORS
+============================================================"""
 
 # 154. Create a decorator that prints:
 #     "Function started" before execution.
@@ -565,9 +637,9 @@
 
 # 163. Create a decorator that validates if all arguments are positive numbers.
 
-# ============================================================
-# SECTION S - DOCSTRINGS
-# ============================================================
+"""============================================================
+SECTION S - DOCSTRINGS
+============================================================"""
 
 # 164. Write docstrings for a function `add(a, b)`.
 
@@ -585,9 +657,9 @@
 
 # 171. Use `help()` on a user-defined function.
 
-# ============================================================
-# SECTION T - MINI INDUSTRY-STYLE FUNCTION TASKS
-# ============================================================
+"""============================================================
+SECTION T - MINI INDUSTRY-STYLE FUNCTION TASKS
+============================================================"""
 
 # 172. Build a function-based Student Result System:
 #     - calculate total
@@ -637,9 +709,9 @@
 
 # 185. Build a function-based Employee ID Generator.
 
-# ============================================================
-# SECTION U - INTERVIEW-FOCUSED THINKING QUESTIONS
-# ============================================================
+"""============================================================
+SECTION U - INTERVIEW-FOCUSED THINKING QUESTIONS
+============================================================"""
 
 # 186. What is the difference between parameter and argument?
 #     Demonstrate using code.
@@ -674,9 +746,9 @@
 # 200. Write one complete answer:
 #     "How functions help build clean, reusable, and scalable code."
 
-# ============================================================
-# BONUS CHALLENGE LABS (VERY IMPORTANT FOR INTERVIEWS)
-# ============================================================
+"""============================================================
+BONUS CHALLENGE LABS (VERY IMPORTANT FOR INTERVIEWS)
+============================================================"""
 
 # 201. Build a menu-driven calculator using functions only.
 
@@ -711,9 +783,9 @@
 
 # 210. Build a mini "invoice engine" using multiple return values and reusable functions.
 
-# ============================================================
-# TRAINER NOTE
-# ============================================================
+"""============================================================
+TRAINER NOTE
+============================================================"""
 
 # Recommended Lab Flow for Students:
 # - Level 1: Questions 1 to 40
