@@ -70,3 +70,71 @@
 #     f2.seek(0)
 #     f2.write("jasil")
 
+
+
+
+
+
+
+# with open("sample.txt","a+")as f:
+#     print(f.tell())
+#     f.seek(0)
+#     data = f.readlines()
+#     print(data)
+
+# data[0]= "kabeer"
+# print(data)
+
+# with open("write_sample.txt","w+")as file:
+#     file.writelines(data)
+
+
+
+
+
+
+
+
+
+'append ( a )'
+# Last ileek append aavum
+
+# with open("sample.txt",'a') as f :
+#     f.write("\njasil Parakkottu Valathu")
+
+
+
+
+
+
+
+
+
+# with open("sample.txt",'a') as f :
+#     f.write("\njasil Parakkottu Valathu")
+#     f.write("\nAdivaram")
+#     f.write("\nKaithapoyil")
+#     f.write("\nPuthuppadi")
+#     f.write("\nEngapuzha")
+#     f.write("\nThamarassery")
+#     f.write("\nKoduvallu")
+
+
+
+
+
+'r +   ( Read + Write )'
+
+# with open('sample.txt','r+')as f :
+#     print(f.read())
+#     f.write("\nPadanilam")
+    
+
+
+
+
+
+
+'w +   ( write + Read )'
+with open('sample.txt','w+')as f:
+    f.write('\nBattery')  
