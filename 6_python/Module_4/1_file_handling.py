@@ -136,5 +136,6 @@
 
 
 'w +   ( write + Read )'
-with open('sample.txt','w+')as f:
-    f.write('\nBattery')  
+
+# with open('sample.txt','w+')as f:
+#     f.write('\nBattery')  
