@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRACKiT</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-mode">
+
+  <!-- NAV BAR -->
+  <nav>
+    <div class="logo">
+      <i class="fa-solid fa-route" aria-label="Company logo"></i>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="nav-icons">
+      <a href="wishlist.html" class="fav-nav-icon" aria-label="Favorites">
+        <i class="fa-regular fa-heart"></i>
+        <span id="favCount">0</span>
+      </a>
+
+      <a href="cart.html" class="cart-icon" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartCount">0</span>
+      </a>
+
+      <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+<div class="search-bar">
+  <input type="text" placeholder="What are you looking for ?" aria-label="Search products">
+<button id="searchBtn" aria-label="Search">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+</div>
+
+  <!-- CATEGORY + BANNER -->
+  <section class="hero-wrap">
+
+    <!-- CATEGORY CARDS -->
+    <div class="category-bar">
+      <div class="category-card active"><img src="./pic/adidas.avif" alt="All"></div>
+      <div class="category-card"><img src="./pic/nike__1_.png" alt="Phone"></div>
+      <div class="category-card"><img src="./pic/adida.avif" alt="Watch"></div>
+      <div class="category-card"><img src="./pic/puma.png" alt="Headphone"></div>
+    </div>
+
+    <!-- ✅ FIXED BANNER SLIDER -->
+    <section class="banner-slider">
+      <div class="slides">
+        <div class="slide active"><img src="./pic/BANN.png" alt="Banner 1"></div>
+        <div class="slide"><img src="./pic/banner-2.png" alt="Banner 2"></div>
+        <div class="slide"><img src="./pic/banner-5.png" alt="Banner 3"></div>
+        <div class="slide"><img src="./pic/banner-4.png" alt="Banner 4"></div>
+        <div class="slide"><img src="./pic/banner-3.png" alt="Banner 5"></div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- PRODUCTS -->
+  <main>
+
+    <div class="product-card" data-type="watch">
+      <img src="./pic/GMT-MASTER_11.png" alt="Watch" class="product-img">
+      <h3 class="product-title">GMT-Master II</h3>
+      <p class="product-price">$56,300</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="headphone">
+      <img src="./pic/WH1000XM6.png" alt="Headphones" class="product-img">
+      <h3 class="product-title">WH-1000XM6</h3>
+      <p class="product-price">$554.04</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="glasses">
+      <img src="./pic/RAY-BAN.png" alt="Glasses" class="product-img">
+      <h3 class="product-title">Ray-Ban | Meta Wayfarer</h3>
+      <p class="product-price">$353.71</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="shoes">
+      <img src="./pic/evaa.png" alt="Shoes" class="product-img">
+      <h3 class="product-title">Arizona Essentials EVA</h3>
+      <p class="product-price">$62.457</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="clothes">
+      <img src="./pic/Lacoste.png" alt="Shirt" class="product-img">
+      <h3 class="product-title">Lacoste - Long Sleeves</h3>
+      <p class="product-price">$58.02</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="bag">
+      <img src="./pic/bag.png" alt="Bag" class="product-img">
+      <h3 class="product-title">Shoulder Bag</h3>
+      <p class="product-price">$106.04</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="pants">
+      <img src="./pic/jack&jones.png" alt="Pants" class="product-img">
+      <h3 class="product-title">CLIFF BOOTCUT JEANS</h3>
+      <p class="product-price">$66.03</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="phone">
+      <img src="./pic/17prodeepblue.png" alt="Phone" class="product-img">
+      <h3 class="product-title">iPhone 17 Pro</h3>
+      <p class="product-price">$1,477.24</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="watch">
+      <img src="./pic/series11.png" alt="Watch" class="product-img">
+      <h3 class="product-title">Apple Watch Series 11</h3>
+      <p class="product-price">$563.41</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="shoes">
+      <img src="./pic/AIR+FORCE.png" alt="Shoes" class="product-img">
+      <h3 class="product-title">Nike Air Force 1 '07</h3>
+      <p class="product-price">$82.45</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <!-- ✅ LAPTOPS (priority when search "laptop") -->
+    <div class="product-card" data-type="laptop">
+      <img src="./pic/mac.png" alt="Laptop" class="product-img">
+      <h3 class="product-title">Apple MacBook Air M4</h3>
+      <p class="product-price">$399.99</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="watch">
+      <img src="./pic/burberry.png" alt="Watch" class="product-img">
+      <h3 class="product-title">Burberry BU9000</h3>
+      <p class="product-price">$339.99</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="laptop">
+      <img src="./pic/galaxy-book-4.avif" alt="Laptop" class="product-img">
+      <h3 class="product-title">Galaxy Book-4</h3>
+      <p class="product-price">$948.95</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="band">
+      <img src="./pic/xiaomi-band.png" alt="Band" class="product-img">
+      <h3 class="product-title">Smart Band 10 Glimmer Edition</h3>
+      <p class="product-price">$339.99</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="cap">
+      <img src="./pic/BLACK RIPPED DENIM CAP.png" alt="Cap" class="product-img">
+      <h3 class="product-title">BLACK RIPPED DENIM CAP</h3>
+      <p class="product-price">$14.51</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="perfume">
+      <img src="./pic/Gucci-Guilty-Parfum-Pour-Homme.png" alt="Perfume" class="product-img">
+      <h3 class="product-title">Gucci Pour Homme</h3>
+      <p class="product-price">$163</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="accessory">
+      <img src="./pic/magic_mouse.png" alt="Mouse" class="product-img">
+      <h3 class="product-title">Magic Mouse</h3>
+      <p class="product-price">$103.70</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="monitor">
+      <img src="./pic/studio-display.png" alt="Monitor" class="product-img">
+      <h3 class="product-title">Apple Studio Display</h3>
+      <p class="product-price">$1,744.18</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="earbuds">
+      <img src="./pic/earbuds.png" alt="Earbuds" class="product-img">
+      <h3 class="product-title">Beats Solo Buds</h3>
+      <p class="product-price">$77.84</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="tablet">
+      <img src="./pic/ipad.png" alt="Tablet" class="product-img">
+      <h3 class="product-title">iPad Pro</h3>
+      <p class="product-price">$1,110.59</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="accessory">
+      <img src="./pic/Headphone-stand.png" alt="Stand" class="product-img">
+      <h3 class="product-title">Headphone Stand</h3>
+      <p class="product-price">$42.24</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="accessory">
+      <img src="./pic/keypad.png" alt="Keyboard" class="product-img">
+      <h3 class="product-title">Magic Keyboard with Touch ID</h3>
+      <p class="product-price">$192.82</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="vr">
+      <img src="./pic/apple vision pro.png" alt="VR" class="product-img">
+      <h3 class="product-title">Apple Vision Pro</h3>
+      <p class="product-price">$3,699</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-type="other">
+      <img src="./pic/3a.png" alt="Other" class="product-img">
+      <h3 class="product-title">3a</h3>
+      <p class="product-price">$281.85</p>
+      <div class="action-panel">
+        <div class="button-row">
+          <button class="btn add-cart">ADD TO CART</button>
+          <button class="btn buy-now">BUY NOW</button>
+        </div>
+        <div class="icon-row"><i class="fa-regular fa-heart fav-icon"></i></div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="con">
+    <video src="./pic/running.mp4" autoplay muted loop playsinline></video>
+  </div>
+
+  <footer class="footer-transparent">
+    © 2026 TRACKiT. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

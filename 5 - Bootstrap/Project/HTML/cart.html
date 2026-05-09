@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRACKiT - Cart</title>
+
+  <!-- Font Awesome (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #111;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 18px auto;
+      padding: 0 16px;
+    }
+
+    h2 {
+      margin: 10px 0 14px;
+      font-size: 20px;
+    }
+
+    /* Cart Item */
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .cart-info {
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .cart-info b {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .cart-info span {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .remove-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 14px;
+      color: #d11a2a;
+    }
+
+    /* Summary */
+    .summary {
+      margin-top: 16px;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .summary h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    /* Button */
+    .place-order {
+      margin-top: 14px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #placeOrderBtn {
+      border: none;
+      background: #000;
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #placeOrderBtn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .empty {
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 12px;
+      padding: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <a href="one.html"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+    <b>TRACKiT Cart</b>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="summary">
+      <h3 id="cartTotal">Total: $0.00</h3>
+      <span id="cartCountText">Items: 0</span>
+    </div>
+
+    <div class="place-order">
+      <button id="placeOrderBtn">PLACE ORDER</button>
+    </div>
+  </div>
+
+  <script>
+    // -------------------------
+    // CART HELPERS
+    // -------------------------
+    function getCart() {
+      return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    // -------------------------
+    // RENDER CART
+    // -------------------------
+    function renderCart() {
+      const cart = getCart();
+      const cartItemsEl = document.getElementById("cartItems");
+      const cartTotalEl = document.getElementById("cartTotal");
+      const cartCountTextEl = document.getElementById("cartCountText");
+      const placeOrderBtn = document.getElementById("placeOrderBtn");
+
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = `<div class="empty">Your cart is empty.</div>`;
+        cartTotalEl.textContent = "Total: $0.00";
+        cartCountTextEl.textContent = "Items: 0";
+        placeOrderBtn.disabled = true;
+        return;
+      }
+
+      placeOrderBtn.disabled = false;
+
+      cartItemsEl.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.img}" alt="${item.name}">
+          <div class="cart-info">
+            <b>${item.name}</b>
+            <span>$${Number(item.price).toFixed(2)} × ${item.qty}</span>
+          </div>
+          <button class="remove-btn" onclick="removeItem('${encodeURIComponent(item.name)}')">
+            Remove
+          </button>
+        </div>
+      `).join("");
+
+      const total = cart.reduce((sum, item) => sum + (Number(item.price) * item.qty), 0);
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+
+      cartTotalEl.textContent = "Total: $" + total.toFixed(2);
+      cartCountTextEl.textContent = "Items: " + count;
+    }
+
+    // -------------------------
+    // REMOVE ITEM
+    // -------------------------
+    function removeItem(encodedName) {
+      const name = decodeURIComponent(encodedName);
+      let cart = getCart();
+      cart = cart.filter(item => item.name !== name);
+      saveCart(cart);
+      renderCart();
+    }
+
+    // -------------------------
+    // PLACE ORDER
+    // -------------------------
+    document.getElementById("placeOrderBtn").addEventListener("click", () => {
+      const cart = getCart();
+
+      if (!cart.length) {
+        alert("Your cart is empty.");
+        return;
+      }
+
+      alert("✅ Order placed successfully!");
+
+      // Clear cart
+      localStorage.removeItem("cart");
+
+      // Go back to home
+      window.location.href = "index.html";
+    });
+
+    // Load
+    document.addEventListener("DOMContentLoaded", renderCart);
+  </script>
+
+</body>
+</html>

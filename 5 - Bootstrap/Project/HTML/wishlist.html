@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRACKiT - Wishlist</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .topbar a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .wish-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 12px;
+  }
+
+  .wish-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .wish-info {
+    flex: 1;
+  }
+
+  .wish-info b {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .remove-btn {
+    background: transparent;
+    border: none;
+    color: #d11a2a;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .empty {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    color: #555;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="one.html">← Back to Home</a>
+  <b>Your Wishlist ❤️</b>
+  <span></span>
+</div>
+
+<div class="container">
+  <div id="wishlistItems"></div>
+</div>
+
+<script>
+  function getWishlist() {
+    return JSON.parse(localStorage.getItem("wishlist")) || [];
+  }
+
+  function saveWishlist(list) {
+    localStorage.setItem("wishlist", JSON.stringify(list));
+  }
+
+  function renderWishlist() {
+    const list = getWishlist();
+    const container = document.getElementById("wishlistItems");
+
+    if (!list.length) {
+      container.innerHTML = '<div class="empty">Your wishlist is empty.</div>';
+      return;
+    }
+
+    container.innerHTML = list.map(item => `
+      <div class="wish-item">
+        <img src="${item.img}" alt="${item.name}">
+        <div class="wish-info">
+          <b>${item.name}</b>
+          ${item.price}
+        </div>
+        <button class="remove-btn" onclick="removeItem('${encodeURIComponent(item.name)}')">
+          Remove
+        </button>
+      </div>
+    `).join("");
+  }
+
+  function removeItem(encodedName) {
+    const name = decodeURIComponent(encodedName);
+    let list = getWishlist();
+    list = list.filter(item => item.name !== name);
+    saveWishlist(list);
+    renderWishlist();
+  }
+
+  document.addEventListener("DOMContentLoaded", renderWishlist);
+</script>
+
+</body>
+</html>
