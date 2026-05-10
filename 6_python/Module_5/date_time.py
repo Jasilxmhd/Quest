@@ -24,27 +24,27 @@ dt = datetime.now()
 # print(dt)
 
 # print('%Y  ->',dt.strftime('%Y'))   # Year , full                      2026
-# print('%y  ->',dt.strftime('%y'))   # Year , short   26
-# print('%m  ->',dt.strftime('%m'))   # month number   05
-# print('%B  ->',dt.strftime('%B'))   # month name (full)         May
-# print('%b  ->',dt.strftime('%b'))   # month name (short)      May
-# print('%d  ->',dt.strftime('%d'))   # day of month          07
-# print('%A  ->',dt.strftime('%A'))   # week day (full)         Thursday
-# print('%a  ->',dt.strftime('%a'))   # week day (short)         Thu
-# print('%H  ->',dt.strftime('%H'))   # Hour (24 - hour)        12
-# print('%I  ->',dt.strftime('%I'))   # Hour (12 - hour)        12
-# print('%p  ->',dt.strftime('%p'))   # AM / PM                 PM
-# print('%M  ->',dt.strftime('%M'))   # Minute                 02
-# print('%S  ->',dt.strftime('%S'))   # Second                   13
-# print('%f  ->',dt.strftime('%f'))   # Micro second         449816
+# print('%y  ->',dt.strftime('%y'))   # Year , short                       26
+# print('%m  ->',dt.strftime('%m'))   # month number                       05
+# print('%B  ->',dt.strftime('%B'))   # month name (full)                 May
+# print('%b  ->',dt.strftime('%b'))   # month name (short)                May
+# print('%d  ->',dt.strftime('%d'))   # day of month                       07
+# print('%A  ->',dt.strftime('%A'))   # week day (full)              Thursday
+# print('%a  ->',dt.strftime('%a'))   # week day (short)                  Thu
+# print('%H  ->',dt.strftime('%H'))   # Hour (24 - hour)                   12
+# print('%I  ->',dt.strftime('%I'))   # Hour (12 - hour)                   12
+# print('%p  ->',dt.strftime('%p'))   # AM / PM                            PM
+# print('%M  ->',dt.strftime('%M'))   # Minute                             02
+# print('%S  ->',dt.strftime('%S'))   # Second                             13
+# print('%f  ->',dt.strftime('%f'))   # Micro second                   449816
 # print('%z  ->',dt.strftime('%z'))   # UTC offset
 # print('%Z  ->',dt.strftime('%Z'))   # Timezone name
-# print('%j  ->',dt.strftime('%j'))   # Day of year           127
-# print('%U  ->',dt.strftime('%U'))   # week number (sunday first)        18
+# print('%j  ->',dt.strftime('%j'))   # Day of year                       127
+# print('%U  ->',dt.strftime('%U'))   # week number (sunday first)         18
 # print('%W  ->',dt.strftime('%W'))   # week number (Monday first)         18
-# print('%c  ->',dt.strftime('%c'))   # Local's date and time           Thu May  7 12:02:13 2026
-# print('%x  ->',dt.strftime('%x'))   # Local's date              05/07/26
-# print('%X  ->',dt.strftime('%X'))   # Local's time            12:02:13
+# print('%c  ->',dt.strftime('%c'))   # Local's date and time              Thu May  7 12:02:13 2026
+# print('%x  ->',dt.strftime('%x'))   # Local's date                  05/07/26
+# print('%X  ->',dt.strftime('%X'))   # Local's time                  12:02:13
 
 
 

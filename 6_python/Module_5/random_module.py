@@ -116,13 +116,11 @@ from random import *
 
 'uniform'
 
-# students =['jasil','shakir','yaseen','niyas']
+value = uniform(0,5)
+print(value)                                      # 2.3328297142858374
 
-# value = uniform(0,5)
-# print(value)                                      # 2.3328297142858374
-
-# rounded_value=round(value,2)
-# print(rounded_value)                              # 2.33
+rounded_value=round(value,2)
+print(rounded_value)                              # 2.33
 
 
 
@@ -211,11 +209,11 @@ from random import *
 
 'OTP'
 
-# from random import*
+from random import*
 
-# num = randint(1,999999)
-# otp = f'{num:06d}'
-# print(f'OTP : {otp}')
+num = randint(1,999999)
+otp = f'{num:06d}'
+print(f'OTP : {otp}')
 
 
 
