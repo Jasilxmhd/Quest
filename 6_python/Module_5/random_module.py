@@ -25,7 +25,7 @@ from random import *
 'choice'
 
 # students =['jasil','shakir','yaseen','niyas']
-# print(choice(students))
+# print(choice(students))                                       # shakir
 
 
 
@@ -33,7 +33,7 @@ from random import *
 
 
 # name ="muhammed"
-# print(choice(name))
+# print(choice(name))                                         # u
 
 
 
@@ -49,7 +49,7 @@ from random import *
 
 # students =['jasil','shakir','yaseen','niyas']
 
-# print(choices(students,k=3))
+# print(choices(students,k=3))                                # ['yaseen', 'shakir', 'jasil']
 
 
 
@@ -60,7 +60,7 @@ from random import *
 
 
 # name = 'muhammed'
-# print(choices(name,k=3))
+# print(choices(name,k=3))                                         # ['m', 'e', 'e']
 
 
 
@@ -94,7 +94,7 @@ from random import *
 
 # students =['jasil','shakir','yaseen','niyas']
 
-# print(sample(students,k=3))
+# print(sample(students,k=3))                                 # ['jasil', 'yaseen', 'shakir']
 
 
 
@@ -116,11 +116,11 @@ from random import *
 
 'uniform'
 
-value = uniform(0,5)
-print(value)                                      # 2.3328297142858374
+# value = uniform(0,5)
+# print(value)                                      # 2.3328297142858374
 
-rounded_value=round(value,2)
-print(rounded_value)                              # 2.33
+# rounded_value=round(value,2)
+# print(rounded_value)                              # 2.33
 
 
 
@@ -185,12 +185,7 @@ print(rounded_value)                              # 2.33
 'question picker'
 
 # question = ['whats is python','Features of pythom','Current version of python']
-# # selected = choice
-# print(question)
-
-# for i in question:
-#     print(i)
-
+# print(choice(question))                                                             # Features of pythom
 
 
 
@@ -209,11 +204,11 @@ print(rounded_value)                              # 2.33
 
 'OTP'
 
-from random import*
+# from random import*
 
-num = randint(1,999999)
-otp = f'{num:06d}'
-print(f'OTP : {otp}')
+# num = randint(1,999999)
+# otp = f'{num:06d}'
+# print(f'OTP : {otp}')                          # OTP : 544007
 
 
 

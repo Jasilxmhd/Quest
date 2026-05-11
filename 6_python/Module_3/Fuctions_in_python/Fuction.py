@@ -133,7 +133,7 @@
 
 
 # def details(name : str , age : int , phone : list) -> str :
-#     """Get details fro user """
+#     """Get details from user """
 #     return name,age,phone
 
 # result = details('Jasil',21,[9746827950])

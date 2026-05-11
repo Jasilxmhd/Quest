@@ -8,7 +8,7 @@
 #     return name,age,phone
 
 # result = details(21,'Jasil',[9746827950])
-# print(result)                                     # (21, 'Jasil', [9746827950])
+# print(result)                                                    # (21, 'Jasil', [9746827950])
 
 
 
@@ -25,9 +25,9 @@
 
 # def details(name : str , age : int , phone : list) -> str :
 #     """Get details fro user """
-#     print(name)               # Jasil
-#     print(age)                # 21
-#     print(phone)              # [9746827950]
+#     print(name)                                                  # Jasil
+#     print(age)                                                   # 21
+#     print(phone)                                                 # [9746827950]
 
 # details(age=21 , name='Jasil' , phone=[9746827950])
 
@@ -48,7 +48,7 @@
 # def add(a , b , c = 2 ):
 #     return a+b+c
 
-# print(add(5,5))
+# print(add(5,5))                                                # 12
 
 
 
@@ -67,7 +67,7 @@
 #         total += i
 #     return total
 
-# print(add(10,30,50,))
+# print(add(10,30,50,))                                                # 90
 
 
 
@@ -79,12 +79,12 @@
 
 '4. Arbitary Keyword argument'
 
-    # def details(**kwargs):
-    #     print(kwargs)
+# def details(**kwargs):
+#     print(kwargs)
 
-    # details(name = 'jasil' , age = 21)
-    # details(name = 'jasil' , age = 21 , place = "calicut")
-    # details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
+# details(name = 'jasil' , age = 21)
+# details(name = 'jasil' , age = 21 , place = "calicut")
+# details(name = 'jasil' , age = 21 , place = "calicut", phn = 9746827950)
 
 
 

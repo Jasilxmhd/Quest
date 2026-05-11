@@ -2,13 +2,13 @@
 'OS Module'
 
 import os 
-# print(os.path.exists('jasil.txt'))            # File ndoon nookaaan
+# print(os.path.exists('jas.txt'))              # File ndoon nookaaan
 
 # os.rename("jasil.txt","jas.txt")              # rename.
 # os.remove("blank.txt")                        # remove file 
 
 'create new folder'
-# os.mkdir("Quest.txt")                         # create new folder
+# os.mkdir("Quest")                             # create new folder
 
 
 
@@ -27,4 +27,4 @@ import os
 
 
 # import shutil
-# shutil.rmtree("One")                          # remove folder and inside files and others full
+# shutil.rmtree("One")                          # remove folder and inside files and others folders

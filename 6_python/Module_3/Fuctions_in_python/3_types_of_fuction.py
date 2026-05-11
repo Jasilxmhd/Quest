@@ -1,12 +1,53 @@
 
 '1. Build in function'
 
+# print()
+# print("Welcome")
 
 
 
 
 
 
+
+
+
+
+
+
+# input()
+# name = input("Enter your name: ")
+# print(name)
+
+
+
+
+
+
+
+
+
+# len()
+# text = "Python"
+# print(len(text))   # 6
+
+
+
+
+
+
+
+# sum()
+# numbers = [10, 20, 30]
+# print(sum(numbers))   # 60
+
+
+
+
+
+# min() and max()
+# print(max(5, 9, 2))   # 9
+# print(min(5, 9, 2))   # 2
 
 
 
@@ -18,8 +59,20 @@
 
 '2. user defined function'
 
+# def greet():
+#     print("Hello, Jasil!")
+
+# greet()
 
 
+
+
+
+# def add(a, b):
+#     return a + b
+
+# result = add(10, 20)
+# print(result)
 
 
 
@@ -36,7 +89,7 @@
 #         return 1
 #     return n* fact(n - 1)
 
-# print(fact(5))
+# print("factorial : ",fact(5))
 
 
 
@@ -181,10 +234,8 @@
 # numbers = [1,2,3,4,5]
 
 
-
-# result = map(square,numbers)
-# print(result)                                   # <map object at 0x0000017CD2549A40>
-
+# # result = map(square,numbers)
+# # print(result)                                   # <map object at 0x0000017CD2549A40>
 
 
 # result = list(map(square,numbers))
@@ -210,14 +261,18 @@
 # print 5 multiplay only
 
 # element = [1,5,10,14,45,35,16,20]
+# result2 = list(filter(lambda x : x % 5 == 0 , element))
+# print(result2)                                              # [5, 10, 45, 35, 20]
+
+
+
 
 # result  = list(map(lambda x : x % 5 == 0 , element))
 # print(result)                                               # [False, True, True, False, True, True, False, True]
 
 
 
-# result2 = list(filter(lambda x : x % 5 == 0 , element))
-# print(result2)                                              # [5, 10, 45, 35, 20]
+
 
 
 
@@ -281,7 +336,7 @@
 
 # result = list(filter(lambda x: any(x.endswith(d) for d in ['gmail.com','apple.com']),emails))
 
-# print(result)          # ['jasilmuhammed25@gmail.com', 'shakir456@gmail.com', 'aflah@apple.com']
+# print(result)                                           # ['jasilmuhammed25@gmail.com', 'shakir456@gmail.com', 'aflah@apple.com']
 
 
 
@@ -303,11 +358,11 @@
 # number = [3,6,5,8,9,12,13,9,15]
 
 # result  = list(filter(lambda x : x % 3 == 0 , number))
-# print("Multiple of 3 : " , result)                       # Multiple of 3 :  [3, 6, 9, 12, 9, 15]
+# print("Multiple of 3 : " , result)                                               # Multiple of 3 :  [3, 6, 9, 12, 9, 15]
 
 
 # result1 = list(map(lambda y : y**3 , result))
-# print("Cube :" , result1)                                                    # Cube : [27, 216, 729, 1728, 729, 3375]
+# print("Cube :" , result1)                                                        # Cube : [27, 216, 729, 1728, 729, 3375]
 
 
 
