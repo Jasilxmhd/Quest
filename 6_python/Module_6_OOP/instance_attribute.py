@@ -95,3 +95,6 @@ jasil.get_details()
 # jasil.update_salary()
 
 jasil.update_company()
+
+
+
