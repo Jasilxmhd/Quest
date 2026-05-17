@@ -160,11 +160,21 @@
 # 10. Movie Class
 
 # Create a class named Movie.
-
 # Add class attribute industry = "Mollywood"
 # Delete the class attribute.
 # Try printing the attribute after deletion.
-# Advanced Level
+
+# class Movile():
+#     industry = "Mollywood"
+
+# del Movile.industry
+# print(Movile.industry)
+
+
+
+
+'Advanced Level'
+
 # 11. Book Class
 
 # Create a class named Book.
@@ -174,6 +184,23 @@
 # show_library()
 # update_library()
 # Update the library name using the method and display the updated value.
+
+# class Book():
+#     library = "Central Library"
+
+#     def show_library(self):
+#         print(Book.library)
+
+#     def update_library(self):
+#         Book.library = "General Library"
+
+# student = Book()
+
+# student.show_library()
+
+# student.update_library()
+# student.show_library()
+
 # 12. School Class Attribute Deletion
 
 # Create a class named School.
@@ -182,6 +209,12 @@
 # Print the attribute.
 # Delete the attribute.
 # Handle the error if the attribute is accessed after deletion.
+
+# class School():
+#     principal = "Ramesh"
+
+
+
 # 13. TV Class
 
 # Create a class named TV.
@@ -190,6 +223,20 @@
 # Create three objects.
 # Update the class attribute to "LG"
 # Show that the updated value is reflected in all objects.
+
+# class Tv():
+#     company = "Sony"
+
+# obj = Tv()
+# obj1 = Tv()
+# obj2 = Tv()
+
+# Tv.company = "LG"
+
+# print(obj.company)
+# print(obj1.company)
+# print(obj2.company)
+
 # 14. University Class
 
 # Create a class named University.
@@ -197,6 +244,22 @@
 # Add class attribute country = "India"
 # Add method show_country()
 # Create multiple objects and call the method.
+
+# class University():
+#     country = "India"
+
+#     def show_country(self):
+#         print(University.country)
+
+# student = University()
+# student1 = University()
+# student2 = University()
+
+# student.show_country()
+# student1.show_country()
+# student2.show_country()
+
+
 # 15. Restaurant Class
 
 # Create a class named Restaurant.
@@ -205,6 +268,10 @@
 # Update the attribute to "Multi Cuisine"
 # Delete the attribute.
 # Print suitable messages after each operation.
+
+
+
+
 # Challenge Questions
 # 16. Company Management
 

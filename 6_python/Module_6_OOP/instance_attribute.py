@@ -57,44 +57,44 @@
 
 
 
-class Empolyee():
-    company_name = "TCS"
-    Branch_name = "Kochi"
+# class Empolyee():
+#     company_name = "TCS"
+#     Branch_name = "Kochi"
 
 
-    def __init__(self,e_id, e_name, e_salary, e_email):
-        self.employee_id=e_id
-        self.employee_name=e_name
-        self.employee_salary=e_salary
-        self.employee_email=e_email
+#     def __init__(self,e_id, e_name, e_salary, e_email):
+#         self.employee_id=e_id
+#         self.employee_name=e_name
+#         self.employee_salary=e_salary
+#         self.employee_email=e_email
 
     
-    def get_details(self):
-        print(f'---------- \nid : {self.employee_id}\nName : {self.employee_name}\nSalary : {self.employee_salary}\nEmail : {self.employee_email}\n----------')
+#     def get_details(self):
+#         print(f'---------- \nid : {self.employee_id}\nName : {self.employee_name}\nSalary : {self.employee_salary}\nEmail : {self.employee_email}\n----------')
 
 
-    def update_salary(self):
+#     def update_salary(self):
 
-        if self.employee_salary > 50000:
-            increment = self.employee_salary * 0.15
-            self.employee_salary += increment
-            print(f'Updated Salary : {self.employee_salary}')
+#         if self.employee_salary > 50000:
+#             increment = self.employee_salary * 0.15
+#             self.employee_salary += increment
+#             print(f'Updated Salary : {self.employee_salary}')
     
 
-    def update_company(self):
-        self.company_name = "Google"
-        print(self.company_name)
+#     def update_company(self):
+#         self.company_name = "Google"
+#         print(self.company_name)
 
 
 
 
 
 
-jasil = Empolyee(e_id=102, e_name='Muhammed Jasil', e_salary=51000, e_email="jasilmuhammed25@gmail.com")
-jasil.get_details()
-# jasil.update_salary()
+# jasil = Empolyee(e_id=102, e_name='Muhammed Jasil', e_salary=51000, e_email="jasilmuhammed25@gmail.com")
+# jasil.get_details()
+# # jasil.update_salary()
 
-jasil.update_company()
+# jasil.update_company()
 
 
 
