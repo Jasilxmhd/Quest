@@ -86,15 +86,78 @@
 #         print(self.company_name)
 
 
+#     # def __del__(self):
+#     #     print("constructor deleted ...")
+
 
 
 
 
 # jasil = Empolyee(e_id=102, e_name='Muhammed Jasil', e_salary=51000, e_email="jasilmuhammed25@gmail.com")
-# jasil.get_details()
-# # jasil.update_salary()
+# yaseen = Empolyee(e_id=100, e_name='yaseen', e_salary=41000, e_email="yaseen45@gmail.com")
 
-# jasil.update_company()
+# # jasil.get_details()
+# # # jasil.update_salary()
+
+# # jasil.update_company()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class
+#     BANK NAME
+# isinstance 
+# ACCOUNT NO, NAME, IFSC, BALANCE 
+# METHODS
+# GET DETAILS, GET BALANCE, WITHDROW ,DEPOSIT
+
+class Bank():
+    bank_name = 'Federal'
+
+    def __init__(self,acc_no,name,ifsc,balance):
+        self.ac_no = acc_no
+        self.name = name
+        self.ifsc = ifsc
+        self.balance = balance
+
+    def get_details(self):
+        print(f'----------\n Account No : {self.ac_no}\n Name : {self.name}\n IFSC code : {self.ifsc}\n Balance : {self.balance}\n----------')
+
+    def get_balance(self):
+        print("Current Balance : ",self.balance)
+
+    def deposit(self,amount):
+        self.balance += amount
+        print(f"Deposit successfull , Current Balance : {self.balance}")
+    
+    def withdrow(self,amount):
+        if amount > self.balance:
+            print('insufficient bank balance')
+        else:
+            self.balance -= amount
+            print(f'Transaction succesfull, Current Balace is {self.balance}')
+
+
+
+jasil = Bank(999012 ,'Jasil' , 'FDRL999' ,45000)
+jasil.get_details()
+
+jasil.get_balance()
+jasil.deposit(500)
+
+jasil.withdrow(1000)
