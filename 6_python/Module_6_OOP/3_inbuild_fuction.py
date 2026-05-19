@@ -19,12 +19,12 @@
 # yaseen = Empolyee(e_id=100, e_name='yaseen', e_salary=41000, e_email="yaseen45@gmail.com")
 
 
-# # print(jasil.company_name)
+# # # print(jasil.company_name)
 
-'getattr'
+# 'getattr'
 
 # print(getattr(jasil,'company_name'))
-# print(getattr(jasil,'id',456))
+# print(getattr(jasil,'id','not found'))
 # print(getattr(jasil,'phone',123456))
 
 
@@ -40,7 +40,7 @@
 
 
 
-'2 - setattr'
+# '2 - setattr'
 # class Empolyee():
 #     company_name = "TCS"
 #     Branch_name = "Kochi"
@@ -60,11 +60,13 @@
 'setattr'
 
 # setattr(jasil, 'phone',9746827950)
+# print(setattr(jasil, 'phone',9746827950))
+
 # print(jasil.phone)
 
 
 # setattr(jasil,'Branch_name','calicut')
-# print(jasil.Branch_name).
+# print(jasil.Branch_name)
 
 
 
@@ -131,6 +133,7 @@
 
 # delattr(jasil,'Branch_name')
 # print(jasil.Branch_name)
+
 
 
 

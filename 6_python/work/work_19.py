@@ -269,10 +269,19 @@
 # Delete the attribute.
 # Print suitable messages after each operation.
 
+# class Restaurant():
+#     type ="veg"
+
+# Restaurant.type = "Multi Cuisine"
+# print("Updated attributes :",Restaurant.type)
+
+# del Restaurant.type
+# print("Attribute 'type' deleted.")
 
 
 
-# Challenge Questions
+'Challenge Questions'
+
 # 16. Company Management
 
 # Create a class named Company.
@@ -282,6 +291,31 @@
 # Display company name
 # Update company name
 # Delete company name
+
+# class Company():
+#     company_name = "Infosys"
+
+#     def get_display(self):
+#         print('Company Name :',self.company_name)
+
+    
+#     def update(self):
+#         self.company_name = "TCS"
+#         print(f'updated name : {self.company_name}')
+
+#     def delete(self):
+#         del Company.company_name
+#         print(f'company name has been deleted !')
+
+# user = Company()
+
+# user.get_display()
+# user.update()
+# user.delete()
+
+
+
+
 # 17. Cricket Team
 
 # Create a class named CricketTeam.
@@ -290,6 +324,18 @@
 # Create multiple objects.
 # Change the team name to "Kerala"
 # Display the updated value using all objects.
+
+# class CricketTeam():
+#     team_name = "India"
+
+# player = CricketTeam()
+# player1 = CricketTeam()
+
+# CricketTeam.team_name = 'Kerala'
+
+# print(player.team_name)
+# print(player1.team_name)
+
 # 18. ATM Machine
 
 # Create a class named ATM.
@@ -297,6 +343,19 @@
 # Add class attribute bank = "SBI"
 # Add method show_bank()
 # Delete the class attribute and check the output.
+
+# class ATM():
+#     bank = "SBI"
+
+#     def show_bank(self):
+#         print(f'Bank Name : {self.bank}')
+
+# del ATM.bank
+# print("class Attribute 'bank' deleted")
+# print(ATM.show_bank)
+
+
+
 # 19. Airline Class
 
 # Create a class named Airline.
@@ -304,6 +363,29 @@
 # Add class attribute airline_name = "Air India"
 # Add methods to display and update the airline name.
 # Create two objects and test the methods.
+
+# class Airline():
+#     airline_name = "Air India"
+
+#     def get_display(self):
+#         print(f'----------\n Airline Name : {self.airline_name}\n----------')
+
+
+#     def update(self):
+#         Airline.airline_name = 'Qatar airways'
+#         print(f'----------\n Updated Name : {self.airline_name}\n----------')
+
+# flight = Airline()
+# flight1 = Airline()
+
+# flight.get_display()
+# flight.update()
+
+# flight1.get_display()
+# flight1.update()
+
+
+
 # 20. Shopping Mall
 
 # Create a class named Mall.
@@ -312,3 +394,14 @@
 # Create objects.
 # Update and delete the class attribute.
 # Display outputs before and after each operation.
+
+# class Mall():
+#     mall_name = "Lulu Mall"
+
+# hotel = Mall()
+
+# Mall.mall_name = "Hilite Mall"
+# print(f"updated mall : {Mall.mall_name}")
+
+# del Mall.mall_name
+# print(Mall.mall_name)
