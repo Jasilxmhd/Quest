@@ -144,33 +144,196 @@
 
 
 # 9. Create a MovieTicket class to calculate total ticket price.
+# class MovieTicket():
+#     movie = 'KGF'
+
+#     def __init__(self,ticket, price):
+#         self.ticket = ticket
+#         self.price = price
+
+#     def total(self):
+#         print('--------------------')
+#         print(f'Movie Name   : {self.movie}')
+#         print(f'Ticket Price : {self.price}')
+#         print(f'Tickets      : {self.ticket}')
+#         print(f'TOTAL AMOUNT : {self.price * self.ticket}')
+#         print('--------------------')
+
+# user = MovieTicket(ticket=4,price=125)
+# user.total()
 
 # 10. Create a Rectangle class and calculate:
 #    - area
 #    - perimeter
 
+# class Rectangle():
+
+#     def __init__(self,length,bredth):
+#         self.length = length
+#         self.bredth = bredth
+    
+#     def area(self):
+#         print(f'Area of rectangle : {self.length * self.bredth}')
+
+#     def perimeter(self):
+#         print(f'Perimeter : {2 * (self.length + self.bredth)}')
+
+# values = Rectangle(length=5,bredth=5)
+# values.area()
+
+# values.perimeter()
+
+
 'CONSTRUCTOR-BASED QUESTIONS'
 
 # 11. Create a class using a default constructor.
 
+# class student:
+    
+#     def __init__(self):
+#         print('its a default constructor')
+    
+#     def display(self):
+#         print('welcome to python')
+
+# sample = student()
+# sample.display()
+
 # 12. Create a class using a parameterized constructor.
+
+# class Student():
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#         print(f'My Name is {self.name} And am {self.age} Year Old.')
+    
+# user = Student('Jasil',21)
+
+              
 
 # 13. Create a User class where password should not be empty.
 
+# class User():
+
+#     def __init__(self,username, password):
+#         self.username = username
+
+#         if password == "":
+#             print('Password should not be empty')
+        
+#         else:
+#             self.password = password
+#             print('User Created Successful')
+
+
+#     def display(self):
+#         print('----------')
+
+#         if hasattr(self,'password'):
+#             print(f'username : {self.username}')
+#             print(f'password : {self.password}')
+#             print('----------')
+
+# login = User('Jasil',"")          # Password should not be empty
+
+# login = User('Jasil',"123456")
+# login.display()
+
+
+
 # 14. Create a constructor that validates email format.
+
+
 
 # 15. Create a constructor that automatically generates employee IDs.
 
 # 16. Create a Product class that applies GST during object creation.
+
+# class Product():
+
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+
+#         gst= price *18 /100
+#         total = price + gst
+
+#         self.gst=gst
+#         self.total=total
+
+#     def display(self):
+#         print('---------------')
+
+#         print(f'  PRODCUT DETAILS\n Name : {self.name}\n Price : {self.price}')
+#         print(f' GST Amount : {self.gst}\n Final Product Price : {self.total}')
+
+#         print('---------------')
+
+# item = Product(name='Iphone 17',price=85000)
+# item.display()
+    
+
 
 # 17. Create a Vehicle class that stores:
 #    - owner name
 #    - vehicle number
 #    - insurance expiry
 
+# class Vehicle():
+
+#     def __init__(self, owner_name ,vehicle_number ,insurance_expiry):
+#         self.name = owner_name
+#         self.number = vehicle_number
+#         self.insure = insurance_expiry
+
+#     def display(self):
+#         print('---------------')
+
+#         print(f'Owner Name       : {self.name}')
+#         print(f'vehicleNumber    : {self.number}')
+#         print(f'insurance_expiry : {self.insure}')
+
+#         print('---------------')
+
+
+# jasil = Vehicle('Jasil','KL-57-W-7584','31-12-2026')
+# jasil.display()
+
 # 18. Create a LibraryBook class with constructor-based initialization.
+# 
+
+# class LibraryBook():
+
+#     def __init__(self, title, author, book_id):
+#         self.title = title
+#         self.auther = author
+#         self.b_id = book_id
+
+#     def display(self):
+#         print('---------------')
+
+#         print('Title : ',self.title)
+#         print('Author : ',self.auther)
+#         print('Book Id : ',self.b_id)
+
+#         print('---------------')
+
+# book1 = LibraryBook("Pathummayude Aadu", "Vaikom Muhammad Basheer", 101)
+# book1.display()
+
 
 # 19. Create a Course class and enroll students using constructors.
+
+# class Course():
+
+#     def __init__(self,student_name , course_name):
+#         self.name = student_name
+#         self.course = course_name
+#         print(f'{self.name} enroll in {self.course}')
+
+# student = Course('Jasil','Python')
 
 # 20. Create a FoodOrder class that calculates total bill automatically.
 
