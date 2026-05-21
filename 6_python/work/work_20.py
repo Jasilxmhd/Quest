@@ -337,7 +337,35 @@
 
 # 20. Create a FoodOrder class that calculates total bill automatically.
 
-# SELF AND ATTRIBUTE QUESTIONS
+
+
+# class FoodOrder:
+
+#     def __init__(self, food_name, quantity, price):
+#         self.name = food_name
+#         self.quantity = quantity
+#         self.price = price
+
+#     def bill(self):
+
+#         print('------------------')
+
+
+#         print(f'Food Item : {self.name}')
+#         print(f'Quantity  : {self.quantity}')
+#         print(f'Price     : {self.price}')
+
+#         print('------------------')
+#         print(f'Your Amount : {self.quantity * self.price}')
+
+# user = FoodOrder(food_name='Burger', quantity=3, price=125)
+# user.bill()
+
+
+
+
+
+'SELF AND ATTRIBUTE QUESTIONS'
 
 # 21. Demonstrate the use of self.
 
@@ -347,13 +375,69 @@
 
 # 23. Create a company management system using class attributes.
 
+# class Company_management:
+#     names ="Google"
+
+#     def __init__(self,name,salary):
+#         self.salary = salary
+#         self.name = name
+    
+#     def dis(self):
+        
+#         print(f'\nCompany Name   : {self.names}')
+#         print(f'Employee Name  : {self.name}')
+#         print(f'Salary         : {self.salary}\n')
+    
+# user = Company_management('Jasil',85000)
+# user.dis()
+
 # 24. Create instance-specific attributes for users.
 
 # 25. Demonstrate local variables inside methods.
 
 # 26. Create a class attribute that tracks total online users.
 
+# class User:
+#     online_user = 0
+#     print('')
+
+#     def __init__(self,username):
+#         self.username = username
+
+#         User.online_user += 1
+
+       
+#         print(f'{self.username} Logged in ')
+#         print(f'Online User : {self.online_user}\n')
+    
+#     def logout(self):
+#         User.online_user -= 1
+
+#         print(f'{self.username} Logged out ')
+#         print(f'Online User : {self.online_user}')
+
+# user = User("jasil")
+# user1 = User("yaseen")
+
+# # user.logout()
+
+
 # 27. Build a login system where each object stores unique user data.
+# class Login:
+
+#     def __init__(self,user,password):
+#         self.user = user
+#         self.password = password
+    
+#     def check(self,usr,psd):
+#         if self.user==usr and self.password==psd :
+#             print('login successfull') 
+#         else:
+#             print('username or password icorrect ')
+
+# user= Login('jasil','123456')
+# user.check('jasil','123456')
+        
 
 # 28. Create a shopping cart where products are instance attributes.
 
@@ -361,11 +445,44 @@
 #    - class attribute for school name
 #    - instance attribute for student details
 
+# class School:
+#     school_name = 'ALP School Adivaram'
+
+#     def __init__(self,student_name,roll_no,std):
+#         self.Name = student_name
+#         self.RollNo = roll_no
+#         self.Class = std
+    
+#     def dis(self):
+#         print('\n    ....... DETAILS .......\n')
+#         print(f'student Name : {self.Name}')
+#         print(f'Roll No      : {self.RollNo}')
+#         print(f'Class        : {self.Class}\n')
+
+
+# student = School(student_name = 'Ahammadhul Kabeer',roll_no=12 , std='5th')
+# student.dis()
+
+    
+    
+
+
 # 30. Create a weather app object storing city-wise temperature data.
 
-# ATTRIBUTE HANDLING FUNCTIONS
+'ATTRIBUTE HANDLING FUNCTIONS'
 
 # 31. Use getattr() to access object properties dynamically.
+
+class Empolyee():
+    company_name = "TCS"
+    Branch_name = "Kochi"
+    phone = 9746827950
+
+jasil = Empolyee()
+
+print(getattr(jasil,'company_name'))
+print(getattr(jasil,'id','not found'))
+print(getattr(jasil,'phone',123456))
 
 # 32. Use setattr() to update employee salary.
 

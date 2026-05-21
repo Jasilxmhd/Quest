@@ -244,46 +244,53 @@
 
 'Food Delivery app'
 
-class User:
+# class User:
 
-    def login(self):
-        print('Login sucessful')
+#     def login(self):
+#         print('Login sucessful')
 
-    def order(self):
-        print('check food items')
+#     def order(self):
+#         print('check food items')
     
-    def payment(self):
-        print('payment ok')
+#     def payment(self):
+#         print('payment ok')
 
-class Shop:
+# class Shop:
 
-    def accept_order(self):
-        print('Order Accepted ✅')
+#     def accept_order(self):
+#         print('Order Accepted ✅')
 
 
-    def food_items(self):
-        print(f'what you want  ? \n 1.ichen biriyani \n 2.Beef Biriyani \n 3.Mandi')
+#     def food_items(self):
+#         print(f'what you want  ? \n 1.ichen biriyani \n 2.Beef Biriyani \n 3.Mandi')
 
-class Devilery_patner:
+# class Devilery_patner:
 
-    def location(self):
-        print('Available to deliver ✅')
+#     def location(self):
+#         print('Available to deliver ✅')
 
 
     
 
-class App(User,Shop,Devilery_patner):
-    def app_working(self):
-        print('✅')
+# class App(User,Shop,Devilery_patner):
+#     def app_working(self):
+#         print('✅')
 
 
-us = App()
+# us = App()
 
-us.login()
-us.order()
-us.payment()
+# us.login()
+# us.order()
+# us.payment()
 
-us.accept_order()
-us.food_items()
+# us.accept_order()
+# us.food_items()
 
-us.location()
+# us.location()
+
+
+
+
+
+
+

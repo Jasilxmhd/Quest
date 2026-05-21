@@ -146,3 +146,26 @@
 
 # # print(Student.school_name)
 
+
+
+
+'-----------------------------------------------------------------'
+
+'Inner class / Nexted class'
+
+
+# class Electronics:
+
+#     def collection(self):
+#         print("collection of electronics items.")
+
+#     class Laptop:
+
+#         def brand(self):
+#             print('HP')
+
+# e = Electronics()
+# lap = Electronics.Laptop()
+
+# e.collection()
+# lap.brand()
