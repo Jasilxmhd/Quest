@@ -473,22 +473,55 @@
 
 # 31. Use getattr() to access object properties dynamically.
 
-class Empolyee():
-    company_name = "TCS"
-    Branch_name = "Kochi"
-    phone = 9746827950
+# class Empolyee():
+#     company_name = "TCS"
+#     Branch_name = "Kochi"
+#     phone = 9746827950
 
-jasil = Empolyee()
+# jasil = Empolyee()
 
-print(getattr(jasil,'company_name'))
-print(getattr(jasil,'id','not found'))
-print(getattr(jasil,'phone',123456))
+# print(getattr(jasil,'company_name'))
+# print(getattr(jasil,'id','not found'))
+# print(getattr(jasil,'phone',123456))
 
 # 32. Use setattr() to update employee salary.
 
+# class Empolyee():
+#     company_name = "TCS"
+#     Branch_name = "Kochi"
+
+# jasil = Empolyee()
+
+# setattr(jasil, 'phone',9746827950)         # Add new attribute
+# print(jasil.phone)
+
+# setattr(jasil,'Branch_name','calicut')
+# print(jasil.Branch_name)                    # modify existing attribute
+
+
 # 33. Use hasattr() to validate whether an object contains a field.
 
+# class Empolyee():
+#     company_name = "TCS"
+#     Branch_name = "Kochi"
+
+# jasil = Empolyee()
+
+# print(hasattr(jasil,'Branch_name'))                  # True
+# print(hasattr(jasil,'Phone'))                        # False
+
 # 34. Use delattr() to remove an object attribute.
+
+# class Empolyee():
+#     company_name = "TCS"
+#     Branch_name = "Kochi"
+
+# jasil = Empolyee()
+
+# delattr(jasil,'company_name')
+# print(jasil.company_name)                              # AttributeError: 'Empolyee' object has no attribute 'company_name'
+
+
 
 # 35. Build a dynamic student record manager using attribute functions.
 
@@ -510,11 +543,51 @@ print(getattr(jasil,'phone',123456))
 #    - Parent → Person
 #    - Child → Student
 
+# class Person:
+#     def speak(self):
+#         print('Helloo..')
+
+# class Student(Person):
+#     def study(self):
+#         print('studying')
+
+# user = Student()
+# user.speak()
+# user.study()
+
+
 # 42. Create:
 #    - Parent → Vehicle
 #    - Child → Bike
 
+# class Vehicle:
+#     def color(self):
+#         print('White color')
+
+# class Bike(Vehicle):
+#     def start(self):
+#         print('Bike start with self Button')
+
+# jasil = Bike()
+
+# jasil.color()
+# jasil.start()
+
 # 43. Create an Employee class inherited by Developer.
+
+# class Employee:
+
+#     def work(self):
+#         print('employee working....')
+
+# class Developer(Employee):
+#     def project(self):
+#         print('Developer Working has a new Project')
+
+# jr = Developer()
+
+# jr.work()
+# jr.project()
 
 # 44. Create a hospital management system using inheritance.
 

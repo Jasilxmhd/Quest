@@ -131,15 +131,17 @@
 
 'Method overriding'
 
-# class Vehicle:
-#     def start(self):
-#         print('Vehicle starting')
+class Vehicle:
+    def start(self):
+        print('Vehicle starting')
 
 
-# class Bike(Vehicle):
-#     def start(self):
-#         super().start()                                   # Vehicle starting
-#         print("Bike starting with self Button")
+class Bike(Vehicle):
+    def start(self):
+        super().start()                                   # Vehicle starting
+        print("Bike starting with self Button")
 
-# b = Bike()
-# b.start()                                                 # Bike starting with self Button
+b = Bike()
+b.start()                                                 # Bike starting with self Button
+
+
