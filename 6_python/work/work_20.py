@@ -593,22 +593,128 @@
 
 # 45. Create a payment gateway system using inheritance.
 
+# class Payment_gateway:
+
+#     def __init__(self,amount):
+#         self.amount = amount 
+    
+#     def payment(self):
+#         print('Payment processing...')
+
+# class Gpay(Payment_gateway):
+
+#     def payment(self):
+#         print(f"Google Pay payment successful : ₹{self.amount}")
+
+# user = Gpay(500)
+
+# user.payment()
+
+
 'MULTILEVEL INHERITANCE'
 
 # 46. Create:
-#    - Animal → Mammal → Dog
+    #    - Animal → Mammal → Dog
+
+# class Animal:
+
+#     def eat(self):
+#         print('eating...')
+
+# class Mammal(Animal):
+
+#     def walk(self):
+#         print('walking..')
+
+# class Dog(Mammal):
+
+#     def bark(self):
+#         print('barking...')
+        
+
+# babyDog = Dog()
+
+# babyDog.eat()
+# babyDog.walk()
+# babyDog.bark()
+
 
 # 47. Create:
 #    - Company → Department → Employee
 
+# class Company:
+#     def name(self):
+#         print('Jasil Group of Companies.') 
+
+# class Department(Company):
+
+#     def depart(self):
+#         print('Technical department')
+
+# class Employee(Department):
+
+#     def Work(self):
+#         print('Night Shift')
+
+# Boss = Employee()
+
+# Boss.name()
+# Boss.depart()
+# Boss.Work()
+
+
 # 48. Create:
 #    - User → Seller → PremiumSeller
+
+# class User:
+
+#     def username(self):
+#         print('jasilxmhd')
+
+# class Seller(User):
+
+#     def shop_name(self):
+#         print('West Way')
+
+# class PremiumSeller(Seller):
+
+#     def commission(self):
+#         print('125 Rupees from each Product.')
+
+# user1 = PremiumSeller()
+
+# user1.username()
+# user1.shop_name()
+# user1.commission()
+
 
 # 49. Create:
 #    - Account → SavingsAccount → SalaryAccount
 
 # 50. Create:
 #    - Device → Laptop → GamingLaptop
+
+# class Device:
+
+#     def items(self):
+#         print('Lap\nPhone\nMonitor')
+
+# class Laptop(Device):
+
+#     def brand(self):
+#         print(' Mac \n Windows')
+
+# class GamingLaptop(Laptop):
+
+#     def gaming(self):
+#         print('HP Pavilion Ryzen 5')
+
+# user = GamingLaptop()
+
+# user.items()
+# user.brand()
+# user.gaming()
+
 
 'MULTIPLE INHERITANCE'
 
@@ -654,7 +760,7 @@
 
 # 60. Create an OTT subscription system.
 
-# SUPER() AND MRO QUESTIONS
+'SUPER() AND MRO QUESTIONS'
 
 # 61. Demonstrate usage of super().
 
@@ -689,6 +795,21 @@
 #    - Dog
 #    - Cat
 #    with same sound() method.
+
+class Dog:
+
+    def sound():
+        print('Barking...')
+    
+class Cat(Dog):
+
+    def sound(self):
+        print(' Meow Meow ')
+        super().sound
+
+c = Cat()
+
+c.sound()
 
 # 73. Create payment methods:
 #    - UPI
