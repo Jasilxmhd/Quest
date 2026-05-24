@@ -816,6 +816,65 @@ c.sound()
 #    - Card
 #    - NetBanking
 
+class Payment:
+
+    def __init__(self, amount):
+        self.amount = amount
+
+    def show_amount(self):
+        print(f"Amount : ₹{self.amount}")
+
+
+class UPI(Payment):
+
+    def __init__(self, amount, upi_id):
+        super().__init__(amount)
+        self.upi_id = upi_id
+
+    def pay(self):
+        print("Payment Method : UPI")
+        print(f"UPI ID : {self.upi_id}")
+        self.show_amount()
+
+
+class Card(Payment):
+
+    def __init__(self, amount, card_number):
+        super().__init__(amount)
+        self.card_number = card_number
+
+    def pay(self):
+        print("Payment Method : Card")
+        print(f"Card Number : {self.card_number}")
+        self.show_amount()
+
+
+class NetBanking(Payment):
+
+    def __init__(self, amount, bank_name):
+        super().__init__(amount)
+        self.bank_name = bank_name
+
+    def pay(self):
+        print("Payment Method : NetBanking")
+        print(f"Bank Name : {self.bank_name}")
+        self.show_amount()
+
+
+u1 = UPI(1500, "jasil@upi")
+u1.pay()
+
+print()
+
+c1 = Card(3000, "1234-5678-9876")
+c1.pay()
+
+print()
+
+n1 = NetBanking(5000, "SBI")
+n1.pay()
+
+
 # 74. Create a shipping system using polymorphism.
 
 # 75. Create different file handlers:
@@ -842,6 +901,32 @@ c.sound()
 'OPERATOR OVERLOADING QUESTIONS'
 
 # 81. Overload + operator for complex numbers.
+
+class Data:
+
+    def __init__(self, value):
+        self.value = value
+
+    # Operator Overloading
+    def __add__(self, other):
+        return self.value + other.value
+
+
+# String Example
+s1 = Data("Hello ")
+s2 = Data("Python")
+
+print("String Addition:")
+print(s1 + s2)
+
+print()
+
+# Integer Example
+n1 = Data(100)
+n2 = Data(200)
+
+print("Integer Addition:")
+print(n1 + n2)
 
 # 82. Overload + operator for adding bank balances.
 
