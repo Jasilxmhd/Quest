@@ -766,6 +766,27 @@
 
 # 62. Create parent and child constructors using super().
 
+class Person:
+
+    def __init__(self, name):
+        self.name = name
+        print("Parent constructor called")
+
+
+class Student(Person):
+
+    def __init__(self, name, course):
+        super().__init__(name)
+
+        self.course = course
+        print("Child constructor called")
+
+
+s1 = Student("Jasil", "Computer Engineering")
+
+print("Name :", s1.name)
+print("Course :", s1.course)
+
 # 63. Demonstrate Method Resolution Order (MRO).
 
 # 64. Create a diamond inheritance structure and explain MRO.
