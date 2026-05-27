@@ -766,26 +766,26 @@
 
 # 62. Create parent and child constructors using super().
 
-class Person:
+# class Person:
 
-    def __init__(self, name):
-        self.name = name
-        print("Parent constructor called")
-
-
-class Student(Person):
-
-    def __init__(self, name, course):
-        super().__init__(name)
-
-        self.course = course
-        print("Child constructor called")
+#     def __init__(self, name):
+#         self.name = name
+#         print("Parent constructor called")
 
 
-s1 = Student("Jasil", "Computer Engineering")
+# class Student(Person):
 
-print("Name :", s1.name)
-print("Course :", s1.course)
+#     def __init__(self, name, course):
+#         super().__init__(name)
+
+#         self.course = course
+#         print("Child constructor called")
+
+
+# s1 = Student("Jasil", "Computer Engineering")
+
+# print("Name :", s1.name)
+# print("Course :", s1.course)
 
 # 63. Demonstrate Method Resolution Order (MRO).
 
@@ -817,83 +817,83 @@ print("Course :", s1.course)
 #    - Cat
 #    with same sound() method.
 
-class Dog:
+# class Dog:
 
-    def sound():
-        print('Barking...')
+#     def sound():
+#         print('Barking...')
     
-class Cat(Dog):
+# class Cat(Dog):
 
-    def sound(self):
-        print(' Meow Meow ')
-        super().sound
+#     def sound(self):
+#         print(' Meow Meow ')
+#         super().sound
 
-c = Cat()
+# c = Cat()
 
-c.sound()
+# c.sound()
 
 # 73. Create payment methods:
 #    - UPI
 #    - Card
 #    - NetBanking
 
-class Payment:
+# class Payment:
 
-    def __init__(self, amount):
-        self.amount = amount
+#     def __init__(self, amount):
+#         self.amount = amount
 
-    def show_amount(self):
-        print(f"Amount : ₹{self.amount}")
-
-
-class UPI(Payment):
-
-    def __init__(self, amount, upi_id):
-        super().__init__(amount)
-        self.upi_id = upi_id
-
-    def pay(self):
-        print("Payment Method : UPI")
-        print(f"UPI ID : {self.upi_id}")
-        self.show_amount()
+#     def show_amount(self):
+#         print(f"Amount : ₹{self.amount}")
 
 
-class Card(Payment):
+# class UPI(Payment):
 
-    def __init__(self, amount, card_number):
-        super().__init__(amount)
-        self.card_number = card_number
+#     def __init__(self, amount, upi_id):
+#         super().__init__(amount)
+#         self.upi_id = upi_id
 
-    def pay(self):
-        print("Payment Method : Card")
-        print(f"Card Number : {self.card_number}")
-        self.show_amount()
-
-
-class NetBanking(Payment):
-
-    def __init__(self, amount, bank_name):
-        super().__init__(amount)
-        self.bank_name = bank_name
-
-    def pay(self):
-        print("Payment Method : NetBanking")
-        print(f"Bank Name : {self.bank_name}")
-        self.show_amount()
+#     def pay(self):
+#         print("Payment Method : UPI")
+#         print(f"UPI ID : {self.upi_id}")
+#         self.show_amount()
 
 
-u1 = UPI(1500, "jasil@upi")
-u1.pay()
+# class Card(Payment):
 
-print()
+#     def __init__(self, amount, card_number):
+#         super().__init__(amount)
+#         self.card_number = card_number
 
-c1 = Card(3000, "1234-5678-9876")
-c1.pay()
+#     def pay(self):
+#         print("Payment Method : Card")
+#         print(f"Card Number : {self.card_number}")
+#         self.show_amount()
 
-print()
 
-n1 = NetBanking(5000, "SBI")
-n1.pay()
+# class NetBanking(Payment):
+
+#     def __init__(self, amount, bank_name):
+#         super().__init__(amount)
+#         self.bank_name = bank_name
+
+#     def pay(self):
+#         print("Payment Method : NetBanking")
+#         print(f"Bank Name : {self.bank_name}")
+#         self.show_amount()
+
+
+# u1 = UPI(1500, "jasil@upi")
+# u1.pay()
+
+# print()
+
+# c1 = Card(3000, "1234-5678-9876")
+# c1.pay()
+
+# print()
+
+# n1 = NetBanking(5000, "SBI")
+# n1.pay()
 
 
 # 74. Create a shipping system using polymorphism.
@@ -923,33 +923,47 @@ n1.pay()
 
 # 81. Overload + operator for complex numbers.
 
-class Data:
+# class Data:
 
-    def __init__(self, value):
-        self.value = value
+#     def __init__(self, value):
+#         self.value = value
 
-    # Operator Overloading
-    def __add__(self, other):
-        return self.value + other.value
+#     # Operator Overloading
+#     def __add__(self, other):
+#         return self.value + other.value
 
 
-# String Example
-s1 = Data("Hello ")
-s2 = Data("Python")
+# # String Example
+# s1 = Data("Hello ")
+# s2 = Data("Python")
 
-print("String Addition:")
-print(s1 + s2)
+# print("String Addition:")
+# print(s1 + s2)
 
-print()
+# print()
 
-# Integer Example
-n1 = Data(100)
-n2 = Data(200)
+# n1 = Data(100)
+# n2 = Data(200)
 
-print("Integer Addition:")
-print(n1 + n2)
+# print("Integer Addition:")
+# print(n1 + n2)
 
 # 82. Overload + operator for adding bank balances.
+
+# class Bank:
+
+#     def __init__(self,balance):
+#         self.balance = balance
+
+    
+#     def __add__(self,other):
+#         total = self.balance + other.balance
+#         return total
+    
+# user = Bank(5000)
+# user1 = Bank(3000)
+
+# print('Total Balance : ', user + user1 )
 
 # 83. Overload * operator for matrix multiplication.
 
