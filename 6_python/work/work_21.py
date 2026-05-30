@@ -31,6 +31,21 @@ BEGINNER LEVEL
 # - Print "Division Successful" using else block
 # - Print "Program Ended" using finally block
 
+# try:
+#         a = int(input('Enter a number :'))
+#         b = int(input('Enter another number :'))
+
+#         c = a/b
+# except:
+#         print("Dvision by zero")
+
+# else:
+#         print("Division Successful",c)
+
+# finally:
+#         print("Program Ended")
+
+
 
 # 2. INTEGER INPUT CHECKER
 # ------------------------
@@ -41,12 +56,43 @@ BEGINNER LEVEL
 # - Prints a success message using else
 # - Prints "Thank You" using finally
 
+# try:
+#     a = int(input('Enter your age : '))
+
+# except ValueError:
+#     print("invalid input. please enter number only")
+
+# else:
+#     print('Age Entered Successfully')
+
+# finally:
+#     print('Thank You')
+
 
 # 3. LIST INDEX ACCESS
 # --------------------
 # Create a list with 5 fruits.
 # Ask the user to enter an index.
 # Display the fruit at that index.
+
+# try:
+
+#     fruits = ['apple', 'banana', 'kiwi', 'orange']
+#     print(fruits)
+
+#     a = int(input('Enter a fruits Index (0 - 3) : '))
+
+#     print('Selected Fruit :', fruits[a])
+
+# except IndexError:
+#     print('List index out of range. Please enter index 0 - 3')
+
+# else:
+#     print('Success')
+
+# finally:
+#     print('Program ended.')
+
 
 # Handle:
 # - Invalid index

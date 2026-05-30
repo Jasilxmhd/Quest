@@ -71,15 +71,15 @@
 
 'while True using exception'
 
-while True:
-    try:
-        a = int(input("Enter a number : "))
-        b = int(input("Enter another number : "))
-        c = a/b
+# while True:
+#     try:
+#         a = int(input("Enter a number : "))
+#         b = int(input("Enter another number : "))
+#         c = a/b
 
-    except:
-        print('Please enter valid input !!')
+#     except:
+#         print('Please enter valid input !!')
 
-    else:
-        print(c)
-        break
+#     else:
+#         print(c)
+#         break
