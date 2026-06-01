@@ -1,259 +1,259 @@
-while True:
+# while True:
 
-    print("\n----- MENU -----")
-    print("1. List all records")
-    print("2. Add records")
-    print("3. Edit Record")
-    print("4. Delete Record")
-    print("5. Exit")
+#     print("\n----- MENU -----")
+#     print("1. List all records")
+#     print("2. Add records")
+#     print("3. Edit Record")
+#     print("4. Delete Record")
+#     print("5. Exit")
 
-    choice = input("Enter your choice : ")
+#     choice = input("Enter your choice : ")
 
-    if choice == "1":
+#     if choice == "1":
 
-        file = open("userdata.txt", "r")
+#         file = open("userdata.txt", "r")
 
-        print("\n------ Display Records ------")
-        print(file.read())
+#         print("\n------ Display Records ------")
+#         print(file.read())
 
-        file.close()
+#         file.close()
 
-    elif choice == "2":
+#     elif choice == "2":
 
-        print("\n------ Add Records ------")
+#         print("\n------ Add Records ------")
 
-        name = input("Enter Name : ")
+#         name = input("Enter Name : ")
 
-        phones = []
-        emails = []
+#         phones = []
+#         emails = []
 
-        while True:
+#         while True:
 
-            phone = input("Enter Phone Number : ")
+#             phone = input("Enter Phone Number : ")
 
-            if phone.startswith("+91 ") and len(phone) == 14:
-                phones.append(phone)
-            else:
-                print("Invalid Phone Number")
-                continue
+#             if phone.startswith("+91 ") and len(phone) == 14:
+#                 phones.append(phone)
+#             else:
+#                 print("Invalid Phone Number")
+#                 continue
 
-            more = input("Add Another Phone Number? (yes/no) : ")
+#             more = input("Add Another Phone Number? (yes/no) : ")
 
-            if more.lower() != "yes":
-                break
+#             if more.lower() != "yes":
+#                 break
 
-        while True:
+#         while True:
 
-            email = input("Enter Email : ")
+#             email = input("Enter Email : ")
 
-            if email.endswith("@gmail.com"):
-                emails.append(email)
-            else:
-                print("Invalid Email")
-                continue
+#             if email.endswith("@gmail.com"):
+#                 emails.append(email)
+#             else:
+#                 print("Invalid Email")
+#                 continue
 
-            more = input("Add Another Email? (yes/no) : ")
+#             more = input("Add Another Email? (yes/no) : ")
 
-            if more.lower() != "yes":
-                break
+#             if more.lower() != "yes":
+#                 break
 
-        file = open("userdata.txt", "a")
+#         file = open("userdata.txt", "a")
 
-        file.write("\nName : " + name + "\n")
+#         file.write("\nName : " + name + "\n")
 
-        file.write("Phone Numbers :\n")
+#         file.write("Phone Numbers :\n")
 
-        for p in phones:
-            file.write("- " + p + "\n")
+#         for p in phones:
+#             file.write("- " + p + "\n")
 
-        file.write("Emails :\n")
+#         file.write("Emails :\n")
 
-        for e in emails:
-            file.write("- " + e + "\n")
+#         for e in emails:
+#             file.write("- " + e + "\n")
 
-        file.write("----------------------\n")
+#         file.write("----------------------\n")
 
-        file.close()
+#         file.close()
 
-        print("Records Added Successfully")
+#         print("Records Added Successfully")
 
-    elif choice == "3":
+#     elif choice == "3":
 
-        print("\n------ Edit Records ------")
+#         print("\n------ Edit Records ------")
 
-        search_name = input("Enter Name To Edit : ")
+#         search_name = input("Enter Name To Edit : ")
 
-        file = open("userdata.txt", "r")
-        lines = file.readlines()
-        file.close()
+#         file = open("userdata.txt", "r")
+#         lines = file.readlines()
+#         file.close()
 
-        found = False
-        new_data = []
+#         found = False
+#         new_data = []
 
-        i = 0
+#         i = 0
 
-        while i < len(lines):
+#         while i < len(lines):
 
-            if lines[i].strip() == "Name : " + search_name:
+#             if lines[i].strip() == "Name : " + search_name:
 
-                found = True
+#                 found = True
 
-                print("Record Found")
+#                 print("Record Found")
 
-                change_name = input("Do You Want To Change Name? (yes/no) : ")
+#                 change_name = input("Do You Want To Change Name? (yes/no) : ")
 
-                if change_name.lower() == "yes":
-                    new_name = input("Enter New Name : ")
-                else:
-                    new_name = search_name
+#                 if change_name.lower() == "yes":
+#                     new_name = input("Enter New Name : ")
+#                 else:
+#                     new_name = search_name
 
-                old_phones = []
-                old_emails = []
+#                 old_phones = []
+#                 old_emails = []
 
-                j = i + 2
+#                 j = i + 2
 
-                while not lines[j].startswith("Emails"):
-                    old_phones.append(lines[j].replace("- ", "").strip())
-                    j += 1
+#                 while not lines[j].startswith("Emails"):
+#                     old_phones.append(lines[j].replace("- ", "").strip())
+#                     j += 1
 
-                j += 1
+#                 j += 1
 
-                while lines[j].strip() != "----------------------":
-                    old_emails.append(lines[j].replace("- ", "").strip())
-                    j += 1
+#                 while lines[j].strip() != "----------------------":
+#                     old_emails.append(lines[j].replace("- ", "").strip())
+#                     j += 1
 
-                phones = []
+#                 phones = []
 
-                change_phone = input("Do You Want To Change Phone Numbers? (yes/no) : ")
+#                 change_phone = input("Do You Want To Change Phone Numbers? (yes/no) : ")
 
-                if change_phone.lower() == "yes":
+#                 if change_phone.lower() == "yes":
 
-                    while True:
+#                     while True:
 
-                        phone = input("Enter New Phone Number : ")
+#                         phone = input("Enter New Phone Number : ")
 
-                        if phone.startswith("+91 ") and len(phone) == 14:
-                            phones.append(phone)
-                        else:
-                            print("Invalid Phone Number")
-                            continue
+#                         if phone.startswith("+91 ") and len(phone) == 14:
+#                             phones.append(phone)
+#                         else:
+#                             print("Invalid Phone Number")
+#                             continue
 
-                        more = input("Add Another Phone Number? (yes/no) : ")
+#                         more = input("Add Another Phone Number? (yes/no) : ")
 
-                        if more.lower() != "yes":
-                            break
+#                         if more.lower() != "yes":
+#                             break
 
-                else:
-                    phones = old_phones
+#                 else:
+#                     phones = old_phones
 
-                emails = []
+#                 emails = []
 
-                change_email = input("Do You Want To Change Emails? (yes/no) : ")
+#                 change_email = input("Do You Want To Change Emails? (yes/no) : ")
 
-                if change_email.lower() == "yes":
+#                 if change_email.lower() == "yes":
 
-                    while True:
+#                     while True:
 
-                        email = input("Enter New Email : ")
+#                         email = input("Enter New Email : ")
 
-                        if email.endswith("@gmail.com"):
-                            emails.append(email)
-                        else:
-                            print("Invalid Email")
-                            continue
+#                         if email.endswith("@gmail.com"):
+#                             emails.append(email)
+#                         else:
+#                             print("Invalid Email")
+#                             continue
 
-                        more = input("Add Another Email? (yes/no) : ")
+#                         more = input("Add Another Email? (yes/no) : ")
 
-                        if more.lower() != "yes":
-                            break
+#                         if more.lower() != "yes":
+#                             break
 
-                else:
-                    emails = old_emails
+#                 else:
+#                     emails = old_emails
 
-                new_data.append("Name : " + new_name + "\n")
-                new_data.append("Phone Numbers :\n")
+#                 new_data.append("Name : " + new_name + "\n")
+#                 new_data.append("Phone Numbers :\n")
 
-                for p in phones:
-                    new_data.append("- " + p + "\n")
+#                 for p in phones:
+#                     new_data.append("- " + p + "\n")
 
-                new_data.append("Emails :\n")
+#                 new_data.append("Emails :\n")
 
-                for e in emails:
-                    new_data.append("- " + e + "\n")
+#                 for e in emails:
+#                     new_data.append("- " + e + "\n")
 
-                new_data.append("----------------------\n")
+#                 new_data.append("----------------------\n")
 
-                i = j
+#                 i = j
 
-            else:
-                new_data.append(lines[i])
+#             else:
+#                 new_data.append(lines[i])
 
-            i += 1
+#             i += 1
 
-        if found:
+#         if found:
 
-            file = open("userdata.txt", "w")
+#             file = open("userdata.txt", "w")
 
-            for line in new_data:
-                file.write(line)
+#             for line in new_data:
+#                 file.write(line)
 
-            file.close()
+#             file.close()
 
-            print("Record Modified Successfully")
+#             print("Record Modified Successfully")
 
-        else:
-            print("Record Not Found")
+#         else:
+#             print("Record Not Found")
 
-    elif choice == "4":
+#     elif choice == "4":
 
-        print("\n------ Delete Record ------")
+#         print("\n------ Delete Record ------")
 
-        search_name = input("Enter Name To Delete : ")
+#         search_name = input("Enter Name To Delete : ")
 
-        file = open("userdata.txt", "r")
-        lines = file.readlines()
-        file.close()
+#         file = open("userdata.txt", "r")
+#         lines = file.readlines()
+#         file.close()
 
-        found = False
-        new_data = []
+#         found = False
+#         new_data = []
 
-        i = 0
+#         i = 0
 
-        while i < len(lines):
+#         while i < len(lines):
 
-            if lines[i].strip() == "Name : " + search_name:
+#             if lines[i].strip() == "Name : " + search_name:
 
-                found = True
+#                 found = True
 
-                print("Record Deleted Successfully")
+#                 print("Record Deleted Successfully")
 
-                i += 1
+#                 i += 1
 
-                while i < len(lines) and lines[i].strip() != "----------------------":
-                    i += 1
+#                 while i < len(lines) and lines[i].strip() != "----------------------":
+#                     i += 1
 
-            else:
-                new_data.append(lines[i])
+#             else:
+#                 new_data.append(lines[i])
 
-            i += 1
+#             i += 1
 
-        if found:
+#         if found:
 
-            file = open("userdata.txt", "w")
+#             file = open("userdata.txt", "w")
 
-            for line in new_data:
-                file.write(line)
+#             for line in new_data:
+#                 file.write(line)
 
-            file.close()
+#             file.close()
 
-        else:
-            print("Record Not Found")
+#         else:
+#             print("Record Not Found")
 
 
-    elif choice == "5":
+#     elif choice == "5":
 
-        print("Program Closed")
-        break
+#         print("Program Closed")
+#         break
 
-    else:
-        print("Invalid Choice")
+#     else:
+#         print("Invalid Choice")
