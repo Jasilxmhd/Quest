@@ -59,6 +59,12 @@
 
 
 
+
+
+
+"........  character class  ........"
+
+
 '\D'   ' (Any charactor . that is not a digit)'
 
 
@@ -189,11 +195,11 @@
 
 
 
-import re
+# import re
 
-data = 'My Phone NUmber is +91 97468 27950 or +91 96561 77550'
+# data = 'My Phone NUmber is +91 97468 27950 or +91 96561 77550'
 
-pattern = r'\+91 \d{5} \d{5}'
+# pattern = r'\+91 \d{5} \d{5}'
 
-result = re.findall(pattern, data)
-print(result)
+# result = re.findall(pattern, data)
+# print(result)
