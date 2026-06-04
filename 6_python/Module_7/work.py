@@ -16,11 +16,48 @@ import re
 
 'IP address'
 
+# with open('regex_practice_dataset.txt','r+')as f:
+#     # print(f.read())
+#     data = f.read()
+
+#     ip = re.findall(r'\d{,3}\.\d{,3}\.\d{,3}\.\d{,2}',data)
+#     for i in ip:
+#         print(i)
+#     print()
+
+
+
+
+'PAN CARD NUMBERS'
+
+# with open('regex_practice_dataset.txt','r+')as f:
+
+#     data = f.read()
+
+#     pan = re.findall(r'[A-Z]{5}\d{4}[A-Z]',data)
+#     for i in pan:
+#         print(i)
+#     print()
+
+
+
+
+
+
+
+
+
+
+
+
 with open('regex_practice_dataset.txt','r+')as f:
-    # print(f.read())
+
     data = f.read()
 
-    ip = re.findall(r'\d{,3}\.\d{,3}\.\d{,3}\.\d{,2}',data)
-    for i in ip:
+    email = re.findall(r'.com$',data)
+    for i in email:
         print(i)
     print()
+
+
+

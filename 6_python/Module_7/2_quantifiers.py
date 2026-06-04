@@ -131,19 +131,19 @@
 
 
 
-'+'
+'+ ( Atleat one word )'
 
 # import re
 
 # data = 'h a a5  My name is jasil .2004  I am from Adivaram . My phone number is 9746827950'
 
-# result = re.findall(r'\w+', data)    # Atlear one word
+# result = re.findall(r'\w+', data)    # Atleat one word
 
 # print(result)    # ['h', 'a', 'a5', 'My', 'name', 'is', 'jasil', '2004', 'I', 'am', 'from', 'Adivaram', 'My', 'phone', 'number', 'is', '9746827950']
 
 
 
-
+'* ( zero or more )'
 
 # import re
 
@@ -159,7 +159,7 @@
 
 
 
-
+'? ( zero or )'
 
 # import re
 
@@ -184,12 +184,89 @@
 '........................................................'
 
 
-import re
+# import re
 
-test_case = 'a ab abc abbc abbcc abbbccc abbbbcccc'
-result = re.findall(r'a\w*', test_case)
-result1 = re.findall(r'a\w+', test_case)
-result2 = re.findall(r'a\w?', test_case)
-print(result)                                     #  ['a', 'ab', 'abc', 'abbc', 'abbcc', 'abbbccc', 'abbbbcccc']
-print(result1)                                    #  ['ab', 'abc', 'abbc', 'abbcc', 'abbbccc', 'abbbbcccc']
-print(result2)                                    #  ['a', 'ab', 'ab', 'ab', 'ab', 'ab', 'ab']
+# test_case = 'a ab abc abbc abbcc abbbccc abbbbcccc'
+# result = re.findall(r'a\w*', test_case)
+# result1 = re.findall(r'a\w+', test_case)
+# result2 = re.findall(r'a\w?', test_case)
+# print(result)                                         #  ['a', 'ab', 'abc', 'abbc', 'abbcc', 'abbbccc', 'abbbbcccc']
+# print(result1)                                        #  ['ab', 'abc', 'abbc', 'abbcc', 'abbbccc', 'abbbbcccc']
+# print(result2)                                        #  ['a', 'ab', 'ab', 'ab', 'ab', 'ab', 'ab']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'.......................................................................................'
+
+
+
+
+
+
+'Get only Capital letter'
+
+# import re
+# data = '10 h a a5  My name is jasil .2004  I am from Adivaram . My phone number is 9746827950 ✅'
+
+# pattern = r'[A-Z]'                   # Capital leters only
+# pattern = r'[a-z]'                   # Small letters only
+# pattern = r'[A-z]'                   # Capital and Small
+# pattern = r'[0-9]'                   # Digits only
+# pattern = r'[A-z0-9]{3}'             # ['nam', 'jas', '200', 'fro', 'Adi', 'var', 'pho', 'num', 'ber', '974', '682', '795']
+
+
+
+
+
+'....... NOT ( ^ ) Starting.......'
+
+# pattern = r'[^0-9A-Z]'                 # not digits and capital letters( verand nikkan)
+# pattern = r'[^0-9A-z]'                 # not digits and capital letters , get white space and emoji
+
+
+
+
+
+'........ Doller ( ^start, end$ )  ........ '
+
+# pattern = r'^10'                 # start il 10 ndoon check cheyyan not ^ use chayyam([] illand)
+# pattern = r'✅$'                 # end il emoji ndoon nookaan . $ vechh
+
+
+
+
+
+# print(re.findall(pattern,data))
+
+
+
+
