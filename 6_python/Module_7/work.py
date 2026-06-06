@@ -48,13 +48,13 @@ import re
 
 
 
-
+import re
 
 with open('regex_practice_dataset.txt','r+')as f:
 
     data = f.read()
 
-    email = re.findall(r'.com$',data)
+    email = re.findall(r'^Email:',data)
     for i in email:
         print(i)
     print()
