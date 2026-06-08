@@ -47,12 +47,12 @@ import re
 
 
 
-import re
+# import re
 
-with open('regex_practice_dataset.txt', 'r') as f:
-    data = f.read()
+# with open('regex_practice_dataset.txt', 'r') as f:
+#     data = f.read()
 
-emails = re.findall(r'Email: (.*)', data)
+# emails = re.findall(r'Email: (.*)', data)
 
-for email in emails:
-    print(email)
+# for email in emails:
+#     print(email)

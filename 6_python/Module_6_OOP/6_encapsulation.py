@@ -1,5 +1,6 @@
 
 'Encapsulation'
+# Data Hiding
 
 
 # class Bank():
@@ -41,5 +42,9 @@
 
 # print(jasil.__ac_no)          # AttributeError: 'Bank' object has no attribute '__ac_no'
 # print(jasil.__balance)          # AttributeError: 'Bank' object has no attribute '__balance'.
+
+
+
+
 
 
