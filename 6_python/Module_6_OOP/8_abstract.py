@@ -29,14 +29,22 @@ abstractmethod     -> decerator
 from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
-    @abstractmethod
 
+    @abstractmethod
     def breaks(self):
         pass
 
     def acceleration(self):
-        pass
+        print("Vehicle is accelerating")
+
 
 class Bike(Vehicle):
+
     def breaks(self):
-        return super().breaks()
+        print("Bike brakes applied")
+
+
+b = Bike()
+
+b.breaks()
+b.acceleration()
