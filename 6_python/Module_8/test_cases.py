@@ -44,17 +44,70 @@
 '...............................................'
 
 import unittest
-from calculataion import division
+# from calculataion import division
 
 
 
 
-class jasil(unittest.TestCase):
+# class jasil(unittest.TestCase):
     
-    def test_division(self):
+#     def test_division(self):
 
-       with self.assertRaisest(ZeroDivisionError):
-           division(10,0)
+#        with self.assertRaisest(ZeroDivisionError):
+#            division(10,0)
 
+# unittest.main()
+
+
+
+
+
+
+
+
+
+'................................................................................'
+
+
+
+
+def get_data():
+    None
+
+
+"""assertTrue   | assertFalse | assertIn  | assertNotIn"""
+
+
+class TestLetters(unittest.TestCase):
+    def test_uppercase(self):
+        self.assertTrue("PYTHON".isupper())
+        
+        
+    def test_lower(self):
+        self.assertFalse("python".isupper())
+        
+        
+    def test_mebershop(self):
+        fruits = ['apple','banana','orange']
+        self.assertIn("apple",fruits)
+          
+    def test_mebershop2(self):
+        fruits = ['apple','banana','orange']
+        self.assertNotIn("mango",fruits)
+        
+        
+    def test_none(self):
+        self.assertIsNone(get_data())
+    
+    def test_is(self):
+        a=[1,2] 
+        b=a
+        self.assertIs(a,b)       
+        
+         
+        
+    def test_is(self):
+        self.assertAlmostEqual(20/3,6.66667,places=3)        
+        
+        
 unittest.main()
-
