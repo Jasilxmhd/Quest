@@ -1,6 +1,9 @@
-# REGULAR EXPRESSION PRACTICAL QUESTIONS (30)
 
-# BEGINNER LEVEL
+'REGULAR EXPRESSION PRACTICAL QUESTIONS (30)'
+
+'BEGINNER LEVEL'
+
+
 # 1. Extract all email addresses.
 # 2. Extract all phone numbers in Indian format.
 # 3. Extract all dates in DD/MM/YYYY format.
@@ -12,7 +15,8 @@
 # 9. Count the total number of email addresses.
 # 10. Count the total number of phone numbers.
 
-# INTERMEDIATE LEVEL
+'INTERMEDIATE LEVEL'
+
 # 11. Extract usernames from email addresses.
 # 12. Extract only Gmail addresses.
 # 13. Extract all IP addresses.
@@ -24,7 +28,8 @@
 # 19. Extract all PAN numbers.
 # 20. Extract all GSTIN numbers.
 
-# ADVANCED LEVEL
+'ADVANCED LEVEL'
+
 # 21. Extract only valid email addresses and ignore invalid ones.
 # 22. Find all records where salary is greater than 50000.
 # 23. Extract domain names from URLs.
@@ -41,7 +46,8 @@
 #     - Total IP addresses
 #     - Total transactions
 
-# BONUS REAL-WORLD TASKS
+'BONUS REAL-WORLD TASKS'
+
 # 1. Build an email extractor tool.
 # 2. Build a log analyzer using regex.
 # 3. Create a password strength checker.
