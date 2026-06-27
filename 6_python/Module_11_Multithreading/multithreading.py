@@ -1,26 +1,26 @@
 
-# 'Multithreading'
+'Multithreading'
 
-# import threading
+import threading
 
-# def display():
-#     for i in range(5):
-#         print('muhammed')
-
-
-
-# def new():
-#     for i in range(5):
-#         print('jasil')
+def display():
+    for i in range(5):
+        print('muhammed')
 
 
-# task = threading.Thread(target=display)
-# task1 = threading.Thread(target=new)
 
-# task.start()
-# task1.start()
+def new():
+    for i in range(5):
+        print('jasil')
 
-# print('PA')
+
+task = threading.Thread(target=display)
+task1 = threading.Thread(target=new)
+
+task.start()
+task1.start()
+
+print('PA')
 
 
 
