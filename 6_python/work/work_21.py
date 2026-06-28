@@ -31,19 +31,19 @@ BEGINNER LEVEL
 # - Print "Division Successful" using else block
 # - Print "Program Ended" using finally block
 
-try:
-        a = int(input('Enter a number :'))
-        b = int(input('Enter another number :'))
+# try:
+#         a = int(input('Enter a number :'))
+#         b = int(input('Enter another number :'))
 
-        c = a/b
-except:
-        print("Dvision by zero")
+#         c = a/b
+# except:
+#         print("Dvision by zero")
 
-else:
-        print("Division Successful",c)
+# else:
+#         print("Division Successful",c)
 
-finally:
-        print("Program Ended")
+# finally:
+#         print("Program Ended")
 
 
 
@@ -56,17 +56,17 @@ finally:
 # - Prints a success message using else
 # - Prints "Thank You" using finally
 
-try:
-    a = int(input('Enter your age : '))
+# try:
+#     a = int(input('Enter your age : '))
 
-except ValueError:
-    print("invalid input. please enter number only")
+# except ValueError:
+#     print("invalid input. please enter number only")
 
-else:
-    print('Age Entered Successfully')
+# else:
+#     print('Age Entered Successfully')
 
-finally:
-    print('Thank You')
+# finally:
+#     print('Thank You')
 
 
 # 3. LIST INDEX ACCESS
@@ -75,23 +75,23 @@ finally:
 # Ask the user to enter an index.
 # Display the fruit at that index.
 
-try:
+# try:
 
-    fruits = ['apple', 'banana', 'kiwi', 'orange']
-    print(fruits)
+#     fruits = ['apple', 'banana', 'kiwi', 'orange']
+#     print(fruits)
 
-    a = int(input('Enter a fruits Index (0 - 3) : '))
+#     a = int(input('Enter a fruits Index (0 - 3) : '))
 
-    print('Selected Fruit :', fruits[a])
+#     print('Selected Fruit :', fruits[a])
 
-except IndexError:
-    print('List index out of range. Please enter index 0 - 3')
+# except IndexError:
+#     print('List index out of range. Please enter index 0 - 3')
 
-else:
-    print('Success')
+# else:
+#     print('Success')
 
-finally:
-    print('Program ended.')
+# finally:
+#     print('Program ended.')
 
 
 # Handle:
