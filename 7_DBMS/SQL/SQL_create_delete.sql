@@ -41,3 +41,6 @@ select * from student;
 
 alter table student rename column id to s_id;      -- column name changing
 select * from student;
+
+
+
