@@ -13,7 +13,7 @@ alter table employee add phone varchar(50) after name;         --  add phone col
 
 
 -- Create new column and set default value
-alter table employee add department varchar(50) default "IT";
+alter table employee add department varchar(50) default "IT";	
 
 -- Delete a column
 alter table employee drop column email;
