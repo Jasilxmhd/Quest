@@ -17,6 +17,8 @@ insert into employee values(101, "developer", 75000,21,"calicut"),
 
 select * from employee;
 
+
+
 -- copy the full data of table employee
 create table employee_backup as select * from employee;
 select * from employee_backup;
@@ -73,7 +75,6 @@ delete from employee where emp_id = 104 ;
 select * from employee;
 
 
-
 delete from employee;
 
 insert into employee values(101, "developer", 75000,21,"calicut"),
@@ -87,7 +88,7 @@ insert into employee values(101, "developer", 75000,21,"calicut"),
                             (109, "sales", 50000,25,"kochi"),
                             (110, "sales", 50000,25,"kochi");
                             
-select * from employee limit 5;                           --  get first 5 datas
+select * from employee limit 5;                          --  get first 5 datas
 
 
 select * from employee limit 5 offset 4;                 --  get a 5 data in offset 4 (after 4 datas)
@@ -97,3 +98,25 @@ select * from employee limit 5,2;                        -- get data 2 coumns in
 
 
 
+
+
+
+
+ -- -------------------------------------------------------
+ 
+create database colleges;
+use colleges;
+
+create table employee(emp_id int,
+					 department varchar(50),
+					 salary decimal(10,2),
+					 age int,
+					 city varchar(50)
+);
+
+insert into employee values(101, "developer", 75000,21,"calicut"),
+							(102, "Digital marketing", 70000,20,"mukkam"),
+							(103, "tester", 62000,20,"wayanad"),
+                            (104, "sales", 50000,25,"kochi");
+
+select * from employee;
