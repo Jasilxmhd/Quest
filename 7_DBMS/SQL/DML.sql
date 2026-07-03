@@ -107,16 +107,17 @@ select * from employee limit 5,2;                        -- get data 2 coumns in
 create database colleges;
 use colleges;
 
-create table employee(emp_id int,
-					 department varchar(50),
-					 salary decimal(10,2),
-					 age int,
-					 city varchar(50)
+create table employee (emp_id int,
+					  department varchar(50),
+					  salary decimal(10,2),
+					  age int,
+					  city varchar(50)
 );
 
-insert into employee values(101, "developer", 75000,21,"calicut"),
+insert into employee values (101, "developer", 75000,21,"calicut"),
 							(102, "Digital marketing", 70000,20,"mukkam"),
 							(103, "tester", 62000,20,"wayanad"),
                             (104, "sales", 50000,25,"kochi");
 
 select * from employee;
+
