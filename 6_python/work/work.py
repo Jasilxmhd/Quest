@@ -1,7 +1,7 @@
 
 'vehicle number'
 
-import re
+# import re
 # with open('regex_practice_dataset.txt','r+')as f:
 #     # print(f.read())
 #     data = f.read()
@@ -56,3 +56,15 @@ import re
 
 # for email in emails:
 #     print(email)
+
+
+
+
+
+s = " jasil muh"
+# print(len(s))
+
+word = s.split()
+countss = len(word[-1])
+print(countss)
+

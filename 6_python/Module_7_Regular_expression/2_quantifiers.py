@@ -267,6 +267,5 @@
 
 # print(re.findall(pattern,data))
 
-
-
+ 
 

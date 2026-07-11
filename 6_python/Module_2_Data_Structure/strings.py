@@ -68,7 +68,7 @@
 
 # syntax :- [start:stop:step]
 
-s="python data types"
+# s="python data types"
 # print(s[1:4])
 # print(s[1:])
 # print(s[:6])
