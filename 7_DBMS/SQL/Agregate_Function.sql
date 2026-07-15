@@ -101,6 +101,14 @@ select department,count(*) from employees group by department having count(*);
 
 
 
+-- Remove Duplicates
+select distinct department, city from employees;
+
+
+select count(distinct department)as uniqe_column from employees;
+
+
+select avg(salary) from employees as navaneetha;
 
 
 
