@@ -99,9 +99,50 @@ select category , avg(price) from books group by category;
 
 
 
+-- Find the highest-priced book in each category. 
 
 
 
+
+
+-- Lowest price in each publisher
+SELECT publisher, MIN(price) AS lowest_price FROM books GROUP BY publisher;
+
+
+
+-- Total quantity available in each category
+select category,sum(quantity) as Total_Quantity from books group by category;
+
+
+
+
+-- 6. Count books by each publisher
+select publisher , count(*) as book_count from books group by publisher;
+
+
+
+-- 7. Average quantity for each publisher
+select publisher,avg(quantity) as AVG_Quantity from books group by publisher;
+
+
+
+-- Total book value in each category
+select category, sum(quantity * price) as Total_Value from books group by category;
+
+
+
+-- Latest publish year in each category
+select category , max(publish_year) as Latest_yr from books group by category;
+
+
+-- Display categories having more than 2 books. 
+select category,count(*)as book_count from books group by category having count(*)>2;
+
+
+
+ -- Display publishers whose average book price is greater than 700.
+ 
+ select publisher, avg(price)as avarage_pricce from books group by publisher having avg(price)>700;
 
  select * from books;
 

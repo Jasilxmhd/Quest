@@ -113,43 +113,68 @@ select avg(salary) from employees as navaneetha;
 
 
 
+-- ---------------------------------------------------------------------------------
+
+
+
+
+-- sub query
+select * from employees where salary > ( select avg(salary) from employees);
+
+
+-- Get a maximum salary employee details
+select * from employees where salary = (select max(salary) from employees);
+
+
+
+select * from employees where salary > (select salary from employees where emp_name = "rahul sharma");
+
+
+
+select * from employees where city = (select city from employees where emp_name = 'sneha das');
+
+
+
+select * from employees where city ='kochi' and salary > ( select avg(salary) from employees);
+
+
+
+select * from employees where department IN( select department from employees where salary > 80000); 
+
+
+
+select * from employees where department = (select department from employees where emp_name = 'sneha das');
+
+
+
+select * from employees;
+
+
+
+--------------------------------------------------------------- --
+
+-- Value Storing
+
+set @result = 20;
+select @result;
+
+
+
+set @count= (select count(*)from employees);
+select @count;
+
+
+
+
+select max(salary) into  @max_salary from employees;
+select @max_salary;
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--------------------------------------------------------------
 
 
 
