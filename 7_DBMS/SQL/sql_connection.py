@@ -14,6 +14,7 @@ if connection.is_connected():
 
 cursor = connection.cursor()
 
-cursor.execute("select * from employees")
+# cursor.execute("select * from employees")
+cursor.execute("select salary,city from employees")
 result = cursor.fetchall()
 print(result)
