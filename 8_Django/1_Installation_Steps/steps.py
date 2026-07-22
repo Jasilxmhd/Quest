@@ -175,3 +175,22 @@ Step 5
 
 
 '''
+
+
+
+
+
+
+
+
+"""
+
+
+
+
+Step 6
+
+- create a app
+"""
+
+# python manage.py startapp first_app
