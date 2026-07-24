@@ -20,12 +20,15 @@ from first_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homes),
+    # path('', views.homes),
+    path('', views.view_student),
+
 
 
     path('home/', views.home),
     path('about/',views.about),
-    path('homes/',views.homes)
+    path('homes/',views.homes),
+    # path("student/",views.view_student),
     
 
     
