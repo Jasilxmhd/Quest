@@ -95,68 +95,68 @@
 
 
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email import encoders
+# import smtplib
+# from email.mime.text import MIMEText
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.base import MIMEBase
+# from email import encoders
 
 
-sender = "jasilmuhammed25@gmail.com"
-password = "nrna bdij rdge bbdr"
-reciever = "muhjasil974@gmail.com"
+# sender = "jasilmuhammed25@gmail.com"
+# password = "nrna bdij rdge bbdr"
+# reciever = "muhjasil974@gmail.com"
 
-msg = MIMEMultipart()
-msg['From'] = sender
-msg['To'] = reciever
-msg['Subject'] = 'Test email with attachment'
+# msg = MIMEMultipart()
+# msg['From'] = sender
+# msg['To'] = reciever
+# msg['Subject'] = 'Test email with attachment'
 
 
-Html =  """
+# Html =  """
     
 
     
-    <div style="background-color: white; padding: 25px; border-radius: 10px; max-width: 500px; margin: auto;">
+#     <div style="background-color: white; padding: 25px; border-radius: 10px; max-width: 500px; margin: auto;">
         
-        <h2 style="color: #4f46e5;">
-            This is test mail 🚀
-        </h2>
+#         <h2 style="color: #4f46e5;">
+#             This is test mail 🚀
+#         </h2>
         
-        <p style="color: #555; font-size: 18px; line-height: 1.6;">
-            This mail contain an attachment
-        </p>
+#         <p style="color: #555; font-size: 18px; line-height: 1.6;">
+#             This mail contain an attachment
+#         </p>
         
-    </div>
-"""
+#     </div>
+# """
 
-msg.attach(MIMEText(Html,"html"))
+# msg.attach(MIMEText(Html,"html"))
 
-file_path = r"C:\Users\jasil\Documents\Quest\6_python\Module_9\portugal.avif"
-file_name ="portugal.avif"
-
-
-try:
-    with open(file_path,'rb')as attachment:
-        mime = MIMEBase('application','octet-stream')
-
-        mime.set_payload(attachment.read())
-
-        encoders.encode_base64(mime)
-
-        mime.add_header("Content-Disposition",f"attachment; filename={file_name}")
-
-        msg.attach(mime)
-
-except Exception as e:
-    print(f"An Excepation Occured {e}")
+# file_path = r"C:\Users\jasil\Documents\Quest\6_python\Module_9\portugal.avif"
+# file_name ="portugal.avif"
 
 
+# try:
+#     with open(file_path,'rb')as attachment:
+#         mime = MIMEBase('application','octet-stream')
 
-try:
-    with smtplib.SMTP("smtp.gmail.com",587)as server:
-        server.starttls()
-        server.login(sender,password)
-        server.send_message(msg)
-    print("Message sent successfully")
-except Exception as e:
-    print("an exception occured")
+#         mime.set_payload(attachment.read())
+
+#         encoders.encode_base64(mime)
+
+#         mime.add_header("Content-Disposition",f"attachment; filename={file_name}")
+
+#         msg.attach(mime)
+
+# except Exception as e:
+#     print(f"An Excepation Occured {e}")
+
+
+
+# try:
+#     with smtplib.SMTP("smtp.gmail.com",587)as server:
+#         server.starttls()
+#         server.login(sender,password)
+#         server.send_message(msg)
+#     print("Message sent successfully")
+# except Exception as e:
+#     print("an exception occured")

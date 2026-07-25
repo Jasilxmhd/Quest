@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main Page </title>
+    <title>Welcome page </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 </head>
@@ -25,7 +25,7 @@
 <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href='{% url 'welcome' %}'>Back</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{% url 'aboutpage' %}">About</a>
@@ -39,30 +39,42 @@
 </nav>
 
 
+<div class="container text-center flex-grow-1 d-flex justify-content-center align-items-center">
 
-<div class="container text-center mt-5">
-<h1 style="color: #CED4DA;">Welcome to Django</h1>
-<br><br>
-<p class="lead mt-3" style="color: #a1a6ac;">
-Django makes it easier to build better web apps more quickly and with less code.
-MVT (Model-View-Template) is the architecture used by Django to develop web applications. 
-It separates the application into three main components: Model, View, and Template. This makes the code organized, reusable, and easy to maintain.
-</p>
+    <div>
+      <h3 class="fw-light text-white display-5">
+    Django makes it easier to build better web apps
+    <br>
+    more quickly and with less code.
+</h3><br>
 
-<p class="lead mt-3" style="color: #a1a6ac;"><br>
-    Whether you're creating a personal blog, an e-commerce platform, a social
-    networking site, or a business management system, Django provides powerful
-    built-in features such as authentication, an admin dashboard, URL routing,
-    form handling, and database integration to accelerate development.
-</p>
+<a href="{% url 'mainpage' %}"
+   class="btn fw-bold"
+   style="
+      background-color:#44b78b;
+      color:#000;
+      width:250px;
+      height:55px;
+      padding:15px;
+      font-size:18px;
+   ">
+    Get started with Django
+</a>
+    </div>
 
-
-<div class="mt-4">
-    <a href="{% url 'loginpage' %}" class="btn btn-lg" style="background-color: #191871; color: #e5ebf3;">Login</a>
-    <a href="{% url 'aboutpage' %}" class="btn btn-lg" style="background-color: #0d442b; color: #e5ebf3;">About</a>
 </div>
 
-</div>
+
+
+<footer class="text-center text-light py-4 mt-auto"
+        style="background-color: #051604e3;">
+    <div class="container">
+        <p class="mb-2">
+    © 2026 Django Web Application | Developed by <strong>Muhammed Jasil</strong>
+</p>
+    </div>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
