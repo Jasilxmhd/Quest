@@ -61,10 +61,50 @@ select concat(emp_name, ' - ' , city)as emp_city from employees;
 
 
 -- 7. Replace 'Developer' with 'Software Engineer' in designation.
+update employees set designation = 'Software Engineer' where designation = 'Developer';
+
+
+
+-- 11. Display employee names in reverse order using REVERSE().
+select emp_name, reverse(emp_name) as Reverse_Name from employees;
+
+
+
+
+-- 12. Display employee names repeated twice using REPEAT().
+select emp_name,repeat(emp_name,2) as Repeated_Name from employees;
+
+
+
+
+-- 13. Find the position of letter 'a' in employee names using INSTR().
+select emp_name,insert(emp_name,1,1,'a') as Letter from employees;
+
+
+
+
+-- 14. Extract 4 characters from employee name starting from position 2.
+select emp_name,substring(emp_name,2,4) as Extracted_name from employees;
+
+
+
+-- 17. Convert salary to nearest whole number.
+select salary, round(salary) as Round_Salary from employees;
+
+
+
+
+
+-- 
+
+
+
 
                                 
 select * from employees;
-                                
+                        
+						
+
                                 
                                 
                                 
