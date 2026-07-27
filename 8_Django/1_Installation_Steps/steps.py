@@ -194,3 +194,13 @@ Step 6
 """
 
 # python manage.py startapp first_app
+
+
+
+"connect to mysql database"
+# pip install mysqlclient 
+
+
+
+'Install packages from the file'
+# pip freeze > requirments.txt
