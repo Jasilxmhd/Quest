@@ -1,10 +1,31 @@
+
+{% comment %} <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+
+<a href="{% url 'list_course' %}">
+    <button type="button">Back</button>
+</a>  {% endcomment %}
+
+
+
+
+
+
+
+
 {% comment %} 
 <form method="POST">
     {% csrf_token %}
     
     {{ form }}
 
-    <button type="submit">add course</button>
+    <button type="submit">update course</button>
 </form>
 
     {% endcomment %}
@@ -22,13 +43,10 @@
 
 
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Course</title>
+    <title>Update Course</title>
 
     <style>
         *{
@@ -47,8 +65,8 @@
         }
 
         .card{
-            width:400px;
             background:#fff;
+            width:400px;
             padding:30px;
             border-radius:10px;
             box-shadow:0 4px 12px rgba(0,0,0,0.15);
@@ -66,7 +84,7 @@
 
         label{
             display:block;
-            margin-bottom:5px;
+            margin-bottom:6px;
             font-weight:bold;
             color:#333;
         }
@@ -91,7 +109,7 @@
             box-shadow:0 0 5px rgba(25,118,210,0.3);
         }
 
-        .btn{
+        button{
             width:100%;
             padding:12px;
             background:#1976d2;
@@ -103,11 +121,11 @@
             margin-top:10px;
         }
 
-        .btn:hover{
+        button:hover{
             background:#1565c0;
         }
 
-        .back{
+        .back-btn{
             display:block;
             text-align:center;
             margin-top:15px;
@@ -116,26 +134,24 @@
             font-weight:bold;
         }
 
-        .back:hover{
+        .back-btn:hover{
             text-decoration:underline;
         }
     </style>
 </head>
-
 <body>
 
 <div class="card">
-    <h2>Add Course</h2>
+    <h2>Update Course</h2>
 
     <form method="POST">
         {% csrf_token %}
-
         {{ form.as_p }}
 
-        <button type="submit" class="btn">Add Course</button>
+        <button type="submit">Update Course</button>
     </form>
 
-    <a href="{% url 'list_course' %}" class="back">← Back to Course List</a>
+    <a href="{% url 'list_course' %}" class="back-btn">← Back to Course List</a>
 </div>
 
 </body>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Management</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#eef4ff;
+            padding:40px;
+        }
+
+        h2{
+            text-align:center;
+            color:#0d47a1;
+            margin-bottom:25px;
+        }
+
+        .container{
+            width:75%;
+            margin:auto;
+        }
+
+        .add-btn{
+            display:inline-block;
+            background:#1976d2;
+            color:white;
+            text-decoration:none;
+            padding:10px 18px;
+            border-radius:6px;
+            margin-bottom:20px;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        .add-btn:hover{
+            background:#1565c0;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            border-radius:8px;
+            overflow:hidden;
+            box-shadow:0 2px 10px rgba(0,0,0,.15);
+        }
+
+        th{
+            background:#1976d2;
+            color:white;
+            padding:14px;
+        }
+
+        td{
+            padding:12px;
+            border-bottom:1px solid #ddd;
+            text-align:center;
+        }
+
+        tr:nth-child(even){
+            background:#f5f9ff;
+        }
+
+        tr:hover{
+            background:#e3f2fd;
+        }
+
+        .action{
+            color:#1976d2;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .action:hover{
+            color:#0d47a1;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Trainer List</h2>
+
+<div class="container">
+
+    <a href="{% url 'add' %}" class="add-btn">
+        + Add Trainer
+    </a>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Trainer Name</th>
+            <th>Trainer Email</th>
+            <th>Course</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for t in trainer %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.trainer_name }}</td>
+            <td>{{ c.trainer_email }}</td>
+
+            <td>
+                <a class="action" href="{% url 'trainer_details' id=c.id %}">
+                    View
+                </a>
+            </td>
+            <td>
+                <a class="action" href="{% url 'trainer_update' id=c.id %}">
+                    Update
+                </a>
+            </td>
+            <td>
+                <a class="action" href="{% url 'trainer_delete' id=c.id %}">
+                    delete
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No Trainer found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>

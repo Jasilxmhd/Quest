@@ -125,17 +125,17 @@
 <body>
 
 <div class="card">
-    <h2>Add Course</h2>
+    <h2>Add Trainer</h2>
 
     <form method="POST">
         {% csrf_token %}
 
         {{ form.as_p }}
 
-        <button type="submit" class="btn">Add Course</button>
+        <button type="submit" class="btn">Add Trainer</button>
     </form>
 
-    <a href="{% url 'list_course' %}" class="back">← Back to Course List</a>
+    <a href="{% url 'trainer_list' %}" class="back">← Back to Trainer List</a>
 </div>
 
 </body>

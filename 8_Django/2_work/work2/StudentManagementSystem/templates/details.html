@@ -1,0 +1,90 @@
+{% comment %} 
+{{ course.id}}
+{{ course.courseName}} {% endcomment %}
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Details</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#eef4ff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .card{
+            width:400px;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        h2{
+            text-align:center;
+            color:#1976d2;
+            margin-bottom:20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            padding:12px;
+            border:1px solid #ddd;
+            text-align:left;
+        }
+
+        th{
+            background:#1976d2;
+            color:white;
+            width:40%;
+        }
+
+        .back{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            text-decoration:none;
+            background:#1976d2;
+            color:white;
+            padding:10px;
+            border-radius:5px;
+        }
+
+        .back:hover{
+            background:#1565c0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Course Details</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ course.id }}</td>
+        </tr>
+        <tr>
+            <th>Course Name</th>
+            <td>{{ course.courseName }}</td>
+        </tr>
+    </table>
+
+    <a href="{% url 'list_course' %}" class="back">Back</a>
+</div>
+
+</body>
+</html>
