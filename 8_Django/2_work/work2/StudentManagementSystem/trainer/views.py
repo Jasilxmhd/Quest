@@ -26,7 +26,7 @@ def create_trainer(request):
 
 def trainer_list(request):
     trainer = Trainer.objects.all()
-    return render(request, "trainer_list.html", {'trainer': trainer})
+    return render(request, "trainer/trainer_list.html", {'trainer': trainer})
 
 
 
@@ -34,7 +34,7 @@ def trainer_list(request):
 
 def details(request,id):
     t = Trainer.objects.get(id =id)
-    return render(request,'trainer_details.html',{'trainer':t})
+    return render(request,'trainer/trainer_details.html',{'trainer':t})
 
 
 
@@ -53,7 +53,7 @@ def update_trainer(request,id):
             return redirect(trainer_list)
     else:
         f = Trainerform(instance=data)
-    return render(request,'update_trainer.html',{'form':f})
+    return render(request,'trainer/update_trainer.html',{'form':f})
 
 
 

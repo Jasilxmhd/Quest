@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Course Management</title>
+    <title>Student Management</title>
 
     <style>
         *{
@@ -87,51 +87,59 @@
 
 <body>
 
-<h2>Trainer List</h2>
+<h2>Student List</h2>
 
 <div class="container">
 
-    <a href="{% url 'add' %}" class="add-btn">
-        + Add Trainer
+    <a href="{% url 'create_student' %}" class="add-btn">
+        + Add Student
     </a>
 
     <table>
         <tr>
             <th>ID</th>
-            <th>Trainer Name</th>
-            <th>Trainer Email</th>
+            <th>Student Name</th>
+            <th>Student Email</th>
+            <th>Student PHN NO</th>
             <th>Course</th>
+            <th>Trainer Name</th>
             <th>Details</th>
             <th>Update</th>
+            
             <th>Delete</th>
         </tr>
 
-        {% for t in trainer %}
+        {% for s in student %}
         <tr>
-            <td>{{ t.id }}</td>
-            <td>{{ t.trainer_name }}</td>
-            <td>{{ t.trainer_email }}</td>
-            <td>{{ t.course }}</td>
+            <td>{{ s.id }}</td>
+            <td>{{ s.student_name }}</td>
+            <td>{{ s.student_email }}</td>   
+            <td>{{ s.student_phnno }}</td>   
+            <td>{{ s.course }}</td>   
+            <td>{{ s.trainer }}</td>   
+
+
+
 
             <td>
-                <a class="action" href="{% url 'trainer_details' id=t.id %}">
+                <a class="action" href="{% url 'student_details' id=s.id %}">
                     View
                 </a>
             </td>
             <td>
-                <a class="action" href="{% url 'update_trainer' id=t.id %}">
+                <a class="action" href="{% url 'update_student' id=s.id %}">
                     Update
                 </a>
             </td>
             <td>
-                <a class="action" href="{% url 'delete_trainer' id=t.id %}">
+                <a class="action" href="{% url 'delete_student' id=s.id %}">
                     delete
                 </a>
             </td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="4">No Trainer found.</td>
+            <td colspan="4">No Student found.</td>
         </tr>
         {% endfor %}
     </table>

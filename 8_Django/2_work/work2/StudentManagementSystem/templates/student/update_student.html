@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Update Course</title>
+    <title>Update Student</title>
 
     <style>
         *{
@@ -99,16 +99,16 @@
 <body>
 
 <div class="card">
-    <h2>Update Trainer</h2>
+    <h2>Update Student</h2>
 
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button type="submit">Update Trainer</button>
+        <button type="submit">Update Student</button>
     </form>
 
-    <a href="{% url 'trainer_list' %}" class="back-btn">← Back to Trainer List</a>
+    <a href="{% url 'student_list' %}" class="back-btn">← Back to Student List</a>
 </div>
 
 </body>

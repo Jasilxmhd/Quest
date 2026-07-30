@@ -70,24 +70,36 @@
 <body>
 
 <div class="card">
-    <h2>Trainer Details</h2>
+    <h2>Student Details</h2>
 
     <table>
         <tr>
             <th>ID</th>
-            <td>{{ trainer.id }}</td>
+            <td>{{ student.id }}</td>
         </tr>
         <tr>
-            <th>Course Name</th>
-            <td>{{ trainer.trainer_name }}</td>
+            <th>Name</th>
+            <td>{{ student.student_name }}</td>
         </tr>
         <tr>
-            <th>Trainer Email</th>
-            <td>{{ trainer.trainer_email }}</td>
+            <th>Email</th>
+            <td>{{ student.student_email }}</td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td>{{ student.student_phnno }}</td>
+        </tr>
+        <tr>
+            <th>Course</th>
+            <td>{{ student.course }}</td>
+        </tr>
+        <tr>
+            <th>Trainer Name</th>
+            <td>{{ student.trainer }}</td>
         </tr>
     </table>
 
-    <a href="{% url 'trainer_list' %}" class="back">Back</a>
+    <a href="{% url 'student_list' %}" class="back">Back</a>
 </div>
 
 </body>
