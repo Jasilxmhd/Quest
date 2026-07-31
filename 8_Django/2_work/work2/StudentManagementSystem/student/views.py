@@ -23,6 +23,12 @@ def create_student(request):
 
 
 
+
+
+
+
+
+
 def student_list(request):
     student = Student.objects.all()
     return render(request,'student/student_list.html',{'student':student})
@@ -30,9 +36,17 @@ def student_list(request):
     
 
 
-def student_details(request,id):
-    j = Student.objects.all()
-    return render(request,'student/student_details.html',{'student':j})
+
+
+
+
+
+def student_details(request, id):
+    student = Student.objects.get(id=id)
+    return render(request,'student/student_details.html',{'student': student})
+
+
+
 
 
 
@@ -48,7 +62,7 @@ def update_student(request,id):
             return redirect(student_list)
     else:
         f = Studentform(instance=data)
-    return render(request,'update_trainer.html',{'form':f})
+    return render(request,'student/update_student.html',{'form':f})
 
 
 
@@ -61,3 +75,7 @@ def delete_student(request , id):
   
     data.delete()
     return redirect(student_list)
+
+
+def resume(request):
+    return render(request,'index.html')

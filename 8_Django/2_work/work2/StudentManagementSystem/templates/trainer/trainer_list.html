@@ -1,8 +1,12 @@
+
+{% extends "business/base.html" %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Course Management</title>
 
+    {% block content %}
     <style>
         *{
             margin:0;
@@ -137,6 +141,8 @@
     </table>
 
 </div>
+{% endblock content %}
 
 </body>
 </html>
+
