@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --page-bg: #7d8580;
+            --forest-dark: #06291d;
+            --forest: #0b4b34;
+            --forest-light: #2b8b65;
+            --cream: #dbeee4;
+            --text-dark: #101b16;
+            --text-muted: #7d8580;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "DM Sans", Arial, sans-serif;
+            background: var(--page-bg);
+        }
+
+        .welcome-card {
+            width: min(100%, 1100px);
+            min-height: 680px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            padding: 14px;
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 14px 34px rgba(0, 35, 24, 0.22);
+        }
+
+        /* Left panel */
+        .actions-panel {
+            padding: 60px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #ffffff;
+        }
+
+        .logo-box {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 34px;
+            font-style: italic;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--forest-dark), var(--forest-light));
+        }
+
+        .actions-panel h2 {
+            margin: 0 0 8px;
+            color: var(--text-dark);
+            font-size: 24px;
+        }
+
+        .actions-panel > p {
+            margin: 0 0 32px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 1px;
+            margin-bottom: 30px;
+            background: #dce5df;
+        }
+
+        .buttons {
+            display: grid;
+            gap: 14px;
+        }
+
+        .btn {
+            display: block;
+            padding: 14px 20px;
+            border-radius: 7px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .btn-login {
+            color: #ffffff;
+            background: linear-gradient(90deg, #06291d, #0b4b34, #2b8b65);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(90deg, #031b13, #073b2a, #1f7655);
+        }
+
+        .btn-register {
+            color: var(--forest);
+            border: 1px solid var(--forest);
+            background: #ffffff;
+        }
+
+        .btn-register:hover {
+            color: #ffffff;
+            background: var(--forest);
+            transform: translateY(-2px);
+        }
+
+        /* Right panel */
+        .message-panel {
+            position: relative;
+            overflow: hidden;
+            padding: 55px;
+            display: flex;
+            align-items: flex-start;
+            color: #ffffff;
+            border-radius: 12px;
+            background:
+                radial-gradient(circle at 22% 8%, rgba(49, 151, 104, 0.62), transparent 29%),
+                radial-gradient(circle at 50% 85%, rgba(30, 117, 81, 0.48), transparent 27%),
+                linear-gradient(120deg, #0b4b34 0%, #06291d 52%, #031b13 100%);
+        }
+
+        .message-panel::before,
+        .message-panel::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(94, 193, 144, 0.10);
+        }
+
+        .message-panel::before {
+            width: 300px;
+            height: 300px;
+            right: -145px;
+            top: -120px;
+        }
+
+        .message-panel::after {
+            width: 250px;
+            height: 250px;
+            left: -100px;
+            bottom: -125px;
+        }
+
+        .message-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .message-panel h1 {
+            margin: 15px 0 18px;
+            color: var(--cream);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(42px, 4.5vw, 62px);
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -1.5px;
+            line-height: 0.95;
+        }
+
+        .message-panel h1 span {
+            display: block;
+            margin-left: 58px;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 0.82em;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -2px;
+        }
+
+        .message-panel p {
+            max-width: 310px;
+            margin: 0;
+            color: #d1e4da;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                padding: 14px;
+            }
+
+            .welcome-card {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .message-panel {
+                min-height: 320px;
+                order: -1;
+            }
+
+            .actions-panel,
+            .message-panel {
+                padding: 45px 30px;
+            }
+
+            .message-panel h1 {
+                font-size: 49px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="welcome-card">
+        <section class="actions-panel">
+            {% comment %} <div class="logo-box">Jas</div> {% endcomment %}
+
+            <h1>Get Started</h1>
+            <p>Welcome! Log in or create an account to continue.</p>
+
+            <div class="divider"></div>
+
+            <div class="buttons">
+                <a href="{% url 'loginpage' %}" class="btn btn-login">Login</a>
+                <a href="{% url 'registerpage' %}" class="btn btn-register">Sign up</a>
+            </div>
+        </section>
+
+        <section class="message-panel">
+            <div class="message-content">
+                <h1>
+                    Welcome<br>
+                    Back
+                </h1>
+
+                <p>
+                    Sign in to access your account, or create a new account to begin your journey.
+                </p>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
