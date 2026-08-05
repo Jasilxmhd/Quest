@@ -1,0 +1,22 @@
+<table border=1>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Driscription</th>
+            <th>Image</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.description  }}</td>
+            <td><img src="{{ post.image.url }}"width="250" height="150"></td>
+            <td><a href="{% url 'update' post.id %}">Update</a></td>
+            <td><a href="{% url 'delete' post.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
