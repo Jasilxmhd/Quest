@@ -7,8 +7,8 @@ class Post(models.Model):
 
     title = models.CharField(max_length=250) 
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to='post/')
-
+    image = models.ImageField(upload_to="posts/")
+    
     def __str__(self):
         return self.title
 
