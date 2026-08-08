@@ -4,6 +4,13 @@ from .models import Post
 from .forms import PostForm
 from django .urls import reverse_lazy
 
+from django.http import HttpResponse
+
+# Email 
+
+from django.core.mail import EmailMultiAlternatives
+from django.conf import settings
+
 # Create your views here.
 class PostList(ListView):
     model = Post
@@ -87,3 +94,32 @@ def post_delete(request,id):
         post.delete()
         return redirect("post_list")
     return render(request,"post/delete..html",{"post":post})
+
+
+
+
+
+
+def send_html_email(request):
+    subject = "welcome"
+    text_content = "welcome to django"
+
+    html_content = """
+
+    <h1>welcome to Django</h1>
+    <p>This is an <b> HTML email </p>
+    """
+
+
+    email = EmailMultiAlternatives(
+        subject,
+        text_content,
+        settings.EMAIL_HOST_USER,
+        ['sreerajquest@gmail.com']
+    )
+
+    email.attach_alternative(html_content,"text/html")
+    email.send()
+
+    return HttpResponse("email send succesfully")
+

@@ -13,4 +13,6 @@ urlpatterns = [
     path('post/update/<int:id>/', views.post_update, name="post_update"),
     path('post/delete/<int:id>/', views.post_delete, name="post_delete"),
 
+    path('send/',views.send_html_email,name ='name'),
+
 ]
