@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "DM Sans", Arial, sans-serif;
+            background:
+                radial-gradient(circle at 15% 15%, rgba(60, 208, 139, 0.22), transparent 28%),
+                linear-gradient(135deg, #e8f3ec, #d8eadf);
+        }
+
+        .register-box {
+            width: min(100%, 390px);
+            padding: 42px 36px;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 16px 38px rgba(0, 35, 24, 0.28);
+        }
+
+        .helptext {
+        display: none !important;
+        }
+
+        h2 {
+            margin: 0 0 28px;
+            color: #07583b;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 42px;
+            font-style: italic;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        form p {
+            margin: 0 0 17px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 7px;
+            color: #173d2d;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #b8d5c5;
+            border-radius: 7px;
+            color: #173d2d;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #167852;
+            box-shadow: 0 0 0 3px rgba(22, 120, 82, 0.12);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 8px;
+            padding: 13px;
+            border: none;
+            border-radius: 7px;
+            color: #ffffff;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #063c29, #0b6947, #2b8b65);
+            transition: 0.25s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(90deg, #03291b, #07583b, #167852);
+        }
+
+        @media (max-width: 450px) {
+            .register-box {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-box">
+        <h2>Create Account</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+
+<body>
+
+    <h1>Categories</h1>
+
+    <a href="{% url 'dashboard' %}">Dashboard</a> |
+    <a href="{% url 'category_create' %}">Add Category</a> |
+    <a href="{% url 'logout' %}">Logout</a>
+
+    <hr>
+
+    {% if categories %}
+
+        <table border="1">
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for category in categories %}
+
+            <tr>
+
+                <td>{{ category.id }}</td>
+
+                <td>{{ category.name }}</td>
+
+                <td>{{ category.description }}</td>
+
+                <td>{{ category.created_at }}</td>
+
+                <td>
+                    <a href="{% url 'category_update' category.id %}">
+                        Edit
+                    </a>
+
+                    |
+
+                    <a href="{% url 'category_delete' category.id %}">
+                        Delete
+                    </a>
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    {% else %}
+
+        <p>No categories found.</p>
+
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <h1>Expense Tracker Dashboard</h1>
+
+    <h3>
+        Welcome, {{ request.user.username }}
+    </h3>
+
+    <hr>
+
+    <h2>Dashboard</h2>
+
+    <p>Total Expenses: ₹0</p>
+
+    <p>Current Month Expenses: ₹0</p>
+
+    <p>Total Categories: 0</p>
+
+    <h3>Recently Added Expenses</h3>
+
+    <p>No expenses added yet.</p>
+
+    <hr>
+
+    <a href="{% url 'category_list' %}">
+        Manage Categories
+    </a>
+
+    <br><br>
+
+    <a href="{% url 'loginpage' %}">
+        Login
+    </a>
+    <br><br>
+
+    <a href="{% url 'logout' %}">
+        Logout
+    </a>
+
+</body>
+</html>
