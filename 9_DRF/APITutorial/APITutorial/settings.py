@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'first_drf_app',
+    'student_drf_app',
 
 
 ]
