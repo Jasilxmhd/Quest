@@ -11,3 +11,4 @@ urlpatterns = [
 
     path('employee/delete/<int:id>', views.employee_delete, name='delete'),
 ]
+
