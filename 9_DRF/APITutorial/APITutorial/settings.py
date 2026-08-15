@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'first_drf_app',
     'student_drf_app',
+    
 
 
 ]

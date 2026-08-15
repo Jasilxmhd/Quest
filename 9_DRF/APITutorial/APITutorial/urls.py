@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/',include('first_drf_app.urls')),
     path('api/',include('student_drf_app.urls')),
     
+    
     path('api/login/',TokenObtainPairView.as_view(),name='token_obtain_view'),
     path('api/token/refresh/',TokenRefreshView.as_view(),name='token_refresh'),
     path('api/logout/',TokenBlacklistView.as_view(),name='logout'),
