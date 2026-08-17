@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Categories - Expense Tracker</title>
+    <title>Manage Expenses - Expense Tracker</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -26,6 +26,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+
     <style>
 
         :root {
@@ -41,11 +42,19 @@
             --danger: #FF5C7A;
         }
 
+
         * {
             box-sizing: border-box;
         }
 
+
+        html {
+            background: #08080D !important;
+        }
+
+
         body {
+
             margin: 0;
 
             font-family: 'Poppins', sans-serif;
@@ -56,21 +65,24 @@
                     rgba(0, 212, 199, 0.08),
                     transparent 30%
                 ),
-                var(--bg);
+                #08080D !important;
 
             color: var(--text);
 
             min-height: 100vh;
         }
 
+
         .app {
             display: flex;
             min-height: 100vh;
         }
 
+
         /* SIDEBAR */
 
         .sidebar {
+
             width: 250px;
 
             min-height: 100vh;
@@ -91,7 +103,11 @@
             flex-direction: column;
         }
 
+
+        /* LOGO */
+
         .logo {
+
             display: flex;
 
             align-items: center;
@@ -109,7 +125,9 @@
             margin-bottom: 40px;
         }
 
+
         .logo-icon {
+
             width: 40px;
             height: 40px;
 
@@ -135,7 +153,11 @@
                 0 0 20px rgba(0, 212, 199, 0.20);
         }
 
+
+        /* MENU */
+
         .menu-title {
+
             color: #5F5D6A;
 
             font-size: 10px;
@@ -147,7 +169,9 @@
             margin: 10px 12px;
         }
 
+
         .side-link {
+
             display: flex;
 
             align-items: center;
@@ -169,17 +193,22 @@
             transition: 0.25s;
         }
 
+
         .side-link i {
             font-size: 17px;
         }
 
+
         .side-link:hover {
+
             color: var(--text);
 
             background: var(--card);
         }
 
+
         .side-link.active {
+
             color: var(--teal);
 
             background:
@@ -192,7 +221,11 @@
             border-left: 2px solid var(--teal);
         }
 
+
+        /* LOGOUT */
+
         .sidebar-bottom {
+
             margin-top: auto;
 
             padding-top: 20px;
@@ -200,19 +233,24 @@
             border-top: 1px solid var(--border);
         }
 
+
         .logout-link {
             color: var(--danger);
         }
 
+
         .logout-link:hover {
+
             color: #FF7890;
 
             background: rgba(255, 92, 122, 0.08);
         }
 
+
         /* MAIN */
 
         .main {
+
             width: calc(100% - 250px);
 
             margin-left: 250px;
@@ -222,9 +260,11 @@
             padding: 45px;
         }
 
-        /* TOPBAR */
+
+        /* TOP BAR */
 
         .topbar {
+
             display: flex;
 
             justify-content: flex-end;
@@ -238,7 +278,9 @@
             border-bottom: 1px solid var(--border);
         }
 
+
         .welcome {
+
             color: var(--muted);
 
             font-size: 13px;
@@ -246,13 +288,17 @@
             margin-right: 15px;
         }
 
+
         .username {
+
             color: var(--teal);
 
             font-weight: 500;
         }
 
+
         .logout-btn {
+
             color: var(--text);
 
             background: var(--card);
@@ -270,7 +316,9 @@
             transition: 0.25s;
         }
 
+
         .logout-btn:hover {
+
             color: var(--danger);
 
             border-color: var(--danger);
@@ -278,9 +326,11 @@
             background: rgba(255, 92, 122, 0.06);
         }
 
+
         /* PAGE HEADER */
 
         .page-header {
+
             display: flex;
 
             justify-content: space-between;
@@ -292,7 +342,9 @@
             gap: 20px;
         }
 
+
         .page-title {
+
             font-size: 30px;
 
             font-weight: 600;
@@ -300,7 +352,9 @@
             margin-bottom: 5px;
         }
 
+
         .page-subtitle {
+
             color: var(--muted);
 
             font-size: 13px;
@@ -308,9 +362,11 @@
             margin: 0;
         }
 
+
         /* ADD BUTTON */
 
         .btn-add {
+
             display: inline-flex;
 
             align-items: center;
@@ -343,7 +399,9 @@
             white-space: nowrap;
         }
 
+
         .btn-add:hover {
+
             color: #08080D;
 
             transform: translateY(-2px);
@@ -352,10 +410,12 @@
                 0 8px 20px rgba(0, 212, 199, 0.20);
         }
 
-        /* CATEGORY CARD */
 
-        .category-card {
-            background: var(--card);
+        /* EXPENSE CARD */
+
+        .expense-card {
+
+            background: #15141F !important;
 
             border: 1px solid var(--border);
 
@@ -366,14 +426,44 @@
             overflow: hidden;
         }
 
+
         /* TABLE */
 
         .table {
+
+            --bs-table-bg: transparent !important;
+
+            --bs-table-color: var(--text) !important;
+
+            --bs-table-border-color: var(--border) !important;
+
+            --bs-table-hover-bg:
+                rgba(0, 212, 199, 0.025) !important;
+
+            --bs-table-hover-color:
+                var(--text) !important;
+
+            background: transparent !important;
+
+            color: var(--text) !important;
+
             margin: 0;
         }
 
+
+        .table thead,
+        .table tbody,
+        .table tr,
+        .table th,
+        .table td {
+
+            background-color: transparent !important;
+        }
+
+
         .table th {
-            color: var(--muted);
+
+            color: var(--muted) !important;
 
             font-size: 11px;
 
@@ -383,53 +473,90 @@
 
             letter-spacing: 0.4px;
 
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border) !important;
 
             padding: 14px 10px;
-
-            background: transparent;
         }
 
+
         .table td {
-            color: var(--text);
+
+            color: var(--text) !important;
 
             font-size: 13px;
 
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border) !important;
 
             padding: 16px 10px;
 
             vertical-align: middle;
-
-            background: transparent;
         }
+
 
         .table tbody tr:last-child td {
-            border-bottom: none;
+
+            border-bottom: none !important;
         }
+
 
         .table tbody tr {
+
             transition: 0.2s;
+
+            background: transparent !important;
         }
 
-        .table tbody tr:hover td {
-            background: rgba(0, 212, 199, 0.025);
+
+        .table tbody tr:hover {
+
+            background:
+                rgba(0, 212, 199, 0.025) !important;
         }
 
-        .category-id {
-            color: var(--muted);
-        }
 
-        .category-name {
-            color: var(--cyan);
+        /* EXPENSE TITLE */
+
+        .expense-title {
 
             font-weight: 500;
+
+            color: var(--text) !important;
         }
 
-        .category-description {
-            color: var(--muted);
 
-            max-width: 350px;
+        /* CATEGORY */
+
+        .category {
+
+            color: var(--cyan) !important;
+        }
+
+
+        /* AMOUNT */
+
+        .amount {
+
+            color: var(--teal) !important;
+
+            font-weight: 600;
+        }
+
+
+        /* DATE */
+
+        .date {
+
+            color: var(--muted) !important;
+        }
+
+
+        /* DESCRIPTION */
+
+        .description {
+
+            color: var(--muted) !important;
+
+            max-width: 220px;
 
             white-space: nowrap;
 
@@ -438,21 +565,19 @@
             text-overflow: ellipsis;
         }
 
-        .created-date {
-            color: var(--muted);
-
-            font-size: 12px;
-        }
 
         /* ACTIONS */
 
         .actions {
+
             display: flex;
 
             gap: 7px;
         }
 
+
         .action-btn {
+
             width: 34px;
 
             height: 34px;
@@ -469,38 +594,54 @@
 
             border: 1px solid var(--border);
 
-            background: #111018;
+            background: #111018 !important;
 
             transition: 0.2s;
         }
 
+
+        /* EDIT */
+
         .edit-btn {
-            color: var(--teal);
+
+            color: var(--teal) !important;
         }
 
+
         .edit-btn:hover {
-            color: var(--teal);
+
+            color: var(--teal) !important;
 
             border-color: var(--teal);
 
-            background: rgba(0, 212, 199, 0.08);
+            background:
+                rgba(0, 212, 199, 0.08) !important;
         }
+
+
+        /* DELETE */
 
         .delete-btn {
-            color: var(--danger);
+
+            color: var(--danger) !important;
         }
 
+
         .delete-btn:hover {
-            color: var(--danger);
+
+            color: var(--danger) !important;
 
             border-color: var(--danger);
 
-            background: rgba(255, 92, 122, 0.08);
+            background:
+                rgba(255, 92, 122, 0.08) !important;
         }
+
 
         /* EMPTY */
 
         .empty {
+
             text-align: center;
 
             padding: 70px 20px;
@@ -510,7 +651,9 @@
             font-size: 13px;
         }
 
+
         .empty i {
+
             display: block;
 
             font-size: 45px;
@@ -520,7 +663,9 @@
             color: #494755;
         }
 
+
         .empty-title {
+
             color: var(--text);
 
             font-size: 16px;
@@ -528,46 +673,61 @@
             margin-bottom: 5px;
         }
 
+
         /* RESPONSIVE */
 
         @media (max-width: 991px) {
 
             .sidebar {
+
                 width: 75px;
 
                 padding: 25px 10px;
             }
 
+
             .logo span,
             .menu-title,
             .side-link span {
+
                 display: none;
             }
 
+
             .logo {
+
                 justify-content: center;
             }
+
 
             .side-link {
+
                 justify-content: center;
             }
 
+
             .main {
+
                 width: calc(100% - 75px);
 
                 margin-left: 75px;
 
                 padding: 30px;
             }
+
         }
+
 
         @media (max-width: 768px) {
 
             .sidebar {
+
                 display: none;
             }
 
+
             .main {
+
                 width: 100%;
 
                 margin-left: 0;
@@ -575,29 +735,34 @@
                 padding: 25px 15px;
             }
 
+
             .page-header {
+
                 align-items: flex-start;
 
                 flex-direction: column;
             }
 
+
             .page-title {
+
                 font-size: 25px;
             }
 
+
             .btn-add {
+
                 width: 100%;
 
                 justify-content: center;
             }
 
-            .category-card {
+
+            .expense-card {
+
                 padding: 15px;
             }
 
-            .topbar {
-                margin-bottom: 25px;
-            }
         }
 
     </style>
@@ -610,6 +775,8 @@
 
 <div class="app">
 
+
+    <!-- SIDEBAR -->
 
     <aside class="sidebar">
 
@@ -647,20 +814,21 @@
         </a>
 
 
-        <a href="{% url 'category_list' %}"
+
+        <a href="{% url 'expense_list' %}"
            class="side-link active">
 
-            <i class="bi bi-tags"></i>
+            <i class="bi bi-receipt"></i>
 
             <span>
-                Manage Categories
+                Manage Expenses
             </span>
 
-        </a>
-
+        </a>    
 
 
         <div class="sidebar-bottom">
+
 
             <a href="{% url 'logout' %}"
                class="side-link logout-link">
@@ -673,16 +841,22 @@
 
             </a>
 
+
         </div>
 
 
     </aside>
 
 
+    <!-- MAIN -->
+
     <main class="main">
 
 
+        <!-- TOPBAR -->
+
         <div class="topbar">
+
 
             <div class="welcome">
 
@@ -704,39 +878,46 @@
 
             </a>
 
+
         </div>
 
+
+        <!-- PAGE HEADER -->
 
         <div class="page-header">
 
 
             <div>
 
+
                 <h1 class="page-title">
 
-                    <i class="bi bi-tags"
+                    <i class="bi bi-receipt"
                        style="color: var(--teal);">
+
                     </i>
 
-                    Categories
+                    Expenses
 
                 </h1>
 
+
                 <p class="page-subtitle">
 
-                    Create and manage your expense categories.
+                    View and manage your daily expenses.
 
                 </p>
+
 
             </div>
 
 
-            <a href="{% url 'category_create' %}"
+            <a href="{% url 'expense_create' %}"
                class="btn-add">
 
                 <i class="bi bi-plus-lg"></i>
 
-                Add Category
+                Add Expense
 
             </a>
 
@@ -744,42 +925,58 @@
         </div>
 
 
-        <div class="category-card">
+        <!-- EXPENSE TABLE -->
+
+        <div class="expense-card">
 
 
-            {% if categories %}
+            {% if expenses %}
 
 
             <div class="table-responsive">
+
 
                 <table class="table align-middle">
 
 
                     <thead>
 
+
                         <tr>
 
-                            <th>
-                                ID
-                            </th>
 
                             <th>
-                                Name
+                                Title
                             </th>
+
+
+                            <th>
+                                Category
+                            </th>
+
+
+                            <th>
+                                Amount
+                            </th>
+
+
+                            <th>
+                                Date
+                            </th>
+
 
                             <th>
                                 Description
                             </th>
 
-                            <th>
-                                Created At
-                            </th>
 
                             <th>
                                 Actions
                             </th>
 
+
                         </tr>
+
 
                     </thead>
 
@@ -787,36 +984,43 @@
                     <tbody>
 
 
-                        {% for category in categories %}
+                        {% for expense in expenses %}
 
 
                         <tr>
 
 
-                            <td class="category-id">
+                            <td class="expense-title">
 
-                                #{{ category.id }}
-
-                            </td>
-
-
-                            <td class="category-name">
-
-                                {{ category.name }}
+                                {{ expense.title }}
 
                             </td>
 
 
-                            <td class="category-description">
+                            <td class="category">
 
-                                {{ category.description|default:"—" }}
+                                {{ expense.category.name }}
 
                             </td>
 
 
-                            <td class="created-date">
+                            <td class="amount">
 
-                                {{ category.created_at|date:"d M Y, h:i A" }}
+                                ₹{{ expense.amount }}
+
+                            </td>
+
+
+                            <td class="date">
+
+                                {{ expense.expense_date }}
+
+                            </td>
+
+
+                            <td class="description">
+
+                                {{ expense.description|default:"—" }}
 
                             </td>
 
@@ -827,7 +1031,7 @@
                                 <div class="actions">
 
 
-                                    <a href="{% url 'category_update' category.id %}"
+                                    <a href="{% url 'expense_update' expense.id %}"
                                        class="action-btn edit-btn"
                                        title="Edit">
 
@@ -836,7 +1040,7 @@
                                     </a>
 
 
-                                    <a href="{% url 'category_delete' category.id %}"
+                                    <a href="{% url 'expense_delete' expense.id %}"
                                        class="action-btn delete-btn"
                                        title="Delete">
 
@@ -862,6 +1066,7 @@
 
                 </table>
 
+
             </div>
 
 
@@ -870,15 +1075,29 @@
 
             <div class="empty">
 
-                <i class="bi bi-tags"></i>
+
+                <i class="bi bi-receipt"></i>
+
 
                 <div class="empty-title">
-                    No Categories Found
+
+                    No Expenses Found
+
                 </div>
 
+
                 <div>
-                    Add your first category to start organizing expenses.
+
+                    Add your first expense to start tracking.
+
                 </div>
+
+
+                <br>
+
+
+
+
 
             </div>
 

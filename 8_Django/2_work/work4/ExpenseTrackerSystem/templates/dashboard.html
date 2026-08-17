@@ -1,47 +1,1599 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Dashboard</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker Dashboard</title>
+
+
+    <!-- =========================
+         GOOGLE FONT
+    ========================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         BOOTSTRAP
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        /* ========================================
+           ROOT COLORS
+        ======================================== */
+
+        :root {
+
+            --bg: #08080D;
+
+            --sidebar: #0D0D15;
+
+            --navbar: #0B0B12;
+
+            --card: #15141F;
+
+            --card-hover: #1B1A27;
+
+            --border: #292735;
+
+            --border-hover: #3A3849;
+
+            --text: #F5F5F7;
+
+            --muted: #92909D;
+
+            --teal: #00D4C7;
+
+            --cyan: #19C7D8;
+
+            --danger: #FF5C7A;
+
+            --success: #38D39F;
+
+        }
+
+
+        /* ========================================
+           BODY
+        ======================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 5%,
+                    rgba(0, 212, 199, 0.08),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(25, 199, 216, 0.05),
+                    transparent 25%
+                ),
+
+                var(--bg);
+
+            min-height: 100vh;
+        }
+
+
+        /* ========================================
+           MAIN APP
+        ======================================== */
+
+        .app {
+
+            min-height: 100vh;
+
+            width: 100%;
+        }
+
+
+        /* ========================================
+           SIDEBAR
+        ======================================== */
+
+        .sidebar {
+
+            position: fixed;
+
+            left: 0;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 250px;
+
+            background: rgba(13, 13, 21, 0.97);
+
+            border-right: 1px solid var(--border);
+
+            padding: 25px 18px;
+
+            z-index: 1000;
+
+            overflow-y: auto;
+        }
+        
+
+
+        /* ========================================
+           LOGO
+        ======================================== */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-decoration: none;
+
+            color: var(--text);
+
+            font-size: 19px;
+
+            font-weight: 600;
+
+            margin-bottom: 42px;
+        }
+
+
+        .logo:hover {
+
+            color: var(--text);
+        }
+
+
+        .logo-icon {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            color: #08080D;
+
+            font-size: 20px;
+
+            box-shadow:
+                0 0 25px rgba(0, 212, 199, 0.20);
+        }
+
+
+        /* ========================================
+           MENU TITLE
+        ======================================== */
+
+        .menu-title {
+
+            color: #5F5D6A;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.2px;
+
+            margin: 10px 12px 12px;
+        }
+
+
+        /* ========================================
+           SIDEBAR LINK
+        ======================================== */
+
+        .side-link {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            margin-bottom: 6px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .side-link i {
+
+            font-size: 17px;
+
+            min-width: 18px;
+        }
+
+
+        .side-link:hover {
+
+            color: var(--text);
+
+            background: var(--card);
+        }
+
+
+        .side-link.active {
+
+            color: var(--teal);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 212, 199, 0.15),
+                    rgba(0, 212, 199, 0.02)
+                );
+
+            border-left: 2px solid var(--teal);
+
+            padding-left: 12px;
+        }
+
+
+        /* ========================================
+           MAIN CONTENT
+        ======================================== */
+
+        .main {
+
+            margin-left: 250px;
+
+            min-height: 100vh;
+
+            width: calc(100% - 250px);
+        }
+
+
+        /* ========================================
+           TOP NAVBAR
+        ======================================== */
+
+        .top-navbar {
+
+            height: 75px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            padding: 0 40px;
+
+            background: rgba(8, 8, 13, 0.88);
+
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(14px);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 999;
+        }
+
+
+        .navbar-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        /* ========================================
+           WELCOME
+        ======================================== */
+
+        .welcome-text {
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .welcome-text span {
+
+            color: var(--text);
+
+            font-weight: 500;
+        }
+
+
+        /* ========================================
+           LOGOUT BUTTON
+        ======================================== */
+
+        .navbar-logout {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 12px 18px;
+
+            background: #15141F;
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .navbar-logout i {
+
+            font-size: 17px;
+        }
+
+
+        .navbar-logout:hover {
+
+            color: var(--danger);
+
+            border-color: var(--danger);
+
+            background: rgba(255, 92, 122, 0.07);
+
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 5px 20px rgba(255, 92, 122, 0.08);
+        }
+
+
+        /* ========================================
+           CONTENT
+        ======================================== */
+
+        .content {
+
+            padding: 40px;
+        }
+
+
+        /* ========================================
+           PAGE HEADER
+        ======================================== */
+
+        .header {
+
+            margin-bottom: 32px;
+        }
+
+
+        .title {
+
+            font-size: 32px;
+
+            font-weight: 600;
+
+            margin: 0 0 7px;
+        }
+
+
+        .subtitle {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin: 0;
+        }
+
+
+        .username {
+
+            color: var(--teal);
+
+            font-weight: 500;
+        }
+
+
+        /* ========================================
+           STATISTICS
+        ======================================== */
+
+        .stat-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            height: 100%;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171620,
+                    #111018
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .stat-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+
+            height: 130px;
+
+            right: -55px;
+
+            top: -55px;
+
+            border-radius: 50%;
+
+            background: var(--teal);
+
+            opacity: 0.06;
+
+            filter: blur(15px);
+        }
+
+
+        .stat-card:hover {
+
+            transform: translateY(-5px);
+
+            background: var(--card-hover);
+
+            border-color: var(--teal);
+
+            box-shadow:
+                0 12px 35px rgba(0, 212, 199, 0.08);
+        }
+
+
+        /* ========================================
+           STAT ICON
+        ======================================== */
+
+        .stat-icon {
+
+            width: 46px;
+
+            height: 46px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            color: var(--teal);
+
+            background: rgba(0, 212, 199, 0.10);
+
+            font-size: 20px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ========================================
+           STAT TITLE
+        ======================================== */
+
+        .stat-title {
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.7px;
+        }
+
+
+        /* ========================================
+           STAT VALUE
+        ======================================== */
+
+        .stat-value {
+
+            margin-top: 7px;
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            color: var(--text);
+        }
+
+
+        .stat-value span {
+
+            color: var(--teal);
+        }
+
+
+        /* ========================================
+           RECENT EXPENSE CARD
+        ======================================== */
+
+        .recent-card {
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+        }
+
+
+        .recent-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .recent-title {
+
+            font-size: 17px;
+
+            font-weight: 500;
+        }
+
+
+        .recent-subtitle {
+
+            margin-top: 3px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* ========================================
+           TABLE
+        ======================================== */
+
+        .table {
+
+            margin-top: 20px;
+
+            margin-bottom: 0;
+        }
+
+
+        .table thead th {
+
+            color: var(--muted);
+
+            background: transparent;
+
+            border-bottom: 1px solid var(--border);
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            padding: 12px 10px;
+
+            text-transform: uppercase;
+        }
+
+
+        .table tbody td {
+
+            color: var(--text);
+
+            background: transparent;
+
+            border-bottom: 1px solid var(--border);
+
+            font-size: 13px;
+
+            padding: 15px 10px;
+        }
+
+
+        .table tbody tr:last-child td {
+
+            border-bottom: none;
+        }
+
+
+        .table tbody tr {
+
+            transition: 0.2s;
+        }
+
+
+        .table tbody tr:hover td {
+
+            background: rgba(0, 212, 199, 0.025);
+        }
+
+
+        .amount {
+
+            color: var(--teal) !important;
+
+            font-weight: 600;
+        }
+
+
+        .category {
+
+            color: var(--cyan) !important;
+
+            font-weight: 400;
+        }
+
+
+        /* ========================================
+           EMPTY STATE
+        ======================================== */
+
+        .empty {
+
+            text-align: center;
+
+            padding: 55px 20px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        .empty i {
+
+            display: block;
+
+            margin-bottom: 13px;
+
+            color: #494755;
+
+            font-size: 38px;
+        }
+
+
+        /* ========================================
+           ACTION BUTTONS
+        ======================================== */
+
+        .action-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        /* ========================================
+           ADD CATEGORY
+        ======================================== */
+
+        .btn-teal {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 20px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            color: #08080D;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .btn-teal:hover {
+
+            color: #08080D;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 212, 199, 0.20);
+        }
+
+
+        /* ========================================
+           MANAGE CATEGORY
+        ======================================== */
+
+        .btn-outline-dark {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 20px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            background: var(--card);
+
+            color: var(--text);
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .btn-outline-dark:hover {
+
+            color: var(--teal);
+
+            border-color: var(--teal);
+
+            background: rgba(0, 212, 199, 0.05);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ========================================
+           MOBILE SIDEBAR
+        ======================================== */
+
+        @media (max-width: 991px) {
+
+            .sidebar {
+
+                width: 75px;
+
+                padding: 25px 10px;
+            }
+
+
+            .logo {
+
+                justify-content: center;
+            }
+
+
+            .logo span {
+
+                display: none;
+            }
+
+
+            .menu-title {
+
+                display: none;
+            }
+
+
+            .side-link {
+
+                justify-content: center;
+
+                padding: 12px;
+            }
+
+
+            .side-link span {
+
+                display: none;
+            }
+
+
+            .main {
+
+                margin-left: 75px;
+
+                width: calc(100% - 75px);
+            }
+
+
+            .content {
+
+                padding: 30px;
+            }
+
+
+            .top-navbar {
+
+                padding: 0 30px;
+            }
+
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 768px) {
+
+            .sidebar {
+
+                display: none;
+            }
+
+
+            .main {
+
+                margin-left: 0;
+
+                width: 100%;
+            }
+
+
+            .content {
+
+                padding: 25px 15px;
+            }
+
+
+            .top-navbar {
+
+                height: 70px;
+
+                padding: 0 15px;
+            }
+
+
+            .navbar-right {
+
+                gap: 10px;
+            }
+
+
+            .welcome-text {
+
+                font-size: 12px;
+            }
+
+
+            .navbar-logout {
+
+                padding: 10px 13px;
+
+                font-size: 12px;
+            }
+
+
+            .navbar-logout i {
+
+                font-size: 15px;
+            }
+
+
+            .title {
+
+                font-size: 25px;
+            }
+
+
+            .subtitle {
+
+                font-size: 12px;
+            }
+
+
+            .stat-card {
+
+                padding: 20px;
+            }
+
+
+            .recent-card {
+
+                padding: 20px;
+            }
+
+        }
+
+
+        /* ========================================
+           VERY SMALL SCREEN
+        ======================================== */
+
+        @media (max-width: 480px) {
+
+            .welcome-text {
+
+                display: none;
+            }
+
+
+            .top-navbar {
+
+                justify-content: flex-end;
+            }
+
+
+            .recent-header {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
+            .action-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .btn-teal,
+            .btn-outline-dark {
+
+                width: 100%;
+
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Expense Tracker Dashboard</h1>
 
-    <h3>
-        Welcome, {{ request.user.username }}
-    </h3>
+<div class="app">
 
-    <hr>
 
-    <h2>Dashboard</h2>
+    <!-- =================================================
+         SIDEBAR
+    ================================================= -->
 
-    <p>Total Expenses: ₹0</p>
+    <aside class="sidebar">
 
-    <p>Current Month Expenses: ₹0</p>
 
-    <p>Total Categories: 0</p>
+        <!-- LOGO -->
 
-    <h3>Recently Added Expenses</h3>
+        <a href="{% url 'dashboard' %}"
+           class="logo">
 
-    <p>No expenses added yet.</p>
+            <div class="logo-icon">
 
-    <hr>
+                <i class="bi bi-wallet2"></i>
 
-    <a href="{% url 'category_list' %}">
-        Manage Categories
-    </a>
+            </div>
 
-    <br><br>
+            <span>
+                Expense Tracker
+            </span>
 
-    <a href="{% url 'loginpage' %}">
-        Login
-    </a>
-    <br><br>
+        </a>
 
-    <a href="{% url 'logout' %}">
-        Logout
-    </a>
+
+        <!-- MAIN MENU -->
+
+        <div class="menu-title">
+            MAIN
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="{% url 'dashboard' %}"              
+           class="side-link active">
+
+            <i class="bi bi-grid-1x2-fill"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- CATEGORIES -->
+
+        <a href="{% url 'category_list' %}"
+           class="side-link">
+
+            <i class="bi bi-tags"></i>
+
+            <span>
+                Manage Categories
+            </span>
+
+        </a>
+
+                <a href="{% url 'expense_list' %}"
+           class="side-link">
+
+            <i class="bi bi-receipt"></i>
+
+            <span>
+                Manage Expenses
+            </span>
+
+        </a>    
+
+
+        <a href="{% url 'category_create' %}"
+        class="side-link">
+
+            <i class="bi bi-plus-lg"></i>
+            <span>
+                Add Category
+            </span>
+
+        </a>
+
+        <a href="{% url 'expense_create' %}"
+        class="side-link">
+
+            <i class="bi bi-plus-lg"></i>
+            <span>
+                Add Expense
+            </span>
+
+        </a>
+
+
+        
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================= -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOP NAVBAR
+        ================================================= -->
+
+        <nav class="top-navbar">
+
+
+            <div class="navbar-right">
+
+
+                <!-- WELCOME -->
+
+                <div class="welcome-text">
+
+                    Welcome,
+
+                    <span>
+                        {{ request.user.username }}
+                    </span>
+
+                </div>
+
+
+                <!-- LOGOUT -->
+
+                <a href="{% url 'logout' %}"
+                   class="navbar-logout">
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    Logout
+
+                </a>
+
+
+            </div>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================= -->
+
+        <div class="content">
+
+
+            <!-- =================================================
+                 HEADER
+            ================================================= -->
+
+<div class="header"
+     style="display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 35px;">
+
+    <div>
+        <h1 class="title">
+            Dashboard
+        </h1>
+
+        <p class="subtitle">
+            Track and manage your daily expenses.
+        </p>
+    </div>
+
+    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+        
+        <!-- Add Category -->
+        <a href="{% url 'category_create' %}"
+           style="display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 12px 18px;
+                  border-radius: 9px;
+                  text-decoration: none;
+                  background: #15141F;
+                  border: 1px solid #292735;
+                  color: #F5F5F7;
+                  font-weight: 600;
+                  font-size: 14px;
+                  white-space: nowrap;">
+
+            <i class="bi bi-tags"></i>
+            Add Category
+
+        </a>
+
+        <!-- Add Expense -->
+        <a href="{% url 'expense_create' %}"
+           style="display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 12px 18px;
+                  border-radius: 9px;
+                  text-decoration: none;
+                  background: #15141F;
+                  border: 1px solid #292735;
+                  color: #F5F5F7;
+                  font-weight: 600;
+                  font-size: 14px;
+                  white-space: nowrap;">
+
+            <i class="bi bi-plus-lg"></i>
+            Add Expense
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================= -->
+
+            <div class="row g-4">
+
+
+                <!-- ============================================
+                     TOTAL EXPENSES
+                ============================================= -->
+
+                <div class="col-xl-4 col-md-6">
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon">
+
+                            <i class="bi bi-wallet2"></i>
+
+                        </div>
+
+
+                        <div class="stat-title">
+
+                            Total Expenses
+
+                        </div>
+
+
+                        <div class="stat-value">
+
+                            ₹<span>
+                                {{ total_expenses|default:"0" }}
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- ============================================
+                     CURRENT MONTH EXPENSES
+                ============================================= -->
+
+                <div class="col-xl-4 col-md-6">
+                
+                    <div class="stat-card">
+                    
+                        <div class="stat-icon">
+                            <i class="bi bi-calendar3"></i>
+                        </div>
+                    
+                        <div class="stat-title">
+                            Current Month Expenses
+                        </div>
+                    
+                        <div class="stat-value">
+                            ₹<span>{{ current_month_expenses|default:"0" }}</span>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+
+
+                <!-- ============================================
+                     TOTAL CATEGORIES
+                ============================================= -->
+
+                <div class="col-xl-4 col-md-12">
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon">
+
+                            <i class="bi bi-tags"></i>
+
+                        </div>
+
+
+                        <div class="stat-title">
+
+                            Total Categories
+
+                        </div>
+
+
+                        <div class="stat-value">
+
+                            <span>
+                                {{ total_categories|default:"0" }}
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RECENT EXPENSES
+            ================================================= -->
+
+            <div class="recent-card">
+
+
+                <!-- HEADER -->
+
+                <div class="recent-header">
+
+
+                    <div>
+
+                        <div class="recent-title">
+
+                            Recently Added Expenses
+
+                        </div>
+
+
+                        <div class="recent-subtitle">
+
+                            Your latest expense transactions
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     EXPENSE DATA EXISTS
+                ================================================= -->
+
+                {% if recent_expenses %}
+
+
+                    <div class="table-responsive">
+
+
+                        <table class="table align-middle">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Title
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                {% for expense in recent_expenses %}
+
+
+                                    <tr>
+
+
+                                        <td>
+
+                                            {{ expense.title }}
+
+                                        </td>
+
+
+                                        <td class="category">
+
+                                            {{ expense.category.name }}
+
+                                        </td>
+
+
+                                        <td class="amount">
+
+                                            ₹{{ expense.amount }}
+
+                                        </td>
+
+
+                                        <td>
+
+                                            {{ expense.expense_date }}
+
+                                        </td>
+
+
+                                    </tr>
+
+
+                                {% endfor %}
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                {% else %}
+
+
+                    <!-- =================================================
+                         EMPTY STATE
+                    ================================================= -->
+
+                    <div class="empty">
+
+
+                        <i class="bi bi-receipt"></i>
+
+
+                        <div>
+                            No expenses added yet.
+                        </div>
+
+
+                        <small>
+                            Your recent expenses will appear here.
+                        </small>
+
+
+                    </div>
+
+
+                {% endif %}
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- =================================================
+     BOOTSTRAP JS
+================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+

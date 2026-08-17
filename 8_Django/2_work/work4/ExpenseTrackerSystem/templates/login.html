@@ -1,142 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+
+    <title>Login - Expense Tracker</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
-        body {
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "DM Sans", Arial, sans-serif;
-            background:
-                radial-gradient(circle at 15% 15%, rgba(60, 208, 139, 0.22), transparent 28%),
-                linear-gradient(135deg, #e8f3ec, #d8eadf);
+
+        :root {
+
+            --bg: #08080D;
+            --card: #15141F;
+            --border: #292735;
+
+            --text: #F5F5F7;
+            --muted: #92909D;
+
+            --teal: #00D4C7;
+            --cyan: #19C7D8;
+
+            --danger: #FF5C7A;
         }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            font-family: 'Poppins', sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(0, 212, 199, 0.10),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(117, 103, 255, 0.07),
+                    transparent 30%
+                ),
+
+                var(--bg);
+        }
+
+
+        /* =========================
+           LOGIN CARD
+        ========================= */
 
         .login-box {
-            width: min(100%, 390px);
-            padding: 42px 36px;
-            border: 1px solid rgba(11, 105, 71, 0.12);
+
+            width: 100%;
+
+            max-width: 420px;
+
+            padding: 40px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #171620,
+                    #111018
+                );
+
+            border: 1px solid var(--border);
+
             border-radius: 16px;
-            background: #ffffff;
-            box-shadow: 0 16px 38px rgba(0, 35, 24, 0.28);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35);
         }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .logo-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            color: #08080D;
+
+            font-size: 26px;
+
+            box-shadow:
+                0 0 25px rgba(0, 212, 199, 0.20);
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
 
         h2 {
-            margin: 0 0 28px;
-            color: #07583b;
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 42px;
-            font-style: italic;
+
+            margin: 0;
+
+            color: var(--text);
+
+            font-size: 28px;
+
             font-weight: 600;
+
             text-align: center;
         }
+
+
+        .subtitle {
+
+            margin: 8px 0 30px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
 
         form p {
-            margin: 0 0 17px;
+
+            margin: 0 0 18px;
         }
+
 
         form label {
+
             display: block;
+
             margin-bottom: 7px;
-            color: #173d2d;
-            font-size: 14px;
-            font-weight: 600;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            font-weight: 500;
         }
+
 
         input {
+
             width: 100%;
-            padding: 12px;
-            margin-top: 5px;
-            border: 1px solid #b8d5c5;
-            border-radius: 7px;
-            color: #173d2d;
-            font-family: inherit;
-            font-size: 15px;
+
+            padding: 12px 13px;
+
+            background: #0F0F17;
+
+            color: var(--text);
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
             outline: none;
+
+            transition: 0.25s;
         }
+
 
         input:focus {
-            border-color: #167852;
-            box-shadow: 0 0 0 3px rgba(22, 120, 82, 0.12);
+
+            background: #11111A;
+
+            color: var(--text);
+
+            border-color: var(--teal);
+
+            box-shadow:
+                0 0 0 3px rgba(0, 212, 199, 0.08);
         }
+
+
+        input::placeholder {
+
+            color: #5F5D6A;
+        }
+
+
+        /* =========================
+           ERRORS
+        ========================= */
+
+        .errorlist {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 5px 0 10px;
+
+            color: var(--danger);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           LOGIN BUTTON
+        ========================= */
 
         button {
+
             width: 100%;
+
             margin-top: 8px;
-            padding: 13px;
+
+            padding: 12px;
+
             border: none;
-            border-radius: 7px;
-            color: #ffffff;
+
+            border-radius: 9px;
+
+            color: #08080D;
+
             cursor: pointer;
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 700;
-            background: linear-gradient(90deg, #063c29, #0b6947, #2b8b65);
-            transition: 0.25s ease;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            transition: 0.25s;
         }
+
 
         button:hover {
+
             transform: translateY(-2px);
-            background: linear-gradient(90deg, #03291b, #07583b, #167852);
+
+            box-shadow:
+                0 8px 20px rgba(0, 212, 199, 0.20);
         }
 
+
+        /* =========================
+           REGISTER
+        ========================= */
+
         .register-link {
-            margin: 20px 0 0;
-            color: #527064;
-            font-size: 14px;
+
+            margin: 22px 0 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 12px;
+
             text-align: center;
         }
 
+
         .register-link a {
-            color: #0b6947;
-            font-weight: 700;
+
+            color: var(--teal);
+
+            font-weight: 600;
+
             text-decoration: none;
+
+            transition: 0.2s;
         }
 
+
         .register-link a:hover {
-            color: #063c29;
+
+            color: var(--cyan);
+
             text-decoration: underline;
         }
 
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
         @media (max-width: 450px) {
+
             .login-box {
-                padding: 35px 25px;
+
+                padding: 30px 22px;
+
             }
+
+            h2 {
+
+                font-size: 25px;
+
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
 
-        <form method="POST">
-            {% csrf_token %}
 
-            {{ login_form.as_p }}
+<div class="login-box">
 
-            <button type="submit">Login</button>
-        </form>
 
-        <p class="register-link">
-            Don’t have an account?
-            <a href="{% url 'registerpage' %}">Register</a>
-        </p>
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="bi bi-wallet2"></i>
+
+        </div>
+
     </div>
+
+
+    <!-- TITLE -->
+
+    <h2>
+        Welcome Back
+    </h2>
+
+
+    <p class="subtitle">
+
+        Login to your Expense Tracker account.
+
+    </p>
+
+
+    <!-- LOGIN FORM -->
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ login_form.as_p }}
+
+
+        <button type="submit">
+
+            <i class="bi bi-box-arrow-in-right"></i>
+
+            Login
+
+        </button>
+
+    </form>
+
+
+    <!-- REGISTER -->
+
+    <p class="register-link">
+
+        Don't have an account?
+
+        <a href="{% url 'registerpage' %}">
+            Register
+        </a>
+
+    </p>
+
+
+</div>
+
+
 </body>
+
 </html>

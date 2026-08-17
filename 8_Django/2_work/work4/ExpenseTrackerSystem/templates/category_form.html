@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html>
 <head>
     <title>{{ title }}</title>
@@ -27,4 +27,915 @@
     </a>
 
 </body>
+</html> {% endcomment %}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} - Expense Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+    <style>
+
+        /* =========================
+           COLORS
+        ========================= */
+
+        :root {
+
+            --bg: #08080D;
+            --sidebar: #0E0E16;
+            --card: #15141F;
+            --card-hover: #1C1B27;
+
+            --border: #292735;
+            --border-light: #343244;
+
+            --text: #F5F5F7;
+            --muted: #92909D;
+
+            --teal: #00D4C7;
+            --cyan: #19C7D8;
+
+            --danger: #FF5C7A;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(0, 212, 199, 0.08),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(117, 103, 255, 0.06),
+                    transparent 30%
+                ),
+
+                var(--bg);
+
+            color: var(--text);
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           LAYOUT
+        ========================= */
+
+        .app {
+
+            display: flex;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+
+        .sidebar {
+
+            width: 250px;
+
+            min-height: 100vh;
+
+            position: fixed;
+
+            left: 0;
+
+            top: 0;
+
+            bottom: 0;
+
+            background: rgba(14, 14, 22, 0.96);
+
+            border-right: 1px solid var(--border);
+
+            padding: 25px 18px;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-decoration: none;
+
+            color: var(--text);
+
+            font-size: 19px;
+
+            font-weight: 600;
+
+            margin-bottom: 40px;
+        }
+
+
+        .logo-icon {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            color: #08080D;
+
+            font-size: 20px;
+
+            box-shadow:
+                0 0 20px rgba(0, 212, 199, 0.20);
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .menu-title {
+
+            color: #5F5D6A;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            margin: 10px 12px;
+        }
+
+
+        .side-link {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 12px 14px;
+
+            margin-bottom: 6px;
+
+            border-radius: 9px;
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+
+        .side-link i {
+
+            font-size: 17px;
+        }
+
+
+        .side-link:hover {
+
+            color: var(--text);
+
+            background: var(--card);
+        }
+
+
+        .side-link.active {
+
+            color: var(--teal);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 212, 199, 0.15),
+                    rgba(0, 212, 199, 0.03)
+                );
+
+            border-left: 2px solid var(--teal);
+        }
+
+
+        /* =========================
+           LOGOUT
+        ========================= */
+
+        .sidebar-bottom {
+
+            margin-top: auto;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .logout-link {
+
+            color: var(--danger);
+        }
+
+
+        .logout-link:hover {
+
+            color: #FF7890;
+
+            background: rgba(255, 92, 122, 0.08);
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .main {
+
+            width: calc(100% - 250px);
+
+            margin-left: 250px;
+
+            min-height: 100vh;
+
+            padding: 45px;
+        }
+
+
+        /* =========================
+           TOP NAVBAR
+        ========================= */
+
+        .topbar {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+
+            margin-bottom: 35px;
+
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .welcome {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin-right: 15px;
+        }
+
+
+        .username {
+
+            color: var(--teal);
+
+            font-weight: 500;
+        }
+
+
+        .logout-btn {
+
+            color: var(--text);
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            padding: 9px 17px;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+
+        .logout-btn:hover {
+
+            color: var(--danger);
+
+            border-color: var(--danger);
+
+            background: rgba(255, 92, 122, 0.06);
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-header {
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-title {
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            margin-bottom: 5px;
+        }
+
+
+        .page-subtitle {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           FORM CARD
+        ========================= */
+
+        .form-card {
+
+            max-width: 700px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171620,
+                    #111018
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.20);
+        }
+
+
+        /* =========================
+           DJANGO FORM
+        ========================= */
+
+        .form-card p {
+
+            margin-bottom: 20px;
+        }
+
+
+        .form-card label {
+
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            margin-bottom: 8px;
+        }
+
+
+        .form-card input,
+        .form-card textarea,
+        .form-card select {
+
+            width: 100%;
+
+            background: #0F0F17;
+
+            color: var(--text);
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            padding: 11px 13px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            outline: none;
+
+            transition: 0.25s;
+        }
+
+
+        .form-card input:focus,
+        .form-card textarea:focus,
+        .form-card select:focus {
+
+            background: #11111A;
+
+            color: var(--text);
+
+            border-color: var(--teal);
+
+            box-shadow:
+                0 0 0 3px rgba(0, 212, 199, 0.08);
+        }
+
+
+        .form-card textarea {
+
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+
+        /* Django help text */
+
+        .helptext {
+
+            display: block;
+
+            color: #686674;
+
+            font-size: 11px;
+
+            margin-top: 6px;
+        }
+
+
+        /* Django errors */
+
+        .errorlist {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 5px 0 10px;
+
+            color: var(--danger);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .form-actions {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .btn-save {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--teal),
+                    var(--cyan)
+                );
+
+            color: #08080D;
+
+            border: none;
+
+            border-radius: 9px;
+
+            padding: 11px 22px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+
+        .btn-save:hover {
+
+            color: #08080D;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 212, 199, 0.20);
+        }
+
+
+        .btn-back {
+
+            background: var(--card);
+
+            color: var(--text);
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            padding: 11px 22px;
+
+            font-size: 13px;
+
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+
+        .btn-back:hover {
+
+            color: var(--teal);
+
+            border-color: var(--teal);
+
+            background: rgba(0, 212, 199, 0.05);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .sidebar {
+
+                width: 75px;
+
+                padding: 25px 10px;
+            }
+
+            .logo span,
+            .menu-title,
+            .side-link span {
+
+                display: none;
+            }
+
+            .logo {
+
+                justify-content: center;
+            }
+
+            .side-link {
+
+                justify-content: center;
+            }
+
+            .main {
+
+                width: calc(100% - 75px);
+
+                margin-left: 75px;
+
+                padding: 30px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .sidebar {
+
+                display: none;
+            }
+
+            .main {
+
+                width: 100%;
+
+                margin-left: 0;
+
+                padding: 25px 15px;
+            }
+
+            .page-title {
+
+                font-size: 25px;
+            }
+
+            .topbar {
+
+                margin-bottom: 25px;
+            }
+
+            .form-card {
+
+                padding: 22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <a href="{% url 'dashboard' %}"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="bi bi-wallet2"></i>
+
+            </div>
+
+            <span>
+                Expense Tracker
+            </span>
+
+        </a>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="menu-title">
+            MAIN
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="{% url 'dashboard' %}"
+           class="side-link">
+
+            <i class="bi bi-grid-1x2-fill"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- CATEGORIES -->
+
+        <a href="{% url 'category_list' %}"
+           class="side-link active">
+
+            <i class="bi bi-tags"></i>
+
+            <span>
+                Manage Categories
+            </span>
+
+        </a>
+
+
+        <!-- LOGOUT -->
+
+        <div class="sidebar-bottom">
+
+            <a href="{% url 'logout' %}"
+               class="side-link logout-link">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="main">
+
+
+        <!-- TOP NAVBAR -->
+
+        <div class="topbar">
+
+            <div class="welcome">
+
+                Welcome,
+                <span class="username">
+                    {{ request.user.username }}
+                </span>
+
+            </div>
+
+
+            <a href="{% url 'logout' %}"
+               class="logout-btn">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-header">
+
+            <h1 class="page-title">
+
+                <i class="bi bi-tags"
+                   style="color: var(--teal);">
+                </i>
+
+                {{ title }}
+
+            </h1>
+
+            <p class="page-subtitle">
+
+                Create or update an expense category.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             FORM
+        ========================= -->
+
+        <div class="form-card">
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+
+                {{ form.as_p }}
+
+
+                <!-- FORM ACTIONS -->
+
+                <div class="form-actions">
+
+
+                    <button type="submit"
+                            class="btn-save">
+
+                        <i class="bi bi-check-lg"></i>
+
+                        Save Category
+
+                    </button>
+
+
+                    <a href="{% url 'category_list' %}"
+                       class="btn-back">
+
+                        <i class="bi bi-arrow-left"></i>
+
+                        Back to Categories
+
+                    </a>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
 </html>
