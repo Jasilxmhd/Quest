@@ -1,0 +1,142 @@
+
+
+
+
+
+
+
+
+
+1. What is Django ORM?
+
+Django ORM allows you to work with database tables using Python objects and methods, instead of writing SQL manually.
+
+python manage.py shell
+
+SQL : 
+SELECT * FROM first_app_department;
+
+
+Django ORM:
+Department.objects.all()
+
+
+..................................................................................
+
+
+
+2. Create
+Create one object
+
+dept = Department(department_name="Sales")
+dept.save()
+
+
+
+
+..................................................................................
+
+
+
+
+3. Read / Retrieve
+Get all records
+
+
+Department.objects.all()
+
+<QuerySet [<Department: IT>, <Department: Sales>]>
+
+
+
+result = Department.objects.all()
+for i in result:
+    print(i)
+
+
+
+Output:
+
+IT
+Sales
+
+..................................................................................
+
+
+
+Get one record
+You used:
+
+dept = Department.objects.get(id=1)
+print(dept)
+
+
+
+..................................................................................
+
+
+
+4. Bulk Create
+
+Department.objects.bulk_create([
+    Department(department_name="Finance"),
+    Department(department_name="HR")
+])
+
+
+
+
+
+
+
+
+..................................................................................
+
+
+
+
+
+
+
+
+
+
+5. Update
+Department.objects.filter(id=1).update(
+    department_name="CS"
+)
+
+
+
+
+
+
+
+
+
+..................................................................................
+
+
+
+
+
+
+
+
+
+
+
+6. Delete
+Department.objects.filter(id=1).delete()
+
+
+
+
+
+
+..............................................
+
+
+7. Exit
+
+exit()
