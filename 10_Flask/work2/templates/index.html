@@ -4,6 +4,8 @@
         <th>Email</th>
         <th>Course</th>
         <th>Age</th>
+        <th>Update</th>
+        <th>delete</th>
     </tr>
 
     {% for s in students %}
@@ -13,6 +15,8 @@
         <td>{{ s.email }}</td>
         <td>{{ s.course }}</td>
         <td>{{ s.age }}</td>
+        <td><a href="{{ url_for('update_student', id = s.id)}}">Edit</a></td>
+        <td><a href="{{ url_for('delete_student', id = s.id)}}">Delete</a></td>
     </tr>
 
     {% endfor %}
